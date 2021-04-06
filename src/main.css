@@ -74,11 +74,9 @@ html {
 }
 .inputs i {
   position: absolute;
-  margin-bottom: 100%;
 }
 .inputs {
   position: absolute;
-  margin-bottom: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -129,7 +127,7 @@ html {
 .form {
 }
 .test {
-  margin-bottom: 80% !important;
+  margin-bottom: 50% !important;
 }
 .log {
   margin-bottom: 75%;
@@ -138,8 +136,8 @@ html {
   background-color: #fff;
   color: #000;
   border-radius: 23px;
-  width: 31px;
-  height: 29px;
+  width: 32px;
+  height: 31px;
   text-align: center;
   font-weight: 800;
   font-size: 21px;
@@ -152,12 +150,18 @@ html {
   margin-bottom: 140%;
 }
 
+.checked {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
 .selection {
-  width: 135px;
+  width: 144px;
   height: 33px;
   background-color: #fff;
   color: #000;
-  padding-left: 1%;
+  padding-left: 2%;
   border: none;
   border-radius: 30px;
   margin-left: 1%;
@@ -226,4 +230,25 @@ html {
   100% {
     opacity: 1;
   }
+}
+.user {
+  width: 47px;
+  height: 47px;
+  background-color: #fff;
+  border-radius: 31px;
+}
+.isLogin {
+  display: flex;
+  text-align: center;
+  margin-top: -8%;
+  margin-left: -10%;
+}
+.text {
+  margin-left: 9px;
+  margin-block-start: 0.6rem;
+}
+.position {
+  display: flex;
+  margin: 2%;
+  margin-top: 16%;
 }

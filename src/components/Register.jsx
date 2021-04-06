@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-class Login extends Component {
+class Register extends Component {
     render() {
         return (
             <>
@@ -35,4 +35,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default Register;
