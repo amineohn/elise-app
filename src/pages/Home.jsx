@@ -17,8 +17,7 @@ class Home extends Component {
                     message: data.message
                 })
             })
-            //.then((res) => res.json()) 
-            // ? use promise then. but i don't use. i will directly dump message.
+            //.then((res) => res.json())
             .catch((error) => console.log(error))
         return (
             <>

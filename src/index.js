@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./main.css";
-import Auth from "./components/Login";
-import Home from "./components/Home";
-import Register from "./components/Register";
+import Auth from "./pages/Login";
+import Home from "./pages/Home";
+import Register from "./pages/Register";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
