@@ -1,8 +1,9 @@
-/* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { isBrowser } from "react-device-detect";
 const url = 'https://localhost:8000/';//test?
+
 class Home extends Component {
     constructor(props) {
         super(props)
@@ -19,6 +20,9 @@ class Home extends Component {
             })
             //.then((res) => res.json())
             .catch((error) => console.log(error))
+        if (isBrowser) {
+            return <div class="error"><p class="error-text">This content is unavailable on browser</p></div>
+        }
         return (
             <>
                 <div className="logo fade-in">
@@ -33,7 +37,6 @@ class Home extends Component {
                             <div className="dot">
                                 -
                         </div>
-
                             <select className="selection" name="test">
                                 <option value="">Type de bennes</option>
                                 <option value="test">test 1</option>
@@ -48,9 +51,7 @@ class Home extends Component {
                                 <option value="test">test 3</option>
                                 <option value="test">test 4</option>
                             </select>
-
                         </div>
-
                     </div>
                     <div className="isLogin">
                         <div className="user"></div>
