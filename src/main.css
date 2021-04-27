@@ -252,3 +252,21 @@ html {
   margin: 2%;
   margin-top: 16%;
 }
+
+.error {
+  display: flex;
+  justify-content: center;
+  margin: 25% auto;
+  background-color: #f37737;
+  width: 30%;
+  height: 40px;
+  text-align: center;
+  color: #fff;
+  border-radius: 30px;
+}
+.error-text {
+  margin-top: 2%;
+}
+.error-bg {
+  background-color: #f37737;
+}

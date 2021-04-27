@@ -1,8 +1,12 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { isBrowser } from "react-device-detect";
 class Login extends Component {
     render() {
+        if (isBrowser) {
+            return <div class="error"><p class="error-text">This content is unavailable on browser</p></div>
+        }
         return (
             <>
                 <div className="logo fade-in">
