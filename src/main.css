@@ -60,6 +60,9 @@ html {
   font-size: 15px;
   padding-left: 15%;
 }
+input {
+  padding-left: 17px;
+}
 
 :-ms-input-placeholder {
   color: #000;
@@ -78,7 +81,9 @@ html {
   position: absolute;
 }
 .icon {
-  padding: 19px;
+  position: absolute;
+  left: 15px;
+  top: calc(50% - 0.5em);
   min-width: 40px;
 }
 .inputs i {
@@ -148,9 +153,7 @@ html {
   justify-content: center;
 }
 .form {
-}
-.test {
-  margin-bottom: 50% !important;
+  position: relative;
 }
 .log {
   place-content: center;

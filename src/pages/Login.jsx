@@ -14,13 +14,13 @@ class Login extends Component {
                 <div className="App slide">
                     <div className="inputs log">
                         <div className="form">
-                            <i class="fas fa-user icon"></i>
-                            <input className="control" type="text" placeholder="Utilisateur" />
+                            <input id="user" className="control" type="text" placeholder="Utilisateur" />
+                            <label for="user" class="fas fa-user icon"></label>
                         </div>
                         <br />
                         <div className="form">
-                            <i class="fas fa-key icon"></i>
-                            <input className="control" type="text" placeholder="Mot de passe" />
+                            <input id="password" className="control" type="password" placeholder="Mot de passe" />
+                            <label for="password" class="fas fa-key icon"></label>
                         </div>
                         <br />
                         <div className="submit">

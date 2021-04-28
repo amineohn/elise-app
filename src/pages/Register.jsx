@@ -11,20 +11,20 @@ class Register extends Component {
             <>
                 <Logo />
                 <div className="App slide">
-                    <div className="inputs test">
+                    <div className="inputs">
                         <div className="form">
-                            <i class="fas fa-user icon"></i>
-                            <input className="control" type="text" placeholder="Utilisateur" />
+                            <input for="user" className="control" type="text" placeholder="Utilisateur" />
+                            <label id="user" class="fas fa-user icon"></label>
                         </div>
                         <br />
                         <div className="form">
-                            <i class="fas fa-lock icon"></i>
-                            <input className="control" type="text" placeholder="Token (sécurité)" />
+                            <input for="token" className="control" type="password" placeholder="Token (sécurité)" />
+                            <label id="token" class="fas fa-lock icon"></label>
                         </div>
                         <br />
                         <div className="form">
-                            <i class="fas fa-key icon"></i>
-                            <input className="control" type="text" placeholder="Mot de passe" />
+                            <input for="password" className="control" type="password" placeholder="Mot de passe" />
+                            <label id="password" class="fas fa-key icon"></label>
                         </div>
                         <br />
                         <div className="submit">
