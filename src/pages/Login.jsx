@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { isBrowser } from "react-device-detect";
+import Logo from "../components/Logo";
 class Login extends Component {
     render() {
         if (isBrowser) {
@@ -9,10 +10,8 @@ class Login extends Component {
         }
         return (
             <>
-                <div className="logo fade-in">
-                    <Link to="/"><img src="https://www.elise.com.fr/assets/templates/meridian/images/logo.jpg" /></Link>
-                </div>
-                <div className="App fade-in">
+                <Logo />
+                <div className="App slide">
                     <div className="inputs log">
                         <div className="form">
                             <i class="fas fa-user icon"></i>

@@ -2,7 +2,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { isBrowser } from "react-device-detect";
-const url = 'https://localhost:8000/';//test?
+import Logo from "../components/Logo";
+const url = 'https://localhost:8000/';
 
 class Home extends Component {
     constructor(props) {
@@ -18,33 +19,32 @@ class Home extends Component {
                     message: data.message
                 })
             })
-            //.then((res) => res.json())
+            //.then((res) => res.json())=
             .catch((error) => console.log(error))
         if (isBrowser) {
             return <div class="error"><p class="error-text">This content is unavailable on browser</p></div>
         }
         return (
             <>
-                <div className="logo fade-in">
-                    <Link to="/"><img src="https://www.elise.com.fr/assets/templates/meridian/images/logo.jpg" /></Link>
-                </div>
+                <Logo />
                 <div className="App fade-in">
                     <div className="pos">
                         <div className="position">
-                            <div className="dot">
+                            <button className="dot">
                                 +
-                        </div><br />
-                            <div className="dot">
+                        </button>
+                            <br />
+                            <button className="dot">
                                 -
-                        </div>
-                            <select className="selection" name="test">
+                        </button>
+                            <select id="bennes" className="selection" name="typebennes">
                                 <option value="">Type de bennes</option>
                                 <option value="test">test 1</option>
                                 <option value="test">test 2</option>
                                 <option value="test">test 3</option>
                                 <option value="test">test 4</option>
                             </select>
-                            <select className="selection" name="test">
+                            <select id="palette" className="selection" name="typepalette">
                                 <option value="">Caisse palette</option>
                                 <option value="test">test 1</option>
                                 <option value="test">test 2</option>
@@ -54,8 +54,10 @@ class Home extends Component {
                         </div>
                     </div>
                     <div className="isLogin">
-                        <div className="user"></div>
-                        <p className="text">connecté en tant que Amine</p>
+                        <img className="user" src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg" alt="" srcset="" />
+                        <Link className="p-login" to="/login">
+                            <p className="text">connecté en tant que Amine</p>
+                        </Link>
                     </div>
                 </div>
             </>
