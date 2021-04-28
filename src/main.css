@@ -43,7 +43,17 @@ html {
   font-weight: 600;
   outline: none;
 }
-
+.enter {
+  background-color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 30px;
+  color: #000;
+  font-size: 15px;
+  font-weight: 600;
+  outline: none;
+  height: 26px;
+}
 ::placeholder {
   color: #000;
   opacity: 1;
@@ -78,6 +88,19 @@ html {
   position: absolute;
   display: flex;
   flex-direction: column;
+}
+.enter-submit {
+    width: 145px;
+    /* height: 39px; */
+    color: #000;
+    border: none;
+    background-color: #fff;
+    font-weight: 500;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease-out;
+    transition-timing-function: linear;
 }
 .button {
   padding: 4%;
@@ -129,14 +152,14 @@ html {
   margin-bottom: 50% !important;
 }
 .log {
-  margin-bottom: 75%;
+  place-content: center;
 }
 .dot {
   background-color: #fff;
   color: #000;
   border-radius: 23px;
-  width: 32px;
-  height: 31px;
+  width: 37px;
+  height: 38px;
   text-align: center;
   font-weight: 800;
   font-size: 21px;
@@ -152,16 +175,22 @@ html {
 .box {
   background-color: #fff;
   width: 93%;
-  height: 488px;
+  height: 448px;
   border-radius: 19px;
   margin-top: 10px;
   color: #000
 }
 .type {
-  display: flex;
-  padding: 2%;
+  padding: 4%;
+  margin-left: 7%;
 }
 
+td {
+  width: 1%
+}
+table {
+
+}
 .checked {
   display: flex;
   align-items: center;
@@ -170,7 +199,7 @@ html {
 
 .selection {
   width: 144px;
-  height: 33px;
+  height: 39px;
   background-color: #fff;
   color: #000;
   padding-left: 2%;
@@ -183,6 +212,10 @@ html {
 .selection:focus {
   outline: none;
   box-shadow: none;
+}
+.data {
+  display: flex;
+  width: 95%;
 }
 .p-login {
   text-decoration: none;
@@ -278,7 +311,7 @@ html {
 .position {
   display: flex;
   margin: 2%;
-  margin-top: 16%;
+  margin-top: 13%;
 }
 
 .error {

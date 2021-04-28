@@ -53,9 +53,50 @@ class Home extends Component {
                             </select>
                         </div>
                     </div>
+                    <div className="data">
+                        <input className="enter" type="number" name="" id="" placeholder="saisir un poids" />
+                            &nbsp;
+                        <button className="enter-submit poids">
+                            Envoyer
+                        </button>
+                            &nbsp;
+                        <button className="enter-submit orangeDark">
+                            Supprimer
+                        </button>
+                    </div>
                     <div className="box">
-                    <p class="type">lolol</p>
-
+                        <table className="type">
+                            <tr className="font-weight: 500;">
+                                <td>Type</td>
+                                <td>Matière</td>
+                                <td>KG</td>
+                            </tr>
+                            <tr>
+                                <td>Caisse</td>
+                                <td>PET</td>
+                                <td>5kg</td>
+                            </tr>
+                            <tr>
+                                <td>Caisse</td>
+                                <td>Papier</td>
+                                <td>105kg</td>
+                            </tr>
+                            <tr>
+                                <td>Caisse</td>
+                                <td>Canettes</td>
+                                <td>20kg</td>
+                            </tr>
+                            <tr>
+                                <td>Caisse</td>
+                                <td>Fer</td>
+                                <td>65kg</td>
+                            </tr>
+                            <tr>
+                                <td>Caisse</td>
+                                <td>Conserve</td>
+                                <td>35kg</td>
+                            </tr>
+                        </table>
                     </div>
                     <div className="isLogin">
                         <img className="user" src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg" alt="" srcset="" />
