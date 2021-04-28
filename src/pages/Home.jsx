@@ -19,7 +19,7 @@ class Home extends Component {
                     message: data.message
                 })
             })
-            //.then((res) => res.json())=
+            //.then((res) => res.json())
             .catch((error) => console.log(error))
         if (isBrowser) {
             return <div class="error"><p class="error-text">This content is unavailable on browser</p></div>

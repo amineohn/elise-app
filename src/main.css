@@ -30,6 +30,7 @@ html {
   color: white;
   padding-bottom: 3%;
   border-radius: 15px;
+  position: relative;
 }
 .control {
   background-color: #fff;
@@ -220,6 +221,7 @@ table {
 .data {
   display: flex;
   width: 95%;
+  position: relative;
 }
 .p-login {
   text-decoration: none;
