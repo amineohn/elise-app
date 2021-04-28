@@ -53,6 +53,10 @@ class Home extends Component {
                             </select>
                         </div>
                     </div>
+                    <div className="box">
+                    <p class="type">lolol</p>
+
+                    </div>
                     <div className="isLogin">
                         <img className="user" src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg" alt="" srcset="" />
                         <Link className="p-login" to="/login">

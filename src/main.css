@@ -26,7 +26,6 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
   padding-bottom: 3%;
@@ -149,7 +148,18 @@ html {
   display: flex;
   align-items: center;
   width: 100%;
-  margin-bottom: 140%;
+}
+.box {
+  background-color: #fff;
+  width: 93%;
+  height: 488px;
+  border-radius: 19px;
+  margin-top: 10px;
+  color: #000
+}
+.type {
+  display: flex;
+  padding: 2%;
 }
 
 .checked {
@@ -257,8 +267,9 @@ html {
 .isLogin {
   display: flex;
   text-align: center;
-  margin-top: -8%;
   margin-left: -10%;
+  bottom: 0;
+  position: absolute;
 }
 .text {
   margin-left: 9px;
