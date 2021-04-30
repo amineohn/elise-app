@@ -71,7 +71,7 @@ class Home extends Component {
                 </Link>
               </div>
               <div className="selected">
-                <select onClick={testing()} id="bennes" className="selection" name="typebennes">
+                <select id="bennes" className="selection" name="typebennes">
                   <option value="">Type de bennes</option>
                   <option value="test">test 1</option>
                   <option value="test">test 2</option>
