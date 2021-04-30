@@ -29,7 +29,8 @@ html {
   font-size: calc(10px + 2vmin);
   color: white;
   padding-bottom: 3%;
-  border-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   position: relative;
 }
 .control {
