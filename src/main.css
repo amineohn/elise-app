@@ -125,7 +125,6 @@ html {
   width: 10px;
 }
 
-
 ::-webkit-scrollbar-thumb {
   background: transparent;
   border-radius: 10px;
@@ -149,7 +148,6 @@ html {
 
 .enter-submit {
   width: 145px;
-  /* height: 39px; */
   color: #000;
   border: none;
   background-color: #fff;

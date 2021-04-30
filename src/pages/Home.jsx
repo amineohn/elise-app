@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { isBrowser } from "react-device-detect";
 import Logo from "../components/Logo";
-//import Modal from "../components/Modal";
 const url = "https://localhost:8000/";
 const Task = (props) => {
   return <p>{props.value}</p>;
