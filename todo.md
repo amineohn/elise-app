@@ -1,0 +1,6 @@
+- Enlever les buttons '+' '-'
+- Rajouter des legendes 'caisse' 'bennes' 'poids'
+- Passer le connecté en haut
+- Mettre les champs les uns sous les autres
+- Remplace le button envoyer tu met ajouter
+- quand on clique sur une ligne possibilité de modifier ou supprimer la ligne
