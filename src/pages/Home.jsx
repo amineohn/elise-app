@@ -63,8 +63,6 @@ class Home extends Component {
                 <img
                   className="user"
                   src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg"
-                  alt=""
-                  srcset=""
                 />
                 <Link className="p-login" to="/login">
                   <p className="text">connecté en tant que Amine</p>
@@ -94,8 +92,6 @@ class Home extends Component {
               onChange={this.handleChange}
               className="enter"
               type="number"
-              name=""
-              id=""
               placeholder="saisir un poids"
             />
             &nbsp;
