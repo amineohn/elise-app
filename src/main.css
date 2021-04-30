@@ -116,7 +116,30 @@ html {
 	top: calc(50% - 0.5em);
 	min-width: 40px;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  margin-top: -10px
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  width: 10px
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent ; 
+  border-radius: 10px;
+  width: 10px
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+  width: 10px
+}
 .inputs i {
 	position: absolute;
 }
@@ -245,8 +268,6 @@ html {
 	overflow-y: auto;
   max-height:265px;
 }
-tr {
-}
 .date {
   display: grid;
 }
@@ -265,8 +286,6 @@ tr {
 td {
 	width: 1%
 }
-
-table {}
 
 .checked {
 	display: flex;
