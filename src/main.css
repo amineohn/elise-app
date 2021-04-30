@@ -26,7 +26,7 @@ html {
   margin-right: 5%;
 }
 
-.App {
+.app {
   background-color: #f37737;
   min-height: 80.8vh;
   display: flex;
@@ -115,26 +115,23 @@ html {
   top: calc(50% - 0.5em);
   min-width: 40px;
 }
-/* width */
 ::-webkit-scrollbar {
   width: 10px;
   margin-top: -10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   border-radius: 10px;
   width: 10px;
 }
 
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
   background: transparent;
   border-radius: 10px;
   width: 10px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #b30000;
   width: 10px;
@@ -336,7 +333,7 @@ td {
   text-decoration: none;
 }
 
-.fade-in {
+.fade {
   animation: fadeIn ease 1.5s;
   -webkit-animation: fadeIn ease 1.5s;
   -moz-animation: fadeIn ease 1.5s;

@@ -13,7 +13,7 @@ class Register extends Component {
     return (
       <>
         <Logo />
-        <div className="App slide">
+        <div className="app slide">
           <div className="auth">
             <div className="form">
               <input

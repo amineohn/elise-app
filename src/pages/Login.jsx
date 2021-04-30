@@ -14,7 +14,7 @@ class Login extends Component {
     return (
       <>
         <Logo />
-        <div className="App slide">
+        <div className="app slide">
           <div className="auth center">
             <div className="form">
               <input

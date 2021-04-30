@@ -56,7 +56,7 @@ class Home extends Component {
     return (
       <>
         <Logo />
-        <div className="App fade-in">
+        <div className="app fade">
           <div className="pos">
             <div className="position">
               <div className="isLogin">
