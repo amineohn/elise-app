@@ -14,7 +14,7 @@ class Register extends Component {
       <>
         <Logo />
         <div className="App slide">
-          <div className="inputs">
+          <div className="auth">
             <div className="form">
               <input
                 for="user"

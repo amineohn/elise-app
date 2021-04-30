@@ -139,11 +139,11 @@ html {
   background: #b30000;
   width: 10px;
 }
-.inputs i {
+.auth i {
   position: absolute;
 }
 
-.inputs {
+.auth {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -233,7 +233,7 @@ html {
   position: relative;
 }
 
-.log {
+.center {
   place-content: center;
 }
 

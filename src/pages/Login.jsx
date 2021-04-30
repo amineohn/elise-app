@@ -15,7 +15,7 @@ class Login extends Component {
       <>
         <Logo />
         <div className="App slide">
-          <div className="inputs log">
+          <div className="auth center">
             <div className="form">
               <input
                 id="user"
