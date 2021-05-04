@@ -13,7 +13,6 @@ class Home extends Component {
     };
   }
   render() {
-    //this.setState({show, setShow: false});
     fetch(url)
       .then((data) => {
         this.setState({
@@ -32,7 +31,7 @@ class Home extends Component {
     return (
       <>
         <Logo />
-        <div className="app fade">
+        <div className="app moveToBottom">
           <div className="pos">
             <div className="position">
               <Logging />
