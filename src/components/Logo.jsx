@@ -21,8 +21,7 @@ const LoadingLogo = () => {
     setIsLoading(false)
   }
   useEffect(() => {
-    const img = [logo];
-    cacheImages(img);
+    cacheImages([logo]);
   })
   return (
     <div className="logo moveFromTop">
