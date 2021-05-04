@@ -5,7 +5,7 @@ import React, { Component } from "react";
 class Logo extends Component {
   render() {
     return (
-      <div className="logo slide">
+      <div className="logo moveFromTop">
         <Link to="/">
           <img src={logo} />
         </Link>

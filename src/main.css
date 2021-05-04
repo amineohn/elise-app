@@ -458,7 +458,16 @@ table {
     margin-block-start: 0.2rem;
   }
 }
-
+.moveFromTop {
+	-webkit-animation: moveFromTop .6s ease both;
+	animation: moveFromTop .6s ease both;
+}
+@-webkit-keyframes moveFromTop {
+	from { -webkit-transform: translateY(-100%); }
+}
+@keyframes moveFromTop {
+	from { -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+}
 .moveToBottom {
 	-webkit-animation: moveFromBottom .6s ease both;
 	animation: moveFromBottom .6s ease both;
