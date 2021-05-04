@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { isBrowser } from "react-device-detect";
 import Logo from "../components/Logo";
+import DataWeight from "../components/DataWeight";
+import Logging from "../components/Logging";
+import TableWeight from "../components/TableWeight";
 const url = "https://localhost:8000/";
 const Task = (props) => {
   return <p>{props.value}</p>;
@@ -13,29 +15,7 @@ class Home extends Component {
       message: null,
     };
   }
-  state = {
-    value: "",
-  };
-
-  handleChange = (e) => {
-    const { value } = e.target;
-    this.setState((_) => ({
-      value,
-    }));
-  };
-
-  handleAdd = (e) => {
-    const { value } = this.state;
-    if (value === "") {
-      return;
-    }
-    this.props.onNewTask(value);
-    this.setState((_) => ({
-      value: "",
-    }));
-  };
   render() {
-    const { value } = this.state;
     //this.setState({show, setShow: false});
     fetch(url)
       .then((data) => {
@@ -58,15 +38,7 @@ class Home extends Component {
         <div className="app fade">
           <div className="pos">
             <div className="position">
-              <div className="isLogin">
-                <img
-                  className="user"
-                  src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg"
-                />
-                <Link className="p-login" to="/login">
-                  <p className="text">connecté en tant que Amine</p>
-                </Link>
-              </div>
+              <Logging />
               <div className="selected">
                 <select id="bennes" className="selection" name="typebennes">
                   <option value="">Type de bennes</option>
@@ -85,97 +57,8 @@ class Home extends Component {
               </div>
             </div>
           </div>
-          <div className="data">
-            <input
-              value={value}
-              onChange={this.handleChange}
-              className="enter"
-              type="number"
-              placeholder="saisir un poids"
-            />
-            &nbsp;
-            <button
-              onClick={this.handleAdd}
-              className="enter-submit poids gray"
-            >
-              Ajouter
-            </button>
-          </div>
-          <div className="box">
-            <table className="type">
-              <tr className="font-weight: 500;">
-                <td>Type</td>
-                <td>Matière</td>
-                <td>KG</td>
-              </tr>
-              <tr>
-                <td onClick="">Caisse</td>
-                <td onClick="">PET</td>
-                <td onClick="">
-                  5kg{" "}
-                  <button className="valid" type="submit">
-                    <i class="fas fa-check edit"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td onClick="">Caisse</td>
-                <td onClick="">Papier</td>
-                <td onClick="">
-                  105kg{" "}
-                  <button className="valid gray" type="submit">
-                    <i class="fas fa-pencil-alt edit"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td onClick="">Caisse</td>
-                <td onClick="">Canettes</td>
-                <td onClick="">20kg</td>
-              </tr>
-
-              <tr>
-                <td onClick="">Caisse</td>
-                <td onClick="">Fer</td>
-                <td onClick="">65kg</td>
-              </tr>
-              <tr>
-                <td onClick="">Caisse</td>
-                <td onClick="">Conserve</td>
-                <td onClick="">35kg</td>
-              </tr>
-              <tr>
-                <td onClick="">Caisse</td>
-                <td onClick="">Conserve</td>
-                <td onClick="">35kg</td>
-              </tr>
-              <tr>
-                <td onClick="">Caisse</td>
-                <td onClick="">Conserve</td>
-                <td onClick="">35kg</td>
-              </tr>
-              <tr>
-                <td onClick="">Caisse</td>
-                <td onClick="">Conserve</td>
-                <td onClick="">35kg</td>
-              </tr>
-              <tr>
-                <td onClick="">Caisse</td>
-                <td onClick="">Conserve</td>
-                <td onClick="">35kg</td>
-              </tr>
-              <tr>
-                <td onClick="">Caisse</td>
-                <td onClick="">Conserve</td>
-                <td onClick="">35kg</td>
-              </tr>
-              <tr>
-                <td onClick="">Caisse</td>
-                <td onClick="">Conserve</td>
-                <td onClick="">35kg</td>
-              </tr>
-            </table>
-          </div>
+          <DataWeight />
+          <TableWeight />
         </div>
       </>
     );
