@@ -5,9 +5,6 @@ import DataWeight from "../components/DataWeight";
 import Logging from "../components/Logging";
 import TableWeight from "../components/TableWeight";
 const url = "https://localhost:8000/";
-const Task = (props) => {
-  return <p>{props.value}</p>;
-};
 class Home extends Component {
   constructor(props) {
     super(props);

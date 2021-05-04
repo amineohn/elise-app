@@ -1,13 +1,16 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { Link } from "react-router-dom";
 import logo from "../assets/img/logo.jpg";
-const Logo = () => {
-  return (
-    <div className="logo slide">
-      <Link to="/">
-        <img src={logo} />
-      </Link>
-    </div>
-  );
-};
+import React, { Component } from "react";
+class Logo extends Component {
+  render() {
+    return (
+      <div className="logo slide">
+        <Link to="/">
+          <img src={logo} />
+        </Link>
+      </div>
+    )
+  }
+}
 export default Logo;
