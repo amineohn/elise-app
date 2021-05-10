@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import avatar from "../assets/img/user.jpg";
 import React, { Component } from "react";
 class Logging extends Component {
@@ -10,9 +9,9 @@ class Logging extends Component {
                     src={avatar}
                     alt='Elise Production'
                 />
-                <Link className="p-login" to="/login">
+                <div className="p-login" to="/login">
                     <p className="text">connecté en tant que Amine</p>
-                </Link>
+                </div>
             </div>
         )
     }

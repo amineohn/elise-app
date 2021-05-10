@@ -4,6 +4,7 @@ import Logo from "../components/Logo";
 import DataWeight from "../components/DataWeight";
 import Logging from "../components/Logging";
 import TableWeight from "../components/TableWeight";
+import { Link } from "react-router-dom";
 const url = "https://localhost:8000/";
 class Home extends Component {
   constructor(props) {
@@ -55,6 +56,9 @@ class Home extends Component {
           </div>
           <DataWeight />
           <TableWeight />
+          <Link className="linked" to="/login">
+            <button className="button gray link">Connexion</button>
+          </Link>
         </div>
       </>
     );

@@ -40,6 +40,10 @@ html {
   border-bottom-right-radius: 15px;
   position: relative;
 }
+input {
+  text-align: start;
+  margin: 0;
+}
 
 .control {
   background-color: #fff;
@@ -73,10 +77,6 @@ html {
   opacity: 1;
   font-size: 15px;
   padding-left: 15%;
-}
-
-.islogged {
-  padding-left: 17px;
 }
 
 :-ms-input-placeholder {
@@ -175,7 +175,18 @@ html {
   transition: all 0.3s ease-out;
   transition-timing-function: linear;
 }
-
+.link {
+  width: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+.linked {
+  display: flex;
+  justify-content: center;
+  padding: 10%;
+}
 .gray {
   background-color: #2a2a2b !important;
   color: #fff !important;
