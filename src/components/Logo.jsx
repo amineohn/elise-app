@@ -1,6 +1,4 @@
-/* eslint-disable jsx-a11y/alt-text */
 import { Link } from "react-router-dom";
-
 import logo from "../assets/img/logo.jpg";
 import React, { Component, useEffect, useState } from "react";
 const LoadingLogo = () => {
@@ -15,7 +13,7 @@ const LoadingLogo = () => {
         img.onerror = reject()
       })
     })
-      
+
     await Promise.all(promises)
 
     setIsLoading(false)
@@ -26,7 +24,7 @@ const LoadingLogo = () => {
   return (
     <div className="logo moveFromTop">
       {isLoading ?
-       'Chargement..' : <Link to="/">
+        'Chargement..' : <Link to="/">
           <img src={logo} />
         </Link>}
     </div>
