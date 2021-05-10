@@ -6,7 +6,7 @@ class Register extends Component {
     if (isBrowser) {
       return (
         <div class="error">
-          <p class="error-text">This content is unavailable on browser</p>
+          <p class="error-content">This content is unavailable on browser</p>
         </div>
       );
     }

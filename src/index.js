@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./main.css";
+import "./assets/styles/main.css";
 import Auth from "./pages/Login";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
