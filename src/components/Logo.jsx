@@ -24,7 +24,10 @@ const LoadingLogo = () => {
   return (
     <div className="logo moveFromTop">
       {isLoading ?
-        'Chargement..' : <Link to="/">
+        <div class="lds-ripple">
+          <div></div>
+          <div></div>
+        </div> : <Link to="/">
           <img src={logo} />
         </Link>}
     </div>
