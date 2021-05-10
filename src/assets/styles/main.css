@@ -28,8 +28,8 @@ html {
 
 .app {
   background-color: #f37737;
-  max-height: 85vh;
-  min-height: 85vh;
+  max-height: 80.8vh;
+  min-height: 80.8vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -109,7 +109,6 @@ input {
 .control i {
   position: absolute;
 }
-
 .icon {
   position: absolute;
   left: 15px;
@@ -329,7 +328,7 @@ td {
   margin-left: 8%;
 }
 
-.p-login {
+.login {
   text-decoration: none;
   color: #fff;
 }
@@ -415,7 +414,7 @@ td {
   border-radius: 31px;
 }
 
-.isLogin {
+.connected {
   display: flex;
   text-align: center;
   position: absolute;
@@ -423,7 +422,7 @@ td {
   margin-left: 2%;
 }
 
-.text {
+.logged {
   margin-left: 9px;
   margin-block-start: 0.6rem;
 }
@@ -455,10 +454,6 @@ td {
   border-radius: 30px;
   color: #fff;
 }
-
-.error-bg {
-  background-color: #f37737;
-}
 table {
   min-width: 290px;
   min-height: 40px;
@@ -471,7 +466,7 @@ table {
     margin: 3%;
     margin-top: 13%;
   }
-  .text {
+  .logged {
     margin-left: 9px;
     margin-block-start: 0.2rem;
   }

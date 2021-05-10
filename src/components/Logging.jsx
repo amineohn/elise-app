@@ -3,14 +3,14 @@ import React, { Component } from "react";
 class Logging extends Component {
     render() {
         return (
-            <div className="isLogin">
+            <div className="connected">
                 <img
                     className="user"
                     src={avatar}
                     alt='Elise Production'
                 />
-                <div className="p-login" to="/login">
-                    <p className="text">connecté en tant que Amine</p>
+                <div className="login">
+                    <p className="logged">connecté en tant que Amine</p>
                 </div>
             </div>
         )
