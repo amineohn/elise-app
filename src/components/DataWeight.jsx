@@ -8,12 +8,10 @@ class DataWeight extends Component {
                     type="number"
                     placeholder="saisir un poids"
                 />
-        &nbsp;
-                <button
-                    className="enter-submit poids gray"
-                >
+                &nbsp;
+                <button className="enter-submit poids gray">
                     Ajouter
-        </button>
+                </button>
             </div>
         )
     }
