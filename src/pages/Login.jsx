@@ -14,7 +14,7 @@ class Login extends Component {
     return (
       <>
         <Logo />
-        <div className="app slide">
+        <div className="app moveToBottom">
           <div className="auth center">
             <div className="form">
               <input
