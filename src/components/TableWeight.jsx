@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-class TableWeight extends Component {
+export default class TableWeight extends Component {
     render() {
         return (
             <div className="box">
@@ -81,4 +81,3 @@ class TableWeight extends Component {
         )
     }
 }
-export default TableWeight;

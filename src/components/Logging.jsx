@@ -1,7 +1,7 @@
 import avatar from "../assets/img/user.jpg";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-class Logging extends Component {
+export default class Logging extends Component {
     render() {
         return (
             <div className="connected">
@@ -19,4 +19,3 @@ class Logging extends Component {
         )
     }
 }
-export default Logging;

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-class DataWeight extends Component {
+export default class DataWeight extends Component {
     render() {
         return (
             <div className="data">
@@ -16,4 +16,3 @@ class DataWeight extends Component {
         )
     }
 }
-export default DataWeight;

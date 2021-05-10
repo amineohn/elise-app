@@ -1,5 +1,5 @@
 import React from 'react'
-const Modal = props => {
+export default Modal = props => {
     return (
         <div className={`modal ${props.show ? 'show' : ''}`} onClick={props.onClose}>
             <div className='model-content' onClick={e => e.stopPropagation()}>
@@ -12,4 +12,3 @@ const Modal = props => {
         </div>
     )
 }
-export default Modal

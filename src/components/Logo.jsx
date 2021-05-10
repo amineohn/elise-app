@@ -30,11 +30,10 @@ const LoadingLogo = () => {
     </div>
   )
 }
-class Logo extends Component {
+export default class Logo extends Component {
   render() {
     return (
       <LoadingLogo />
     )
   }
 }
-export default Logo;
