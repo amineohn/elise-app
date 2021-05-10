@@ -4,11 +4,12 @@ class TableWeight extends Component {
         return (
             <div className="box">
                 <table className="type">
-                    <tr className="font-weight: 500;">
-                        <td>Type</td>
-                        <td>Matière</td>
-                        <td>KG</td>
+                    <tr>
+                        <td className="bold">Type</td>
+                        <td className="bold">Matière</td>
+                        <td className="bold">KG</td>
                     </tr>
+                    <hr />
                     <tr>
                         <td onClick="">Caisse</td>
                         <td onClick="">PET</td>

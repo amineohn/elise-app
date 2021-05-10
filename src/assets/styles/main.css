@@ -36,8 +36,8 @@ html {
   font-size: calc(10px + 2vmin);
   color: white;
   padding-bottom: 3%;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   position: relative;
 }
 input {
@@ -256,7 +256,7 @@ input {
   cursor: pointer;
 }
 
-.pos {
+.container {
   display: flex;
   align-items: center;
   width: 100%;
@@ -426,7 +426,7 @@ td {
   margin-block-start: 0.6rem;
 }
 
-.position {
+.grid {
   display: flex;
   margin: 3%;
   margin-top: 24%;
@@ -458,9 +458,23 @@ table {
   min-height: 40px;
   display: block;
 }
+hr {
+  margin-block-start: 0.2em;
+  border-width: 0.2px;
+  margin-inline-start: 0.2em;
+  display: flex;
+  unicode-bidi: bidi-override;
+  background-color: #000;
+  border-style: double;
+  border-radius: 30px;
+  width: 96%;
+}
+.bold {
+  font-weight: bold;
+}
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) and (orientation: portrait) {
-  .position {
+  .grid {
     display: flex;
     margin: 3%;
     margin-top: 13%;

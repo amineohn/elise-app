@@ -32,8 +32,8 @@ class Home extends Component {
       <>
         <Logo />
         <div className="app moveToBottom">
-          <div className="pos">
-            <div className="position">
+          <div className="container">
+            <div className="grid">
               <Logging />
               <div className="selected">
                 <select id="bennes" className="selection" name="typebennes">
