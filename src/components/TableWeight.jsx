@@ -14,7 +14,7 @@ class TableWeight extends Component {
                         <td onClick="">PET</td>
                         <td onClick="">
                             5kg{" "}
-                            <button className="valid" type="submit">
+                            <button className="valid orangeDark" type="submit">
                                 <i class="fas fa-check edit"></i>
                             </button>
                         </td>
