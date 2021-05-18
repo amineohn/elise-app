@@ -6,31 +6,34 @@ const LoadingLogo = () => {
   const cacheImages = async (srcArray) => {
     const promises = await srcArray.map((src) => {
       return new Promise(function (resolve, reject) {
-        const img = new Image()
+        const img = new Image();
 
         img.src = src;
-        img.onload = resolve()
-        img.onerror = reject()
-      })
-    })
+        img.onload = resolve();
+        img.onerror = reject();
+      });
+    });
 
-    await Promise.all(promises)
+    await Promise.all(promises);
 
-    setIsLoading(false)
-  }
+    setIsLoading(false);
+  };
   useEffect(() => {
     cacheImages([logo]);
-  })
+  });
   return (
     <div className="logo moveFromTop">
-      {isLoading ?
+      {isLoading ? (
         <div class="lds-ripple">
           <div></div>
           <div></div>
-        </div> : <Link to="/">
+        </div>
+      ) : (
+        <Link to="/">
           <img src={logo} alt="" />
-        </Link>}
+        </Link>
+      )}
     </div>
-  )
-}
+  );
+};
 export default LoadingLogo;

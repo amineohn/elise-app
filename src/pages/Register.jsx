@@ -24,7 +24,7 @@ export default class Register extends Component {
               />
               <label id="user" class="fas fa-user icon"></label>
             </div>
-              &nbsp;
+            &nbsp;
             <div className="form">
               <input
                 for="token"
@@ -34,7 +34,7 @@ export default class Register extends Component {
               />
               <label id="token" class="fas fa-lock icon"></label>
             </div>
-              &nbsp;
+            &nbsp;
             <div className="form">
               <input
                 for="password"
