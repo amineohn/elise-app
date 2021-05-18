@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Connected = () => {
   return (
     <div className="connected">
-      <Link to="/login">
+      <Link to="/signin">
         <img className="user" src={avatar} alt="Elise Production" />
       </Link>
       <div className="login">

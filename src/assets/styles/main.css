@@ -71,6 +71,9 @@ input {
   margin-left: 1%;
   max-width: 155px;
 }
+.islogged {
+  padding-left: 44px;
+}
 
 ::placeholder {
   color: #000;

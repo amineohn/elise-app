@@ -42,7 +42,7 @@ export default class Login extends Component {
               </button>
               <div className="spaced"></div>
               <button className="button gray" type="submit">
-                <Link to="/register">Inscription</Link>
+                <Link to="/account/create">Inscription</Link>
               </button>
             </div>
           </div>
