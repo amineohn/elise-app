@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/img/logo.jpg";
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 const LoadingLogo = () => {
   const [isLoading, setIsLoading] = useState(true);
   const cacheImages = async (srcArray) => {
@@ -28,15 +28,9 @@ const LoadingLogo = () => {
           <div></div>
           <div></div>
         </div> : <Link to="/">
-          <img src={logo} />
+          <img src={logo} alt="" />
         </Link>}
     </div>
   )
 }
-export default class Logo extends Component {
-  render() {
-    return (
-      <LoadingLogo />
-    )
-  }
-}
+export default LoadingLogo;

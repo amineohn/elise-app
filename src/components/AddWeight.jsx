@@ -1,6 +1,5 @@
-import React, { Component } from "react";
-export default class DataWeight extends Component {
-    render() {
+import React from "react";
+    const AddWeight = () => {
         return (
             <div className="data">
                 <input
@@ -15,4 +14,4 @@ export default class DataWeight extends Component {
             </div>
         )
     }
-}
+    export default AddWeight;

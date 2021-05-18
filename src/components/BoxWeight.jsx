@@ -1,6 +1,5 @@
-import React, { Component } from "react";
-export default class TableWeight extends Component {
-    render() {
+import React from "react";
+    const BoxWeight = () => {
         return (
             <div className="box">
                 <table className="type">
@@ -80,4 +79,4 @@ export default class TableWeight extends Component {
             </div>
         )
     }
-}
+    export default BoxWeight;

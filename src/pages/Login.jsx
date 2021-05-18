@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { isBrowser } from "react-device-detect";
 import Logo from "../components/Logo";
-class Login extends Component {
+export default class Login extends Component {
   render() {
     if (isBrowser) {
       return (
@@ -25,7 +25,7 @@ class Login extends Component {
               />
               <label for="user" class="fas fa-user icon"></label>
             </div>
-            <br />
+            &nbsp;
             <div className="form">
               <input
                 id="password"
@@ -35,7 +35,7 @@ class Login extends Component {
               />
               <label for="password" class="fas fa-key icon"></label>
             </div>
-            <br />
+            &nbsp;
             <div className="submit">
               <button className="button" type="submit">
                 Connexion
@@ -51,5 +51,3 @@ class Login extends Component {
     );
   }
 }
-
-export default Login;

@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { isBrowser } from "react-device-detect";
 import Logo from "../components/Logo";
-import DataWeight from "../components/DataWeight";
-import Logging from "../components/Logging";
-import TableWeight from "../components/TableWeight";
+import AddWeight from "../components/AddWeight";
+import Connected from "../components/Connected";
+import BoxWeight from "../components/BoxWeight";
 const url = "https://localhost:8000/";
-class Home extends Component {
+export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -34,7 +34,7 @@ class Home extends Component {
         <div className="app moveToBottom">
           <div className="container">
             <div className="grid">
-              <Logging />
+              <Connected />
               <div className="selected">
                 <select id="bennes" className="selection" name="typebennes">
                   <option value="">Type de bennes</option>
@@ -53,12 +53,10 @@ class Home extends Component {
               </div>
             </div>
           </div>
-          <DataWeight />
-          <TableWeight />
+          <AddWeight />
+          <BoxWeight />
         </div>
       </>
     );
   }
 }
-
-export default Home;

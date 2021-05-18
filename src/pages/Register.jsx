@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { isBrowser } from "react-device-detect";
 import Logo from "../components/Logo";
-class Register extends Component {
+export default class Register extends Component {
   render() {
     if (isBrowser) {
       return (
@@ -24,7 +24,7 @@ class Register extends Component {
               />
               <label id="user" class="fas fa-user icon"></label>
             </div>
-            <br />
+              &nbsp;
             <div className="form">
               <input
                 for="token"
@@ -34,7 +34,7 @@ class Register extends Component {
               />
               <label id="token" class="fas fa-lock icon"></label>
             </div>
-            <br />
+              &nbsp;
             <div className="form">
               <input
                 for="password"
@@ -44,7 +44,7 @@ class Register extends Component {
               />
               <label id="password" class="fas fa-key icon"></label>
             </div>
-            <br />
+            &nbsp;
             <div className="submit">
               <button className="button" type="submit">
                 Connexion
@@ -56,5 +56,3 @@ class Register extends Component {
     );
   }
 }
-
-export default Register;
