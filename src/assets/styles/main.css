@@ -28,8 +28,9 @@ html {
 
 .app {
   background-color: #f37737;
-  max-height: 80.8vh;
-  min-height: 80.8vh;
+  max-height: 100vh;
+  min-height: 80vh;
+  overflow:auto;
   display: flex;
   flex-direction: column;
   align-items: center;

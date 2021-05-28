@@ -4,27 +4,29 @@ import Logo from "../components/Logo";
 import AddWeight from "../components/AddWeight";
 import Connected from "../components/Connected";
 import BoxWeight from "../components/BoxWeight";
-const url = "https://localhost:8000/";
+import axios from "axios"
+const url = "http://localhost:8000/users/1"; //test
 export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      message: null,
+      username: null,
     };
   }
   render() {
-    fetch(url)
-      .then((data) => {
-        this.setState({
-          message: data.message,
-        });
+    axios.get(url, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then((data) => {
+        this.username = data.username;
       })
       //.then((res) => res.json())
       .catch((error) => console.log(error));
     if (isBrowser) {
       return (
-        <div class="error">
-          <p class="error-content">This content is unavailable on browser</p>
+        <div className="error">
+          <p className="error-content">This content is unavailable on browser</p>
         </div>
       );
     }

@@ -24,7 +24,7 @@ const LoadingLogo = () => {
   return (
     <div className="logo moveFromTop">
       {isLoading ? (
-        <div class="lds-ripple">
+        <div className="lds-ripple">
           <div></div>
           <div></div>
         </div>

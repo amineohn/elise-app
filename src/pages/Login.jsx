@@ -6,8 +6,8 @@ export default class Login extends Component {
   render() {
     if (isBrowser) {
       return (
-        <div class="error">
-          <p class="error-content">This content is unavailable on browser</p>
+        <div className="error">
+          <p className="error-content">This content is unavailable on browser</p>
         </div>
       );
     }
@@ -23,7 +23,7 @@ export default class Login extends Component {
                 type="text"
                 placeholder="Utilisateur"
               />
-              <label for="user" class="fas fa-user icon"></label>
+              <label for="user" className="fas fa-user icon"></label>
             </div>
             &nbsp;
             <div className="form">
@@ -33,7 +33,7 @@ export default class Login extends Component {
                 type="password"
                 placeholder="Mot de passe"
               />
-              <label for="password" class="fas fa-key icon"></label>
+              <label for="password" className="fas fa-key icon"></label>
             </div>
             &nbsp;
             <div className="submit">

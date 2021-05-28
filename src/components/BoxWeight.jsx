@@ -15,7 +15,7 @@ const BoxWeight = () => {
           <td onClick="">
             5kg{" "}
             <button className="valid orangeDark" type="submit">
-              <i class="fas fa-check edit"></i>
+              <i className="fas fa-check edit"></i>
             </button>
           </td>
         </tr>
@@ -25,7 +25,7 @@ const BoxWeight = () => {
           <td onClick="">
             105kg{" "}
             <button className="valid gray" type="submit">
-              <i class="fas fa-pencil-alt edit"></i>
+              <i className="fas fa-pencil-alt edit"></i>
             </button>
           </td>
         </tr>

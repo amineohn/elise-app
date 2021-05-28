@@ -5,8 +5,8 @@ export default class Register extends Component {
   render() {
     if (isBrowser) {
       return (
-        <div class="error">
-          <p class="error-content">This content is unavailable on browser</p>
+        <div className="error">
+          <p className="error-content">This content is unavailable on browser</p>
         </div>
       );
     }
@@ -22,7 +22,7 @@ export default class Register extends Component {
                 type="text"
                 placeholder="Utilisateur"
               />
-              <label id="user" class="fas fa-user icon"></label>
+              <label id="user" className="fas fa-user icon"></label>
             </div>
             &nbsp;
             <div className="form">
@@ -32,7 +32,7 @@ export default class Register extends Component {
                 type="password"
                 placeholder="Token (sécurité)"
               />
-              <label id="token" class="fas fa-lock icon"></label>
+              <label id="token" className="fas fa-lock icon"></label>
             </div>
             &nbsp;
             <div className="form">
@@ -42,7 +42,7 @@ export default class Register extends Component {
                 type="password"
                 placeholder="Mot de passe"
               />
-              <label id="password" class="fas fa-key icon"></label>
+              <label id="password" className="fas fa-key icon"></label>
             </div>
             &nbsp;
             <div className="submit">
