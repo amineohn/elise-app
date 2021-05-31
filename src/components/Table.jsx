@@ -1,14 +1,7 @@
 import React from "react";
 const BoxWeight = () => {
   return (
-    <div className="box">
-      <table className="type">
-        <tr>
-          <td className="bold">Type</td>
-          <td className="bold">Matière</td>
-          <td className="bold">KG</td>
-        </tr>
-        <hr />
+    <>
         <tr>
           <td onClick="">Caisse</td>
           <td onClick="">PET</td>
@@ -75,8 +68,7 @@ const BoxWeight = () => {
           <td onClick="">Conserve</td>
           <td onClick="">35kg</td>
         </tr>
-      </table>
-    </div>
+        </>
   );
 };
 export default BoxWeight;

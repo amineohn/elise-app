@@ -17,7 +17,7 @@ export default class Register extends Component {
           <div className="auth">
             <div className="form">
               <input
-                for="user"
+                htmlFor="user"
                 className="control islogged"
                 type="text"
                 placeholder="Utilisateur"
@@ -27,7 +27,7 @@ export default class Register extends Component {
             &nbsp;
             <div className="form">
               <input
-                for="token"
+                htmlFor="token"
                 className="control islogged"
                 type="password"
                 placeholder="Token (sécurité)"
@@ -37,7 +37,7 @@ export default class Register extends Component {
             &nbsp;
             <div className="form">
               <input
-                for="password"
+                htmlFor="password"
                 className="control islogged"
                 type="password"
                 placeholder="Mot de passe"

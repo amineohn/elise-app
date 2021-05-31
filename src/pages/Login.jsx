@@ -23,7 +23,7 @@ export default class Login extends Component {
                 type="text"
                 placeholder="Utilisateur"
               />
-              <label for="user" className="fas fa-user icon"></label>
+              <label htmlFor="user" className="fas fa-user icon"></label>
             </div>
             &nbsp;
             <div className="form">
@@ -33,7 +33,7 @@ export default class Login extends Component {
                 type="password"
                 placeholder="Mot de passe"
               />
-              <label for="password" className="fas fa-key icon"></label>
+              <label htmlFor="password" className="fas fa-key icon"></label>
             </div>
             &nbsp;
             <div className="submit">
