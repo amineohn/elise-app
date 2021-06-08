@@ -14,20 +14,7 @@ export default class Home extends Component {
     };
   }
   render() {
-    axios
-      .get(url, {
-        headers: {
-          "Content-Type": "application/json",
-          "text/plain": "/",
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "*",
-          "Access-Control-Allow-Headers": "*",
-          "Access-Control-Allow-Credentials": "true",
-          "Content-Security-Policy": "frame-ancestors * 'self' ",
-        },
-      })
-      .then((res) => res.json())
-      .catch((error) => console.log(error));
+    fetch('http://localhost:3001/session/auth')
     if (isBrowser) {
       return (
         <div className="error">
