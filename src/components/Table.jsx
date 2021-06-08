@@ -14,9 +14,9 @@ const BoxWeight = () => {
       <tr>
         {table.map((item) => (
           <>
-            <td onClick="">{item.type}</td>
-            <td onClick="">{item.data}</td>
-            <td onClick="">
+            <td>{item.type}</td>
+            <td>{item.data}</td>
+            <td>
               {item.value}{" "}
               {item.asButton ? (
                 ""

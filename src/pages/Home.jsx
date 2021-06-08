@@ -4,17 +4,39 @@ import Logo from "../components/Logo";
 import AddWeight from "../components/AddWeight";
 import Connected from "../components/Connected";
 import Table from "../components/Table";
-import axios from "axios";
-const url = "http://localhost:8000/1"; //test
+const header = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'Access-Control-Request-Method': 'GET'
+}
 export default class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      username: null,
-    };
+  state = {
+    data: null
+  };
+
+  componentDidMount() {
+    this.callBackendAPI()
+      .then(res => this.setState({ data: res.express }))
+      .catch(err => console.log(err));
   }
+    // fetching the GET route from the Express server which matches the GET route from server.js
+  callBackendAPI = async () => {
+    const response = await fetch('/session/auth');
+    const body = await response.json();
+
+    if (response.status !== 200) {
+      throw Error(body.message) 
+    }
+    return body;
+  };
   render() {
-    fetch('http://localhost:3001/session/auth')
+    fetch('http://localhost:3001/session/auth', {
+      method: 'GET',
+      headers: header,
+      mode: 'no-cors'
+    }).then((res) => {
+      console.log(res.data);
+    })
     if (isBrowser) {
       return (
         <div className="error">
@@ -52,6 +74,7 @@ export default class Home extends Component {
                     </>
                   ))}
                 </select>
+                {this.state.data}
                 <select id="palette" className="selection" name="typepalette">
                   <option>Caisse palette</option>
                   {palette.map((item) => (
