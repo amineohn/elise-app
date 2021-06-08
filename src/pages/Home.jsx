@@ -4,7 +4,7 @@ import Logo from "../components/Logo";
 import AddWeight from "../components/AddWeight";
 import Connected from "../components/Connected";
 import Table from "../components/Table";
-import axios from "axios"
+import axios from "axios";
 const url = "http://localhost:8000/1"; //test
 export default class Home extends Component {
   constructor(props) {
@@ -14,39 +14,41 @@ export default class Home extends Component {
     };
   }
   render() {
-    axios.get(url, {
-      headers: {
-        'Content-Type': 'application/json',
-        'text/plain': '/',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods':'*',
-        'Access-Control-Allow-Headers':'*',
-        'Access-Control-Allow-Credentials':'true',
-        'Content-Security-Policy': "frame-ancestors * 'self' " ,
-      }
-    }).then((res) => res.json())
+    axios
+      .get(url, {
+        headers: {
+          "Content-Type": "application/json",
+          "text/plain": "/",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "*",
+          "Access-Control-Allow-Headers": "*",
+          "Access-Control-Allow-Credentials": "true",
+          "Content-Security-Policy": "frame-ancestors * 'self' ",
+        },
+      })
+      .then((res) => res.json())
       .catch((error) => console.log(error));
     if (isBrowser) {
       return (
         <div className="error">
-          <p className="error-content">This content is unavailable on browser</p>
+          <p className="error-content">
+            This content is unavailable on browser
+          </p>
         </div>
       );
     }
-    const bennes = 
-      [
-        { 
-          bennes: '2000kg', 
-          value: 'deuxtonnes' 
-        }
-      ] 
-    const palette = 
-      [
-        { 
-          value: '660L (37kg)', 
-          poids: 'poids' 
-        }
-      ]
+    const bennes = [
+      {
+        bennes: "2000kg",
+        value: "deuxtonnes",
+      },
+    ];
+    const palette = [
+      {
+        value: "660L (37kg)",
+        poids: "poids",
+      },
+    ];
     return (
       <>
         <Logo />
@@ -60,11 +62,11 @@ export default class Home extends Component {
                   {bennes.map((item) => (
                     <>
                       <option value={item.value}>{item.bennes}</option>
-                   </>
+                    </>
                   ))}
                 </select>
                 <select id="palette" className="selection" name="typepalette">
-                <option>Caisse palette</option>
+                  <option>Caisse palette</option>
                   {palette.map((item) => (
                     <>
                       <option value={item.poids}>{item.value}</option>
@@ -76,7 +78,7 @@ export default class Home extends Component {
           </div>
           <AddWeight />
           <div className="box">
-           <table className="type">
+            <table className="type">
               <tr>
                 <td className="bold">Type</td>
                 <td className="bold">Matière</td>

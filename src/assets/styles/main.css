@@ -25,12 +25,14 @@ html {
   padding: 5%;
   margin-right: 5%;
 }
-
+.icon-sub {
+  width: 13px;
+  height: 13px
+}
 .app {
   background-color: #f37737;
-  max-height: 100vh;
-  min-height: 80vh;
-  overflow:auto;
+  min-height: 80.8vh;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,11 +43,6 @@ html {
   border-bottom-right-radius: 20px;
   position: relative;
 }
-input {
-  text-align: start;
-  margin: 0;
-}
-
 .control {
   background-color: #fff;
   border: none;
@@ -80,9 +77,15 @@ input {
   color: #000;
   opacity: 1;
   font-size: 15px;
-  padding-left: 30%;
+  padding-left: 2px;
+  justify-content: center;
 }
-
+.icon-submit {
+  width: 16px;
+  height: 16px;
+  margin-bottom:-2px;
+  padding-left: -1px;
+}
 :-ms-input-placeholder {
   color: #000;
   font-size: 15px;
@@ -109,14 +112,16 @@ input {
   height: 19px;
   width: 19px;
 }
-.control i {
-  position: absolute;
-}
 .icon {
   position: absolute;
   left: 15px;
   top: calc(50% - 0.5em);
   min-width: 40px;
+}
+.icon-auth {
+  width: 20px;
+  height: 20px;
+  fill: #000
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -451,8 +456,8 @@ td {
   width: 47px;
   height: 47px;
   border-radius: 31px;
+  stroke: #fff;
 }
-
 .connected {
   display: flex;
   text-align: center;
