@@ -178,18 +178,6 @@ html {
   transition: all 0.3s ease-out;
   transition-timing-function: linear;
 }
-.link {
-  width: 230px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-}
-.linked {
-  display: flex;
-  justify-content: center;
-  padding: 10%;
-}
 .gray {
   background-color: #2a2a2b !important;
   color: #fff !important;
@@ -209,12 +197,12 @@ html {
   transition-timing-function: linear;
 }
 
-.orangeDark {
+.orange {
   background-color: #dc4b2b;
   color: #fff !important;
 }
 
-.orangeDark a {
+.orange a {
   color: #fff !important;
 }
 .button:focus {
@@ -236,20 +224,6 @@ html {
   place-content: center;
 }
 
-.dot {
-  background-color: #fff;
-  color: #000;
-  border-radius: 23px;
-  width: 37px;
-  height: 38px;
-  text-align: center;
-  font-weight: 800;
-  font-size: 21px;
-  margin-left: 1%;
-  border: none;
-  cursor: pointer;
-}
-
 .container {
   display: flex;
   align-items: center;
@@ -264,9 +238,6 @@ html {
   overflow: hidden;
   overflow-y: auto;
   max-height: 265px;
-}
-.date {
-  display: grid;
 }
 
 .lds-ripple {

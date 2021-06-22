@@ -53,9 +53,7 @@ export default class Table extends Component {
                   "can't be editable"
                 ) : (
                   <button
-                    className={
-                      item.isEditable ? "valid orangeDark" : "valid gray"
-                    }
+                    className={item.isEditable ? "valid orange" : "valid gray"}
                     type="submit"
                   >
                     {item.isEditable ? (
