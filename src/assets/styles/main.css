@@ -270,7 +270,6 @@ html {
 .container {
   display: flex;
   align-items: center;
-  width: 100%;
 }
 
 .box {
@@ -476,7 +475,8 @@ td {
 .grid {
   display: flex;
   margin: 3%;
-  margin-top: 24%;
+  margin-top: 27%;
+  margin-left: -10%;
 }
 table {
   min-width: 290px;
