@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Link from "next/link";
 import Logo from "../home/Logo";
 import Icons from "../Icons";
+import { motion } from "framer-motion";
 export default class Login extends Component {
   state = {
     data: null,
@@ -34,10 +35,25 @@ export default class Login extends Component {
     return body;
   };
   render() {
+    const config = {
+      visible: {
+        y: 0,
+        transition: {
+          duration: 0.7,
+          when: "beforeChildren",
+        },
+      },
+      hidden: { y: "-20vh" },
+    };
     return (
       <>
         <Logo />
-        <div className="app moveToBottom">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={config}
+          className="app"
+        >
           <div className="auth center">
             <div className="form">
               <input
@@ -75,7 +91,7 @@ export default class Login extends Component {
               </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </>
     );
   }

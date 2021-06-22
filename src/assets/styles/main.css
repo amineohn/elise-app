@@ -478,28 +478,6 @@ td {
   margin: 3%;
   margin-top: 24%;
 }
-
-.error {
-  display: flex;
-  justify-content: center;
-  width: 30%;
-  height: 40px;
-  text-align: center;
-  border-radius: 30px;
-  flex-direction: column;
-  margin: 0 auto;
-  height: 100vh;
-}
-
-.error-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f37737;
-  padding: 2%;
-  border-radius: 30px;
-  color: #fff;
-}
 table {
   min-width: 290px;
   min-height: 40px;
@@ -530,9 +508,6 @@ hr {
     margin-left: 9px;
     margin-block-start: 0.2rem;
   }
-  .error {
-    width: 70%;
-  }
 }
 @media (min-width: 1024px) and (max-width: 1380px) {
   .grid {
@@ -544,46 +519,7 @@ hr {
     margin-left: 9px;
     margin-block-start: 0.2rem;
   }
-  .error {
-    width: 70%;
-  }
   .box {
     margin-top: 3%;
-  }
-}
-
-@media (min-width: 300px) and (max-width: 660px) {
-  .error {
-    width: 70%;
-  }
-}
-.moveFromTop {
-  -webkit-animation: moveFromTop 0.6s ease both;
-  animation: moveFromTop 0.6s ease both;
-}
-@-webkit-keyframes moveFromTop {
-  from {
-    -webkit-transform: translateY(-100%);
-  }
-}
-@keyframes moveFromTop {
-  from {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-}
-.moveToBottom {
-  -webkit-animation: moveFromBottom 0.6s ease both;
-  animation: moveFromBottom 0.6s ease both;
-}
-@-webkit-keyframes moveFromBottom {
-  from {
-    -webkit-transform: translateY(100%);
-  }
-}
-@keyframes moveFromBottom {
-  from {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
   }
 }

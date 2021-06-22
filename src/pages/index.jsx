@@ -4,12 +4,27 @@ import Type from "../components/home/Type";
 import AddWeight from "../components/home/AddWeight";
 import Connected from "../components/home/Connected";
 import Table from "../components/home/Table";
-
+import { motion } from "framer-motion";
 export default function Home() {
+  const config = {
+    visible: {
+      y: 0,
+      transition: {
+        duration: 0.7,
+        when: "beforeChildren",
+      },
+    },
+    hidden: { y: "-20vh" },
+  };
   return (
     <>
       <Logo />
-      <div className="app moveToBottom">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={config}
+        className="app"
+      >
         <div className="container">
           <div className="grid">
             <Connected />
@@ -28,7 +43,7 @@ export default function Home() {
             <Table />
           </table>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

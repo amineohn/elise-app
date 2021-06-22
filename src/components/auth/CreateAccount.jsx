@@ -1,12 +1,28 @@
 import React, { Component } from "react";
 import Logo from "../home/Logo";
 import Icons from "../Icons";
+import { motion } from "framer-motion";
 export default class CreateAccount extends Component {
   render() {
+    const config = {
+      visible: {
+        y: 0,
+        transition: {
+          duration: 0.7,
+          when: "beforeChildren",
+        },
+      },
+      hidden: { y: "-20vh" },
+    };
     return (
       <>
         <Logo />
-        <div className="app moveToBottom">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={config}
+          className="app"
+        >
           <div className="auth">
             <div className="form">
               <input
@@ -35,7 +51,7 @@ export default class CreateAccount extends Component {
               </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </>
     );
   }
