@@ -13,21 +13,21 @@ const LoadingLogo = () => {
     },
     hidden: { y: "-10vh" },
   };
-  const [isLoading, setIsLoading] = useState(true);
-  const cacheImages = async (srcArray) => {
-    const promises = await srcArray.map((src) => {
+  const [loading, setLoading] = useState(true);
+  const cacheImages = async (array) => {
+    const promises = await array.map((src) => {
       return new Promise(function (resolve, reject) {
-        const img = new Image();
+        const loadImage = new Image();
 
-        img.src = src;
-        img.onload = resolve();
-        img.onerror = reject();
+        loadImage.src = src;
+        loadImage.onload = resolve();
+        loadImage.onerror = reject();
       });
     });
 
     await Promise.all(promises);
 
-    setIsLoading(false);
+    setLoading(false);
   };
   useEffect(() => {
     cacheImages([logo]);
@@ -39,7 +39,7 @@ const LoadingLogo = () => {
       variants={config}
       className="logo"
     >
-      {isLoading ? (
+      {loading ? (
         <div className="lds-ripple">
           <div></div>
           <div></div>
