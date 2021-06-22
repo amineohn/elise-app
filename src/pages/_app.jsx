@@ -3,7 +3,9 @@ import "../assets/styles/main.css";
 function App({ Component, pageProps }) {
   return (
     <>
-      <Head></Head>
+      <Head>
+        <title>Elise Production</title>
+      </Head>
       <body>
         <Component {...pageProps} />
       </body>
