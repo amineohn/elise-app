@@ -17,6 +17,9 @@ html {
   /* Internet Explorer/Edge */
   user-select: none;
   /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .logo {
@@ -26,19 +29,17 @@ html {
   margin-right: 5%;
 }
 .icon-sub {
-  width: 13px;
-  height: 13px;
+  width: 12px;
+  height: 10px;
 }
 .app {
   background-color: #f37737;
-  min-height: 80.8vh;
-  overflow: auto;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding-bottom: 3%;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   position: relative;
@@ -68,6 +69,7 @@ html {
   width: 75%;
   margin-left: 1%;
   max-width: 155px;
+  text-align: center;
 }
 .islogged {
   padding-left: 44px;
@@ -100,12 +102,12 @@ html {
   color: #000;
   font-size: 22px;
 }
+
 .edit {
   font-size: 10px;
-  margin-left: -1px;
+  margin-left: -2px;
   color: #fff;
 }
-
 .valid {
   border: none;
   border-radius: 30px;
