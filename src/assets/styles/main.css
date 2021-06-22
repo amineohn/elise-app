@@ -27,7 +27,7 @@ html {
 }
 .icon-sub {
   width: 13px;
-  height: 13px
+  height: 13px;
 }
 .app {
   background-color: #f37737;
@@ -83,7 +83,7 @@ html {
 .icon-submit {
   width: 16px;
   height: 16px;
-  margin-bottom:-2px;
+  margin-bottom: -2px;
   padding-left: -1px;
 }
 :-ms-input-placeholder {
@@ -121,7 +121,7 @@ html {
 .icon-auth {
   width: 20px;
   height: 20px;
-  fill: #000
+  fill: #000;
 }
 ::-webkit-scrollbar {
   width: 10px;

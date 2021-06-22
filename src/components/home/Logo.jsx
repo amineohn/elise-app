@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import logo from "../assets/img/logo.jpg";
+import logo from "../../assets/img/logo.jpg";
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 const LoadingLogo = () => {
   const [isLoading, setIsLoading] = useState(true);
   const cacheImages = async (srcArray) => {
@@ -29,8 +29,10 @@ const LoadingLogo = () => {
           <div></div>
         </div>
       ) : (
-        <Link to="/">
-          <img src={logo} alt="" />
+        <Link href="/">
+          <a>
+            <img src={logo} alt="" />
+          </a>
         </Link>
       )}
     </div>

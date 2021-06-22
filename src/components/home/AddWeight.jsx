@@ -2,7 +2,6 @@ import React from "react";
 const AddWeight = () => {
   return (
     <div className="data">
-      
       <input className="enter" type="number" placeholder="Saisir un poids" />
       &nbsp;
       <button className="enter-submit poids gray">
