@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-export default class Weight extends Component {
+export default class Type extends Component {
   state = {
     data: null,
   };

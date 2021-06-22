@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Icons from "../Icons";
-export default class BoxWeight extends Component {
+export default class Table extends Component {
   state = {
     data: null,
   };
