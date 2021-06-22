@@ -50,7 +50,7 @@ export default class BoxWeight extends Component {
               <td>
                 {item.value}{" "}
                 {item.asButton ? (
-                  ""
+                  "can't be editable"
                 ) : (
                   <button
                     className={
