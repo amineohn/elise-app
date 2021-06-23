@@ -5,52 +5,60 @@ export default class Table extends Component {
     data: null,
   };
 
+  callBackendAPI = async () => {
+    const response = await fetch("http://localhost:3001/list/weight", {
+      method: "GET",
+      mode: "no-cors",
+      headers: {
+        "Access-Control-Allow-Origin": "header",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Credentials": true,
+      },
+      type: "type",
+      weight: "weight",
+      data: "data",
+    });
+
+    const string = await response.text();
+    const json = string === "" ? {} : JSON.parse(string);
+    console.log(json);
+    return json;
+  };
   componentDidMount() {
     this.callBackendAPI()
       .then((res) =>
         this.setState({
-          list: res.list,
+          weight: res.list,
           type: res.type,
-          data: res.data,
+          deposit: res.deposit,
           error: res.error,
         })
       )
       .catch((err) => console.log(err));
   }
-  callBackendAPI = async () => {
-    const response = await fetch("/list/weight", {
-      list: "weight",
-      data: "data",
-      type: "type",
-    });
-    const body = await response.json();
 
-    if (response.status !== 200) {
-      throw Error(body.message);
-    }
-    return body;
-  };
   render() {
     const table = [
       {
         type: this.state.type,
-        data: this.state.data,
-        value: this.state.list,
+        deposit: this.state.deposit,
+        weight: this.state.weight,
         asButton: false,
         isEditable: true,
       },
     ];
+
     return (
       <>
-        <tr>
-          {table.map((item) => (
+        {table.map((item) => (
+          <tr>
             <>
               <td>{item.type}</td>
-              <td>{item.data}</td>
+              <td>{item.deposit}</td>
               <td>
-                {item.value}{" "}
+                {item.weight}
                 {item.asButton ? (
-                  "can't be editable"
+                  ""
                 ) : (
                   <button
                     className={item.isEditable ? "valid orange" : "valid gray"}
@@ -65,8 +73,8 @@ export default class Table extends Component {
                 )}
               </td>
             </>
-          ))}
-        </tr>
+          </tr>
+        ))}
       </>
     );
   }

@@ -42,7 +42,7 @@ export default function Home() {
             <div className="connected">
               <a href="/api/auth/login">
                 <a>
-                  <Icons icon="profile" />
+                  {user ? <img src={user.picture} /> : <Icons icon="profile" />}
                 </a>
               </a>
               <div className="login">

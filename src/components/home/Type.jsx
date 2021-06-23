@@ -1,30 +1,5 @@
 import React, { Component } from "react";
 export default class Type extends Component {
-  state = {
-    data: null,
-  };
-
-  componentDidMount() {
-    this.callBackendAPI()
-      .then((res) =>
-        this.setState({
-          weight: res.weight,
-          error: res.error,
-        })
-      )
-      .catch((err) => console.log(err));
-  }
-  callBackendAPI = async () => {
-    const response = await fetch("/add/weight", {
-      weight: "weight",
-    });
-    const body = await response.json();
-
-    if (response.status !== 200) {
-      throw Error(body.message);
-    }
-    return body;
-  };
   render() {
     const bennes = [
       {
