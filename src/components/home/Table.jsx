@@ -16,7 +16,7 @@ export default class Table extends Component {
       },
       type: "type",
       weight: "weight",
-      data: "data",
+      deposit: "deposit",
     });
 
     const string = await response.text();
@@ -24,6 +24,7 @@ export default class Table extends Component {
     console.log(json);
     return json;
   };
+
   componentDidMount() {
     this.callBackendAPI()
       .then((res) =>
