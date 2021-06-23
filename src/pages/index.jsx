@@ -28,6 +28,7 @@ export default function Home() {
     },
     hidden: { y: "-20vh" },
   };
+  let s = { fontSize: 14.5, marginTop: 12, marginLeft: 3 };
   return (
     <>
       <Logo />
@@ -53,7 +54,9 @@ export default function Home() {
                 {user ? (
                   <p className="logged">Connecté en tant que {user.name}</p>
                 ) : (
-                  <p className="logged">Connectez-vous</p>
+                  <p className="logged" style={s}>
+                    Connectez-vous en appuyant sur l'icône
+                  </p>
                 )}
               </div>
             </div>
