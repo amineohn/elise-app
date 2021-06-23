@@ -2,10 +2,14 @@ import React from "react";
 import Logo from "../components/home/Logo";
 import Type from "../components/home/Type";
 import AddWeight from "../components/home/AddWeight";
-import Connected from "../components/home/Connected";
+import Icons from "../components/Icons";
 import Table from "../components/home/Table";
 import { motion } from "framer-motion";
+import { useUser } from "@auth0/nextjs-auth0";
+
 export default function Home() {
+  const { user, error, isLoading } = useUser();
+  if (error) return <div>{error.message}</div>;
   const config = {
     visible: {
       y: 0,
@@ -27,7 +31,16 @@ export default function Home() {
       >
         <div className="container">
           <div className="grid">
-            <Connected />
+            <div className="connected">
+              <a href="/api/auth/login">
+                <a>
+                  <Icons icon="profile" />
+                </a>
+              </a>
+              <div className="login">
+                <p className="logged">connecté en tant que Amine</p>
+              </div>
+            </div>
             <Type />
           </div>
         </div>

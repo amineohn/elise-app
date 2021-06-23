@@ -3,6 +3,7 @@ import Link from "next/link";
 import Logo from "../home/Logo";
 import Icons from "../Icons";
 import { motion } from "framer-motion";
+
 export default class SignIn extends Component {
   state = {
     data: null,
@@ -43,7 +44,7 @@ export default class SignIn extends Component {
           when: "beforeChildren",
         },
       },
-      hidden: { y: "-20vh" },
+      hidden: { y: "-30vh" },
     };
     return (
       <>

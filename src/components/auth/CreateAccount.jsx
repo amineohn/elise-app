@@ -12,7 +12,7 @@ export default class CreateAccount extends Component {
           when: "beforeChildren",
         },
       },
-      hidden: { y: "-20vh" },
+      hidden: { y: "-30vh" },
     };
     return (
       <>

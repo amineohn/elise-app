@@ -36,8 +36,6 @@ html {
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
   position: relative;
 }
 
@@ -157,7 +155,7 @@ html {
   position: absolute;
   display: flex;
   flex-direction: column;
-  margin: 20%;
+  margin: 10%;
 }
 
 .enter-submit {
@@ -410,6 +408,9 @@ hr {
   .logged {
     margin-left: 9px;
     margin-block-start: 0.2rem;
+  }
+  .auth {
+    margin: 20% !important;
   }
 }
 @media (min-width: 1024px) and (max-width: 1380px) {
