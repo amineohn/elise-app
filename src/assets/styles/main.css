@@ -186,6 +186,20 @@ html {
   transition: all 0.3s ease-out;
   transition-timing-function: linear;
 }
+.buttons {
+  padding: 4%;
+  width: 157px;
+  height: 39px;
+  color: #000;
+  border: none;
+  background-color: #fff;
+  font-weight: 500;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease-out;
+  transition-timing-function: linear;
+}
 
 .gray {
   background-color: #2a2a2b !important;
@@ -199,14 +213,21 @@ html {
 .gray:hover {
   background-color: #424244 !important;
 }
-
+.p {
+  padding-bottom: 1rem;
+}
 .button:hover {
   background-color: #f5f4f45e;
   transition: all 0.3s ease-in;
   color: #fff;
   transition-timing-function: linear;
 }
-
+.buttons:hover {
+  background-color: #f5f4f45e;
+  transition: all 0.3s ease-in;
+  color: #000;
+  transition-timing-function: linear;
+}
 .orange {
   background-color: #dc4b2b;
   color: #fff !important;
@@ -242,6 +263,15 @@ html {
 
 .box {
   background-color: #fff;
+  width: 93%;
+  border-radius: 19px;
+  margin-top: 5%;
+  color: #000;
+  overflow: hidden;
+  overflow-y: auto;
+  max-height: 265px;
+}
+.box-hover {
   width: 93%;
   border-radius: 19px;
   margin-top: 5%;
@@ -295,7 +325,14 @@ html {
   padding: 4%;
   margin-left: 7%;
 }
-
+.section {
+  padding: 4%;
+  margin-left: -2%;
+  justify-content: center;
+  align-self: center;
+  display: flex;
+  position: relative;
+}
 td {
   width: 1%;
 }

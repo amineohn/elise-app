@@ -72,6 +72,13 @@ export default function Home() {
             <Table />
           </table>
         </div>
+        <div className="box-hover">
+          <div className="type section">
+            <button className="button">
+              <a href="/api/auth/logout">Déconnexion</a>
+            </button>
+          </div>
+        </div>
       </motion.div>
     </>
   );
