@@ -6,18 +6,21 @@ export default class Table extends Component {
   };
 
   callBackendAPI = async () => {
-    const response = await fetch("http://localhost:3001/list/weight", {
-      method: "GET",
-      mode: "no-cors",
-      headers: {
-        "Access-Control-Allow-Origin": "header",
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Credentials": true,
-      },
-      type: "type",
-      weight: "weight",
-      deposit: "deposit",
-    });
+    const response = await fetch(
+      "https://api-elise.imveny.repl.co/list/weight",
+      {
+        method: "GET",
+        mode: "no-cors",
+        headers: {
+          "Access-Control-Allow-Origin": "header",
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Credentials": true,
+        },
+        type: "type",
+        weight: "weight",
+        deposit: "deposit",
+      }
+    );
 
     const string = await response.text();
     const json = string === "" ? {} : JSON.parse(string);
