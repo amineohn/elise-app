@@ -31,7 +31,6 @@ export default class Table extends Component {
           weight: res.list,
           type: res.type,
           deposit: res.deposit,
-          error: res.error,
         })
       )
       .catch((err) => console.log(err));
