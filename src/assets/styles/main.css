@@ -257,13 +257,14 @@ html {
   position: relative;
   width: 80px;
   height: 80px;
+
   justify-content: center;
   align-items: center;
 }
 
 .lds-ripple div {
   position: absolute;
-  border: 4px solid rgb(0, 0, 0);
+  border: 4px solid #f37737;
   opacity: 1;
   border-radius: 50%;
   animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;

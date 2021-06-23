@@ -10,7 +10,13 @@ import { useUser } from "@auth0/nextjs-auth0";
 export default function Home() {
   const { user, error, isLoading } = useUser();
   if (error) return <div>{error.message}</div>;
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading)
+    return (
+      <div className="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    );
 
   const config = {
     visible: {
@@ -39,11 +45,15 @@ export default function Home() {
                   <Icons icon="profile" />
                 </a>
               </a>
-              user && (
-              <div className="login">
-                <p className="logged">connecté en tant que {user.name}</p>
-              </div>
-              )
+              {user ? (
+                <div className="login">
+                  <p className="logged">Connecté en tant que {user.name}</p>
+                </div>
+              ) : (
+                <div className="login">
+                  <p className="logged">Connectez-vous</p>
+                </div>
+              )}
             </div>
             <Type />
           </div>
