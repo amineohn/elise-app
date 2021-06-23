@@ -9,7 +9,7 @@ import { useUser } from "@auth0/nextjs-auth0";
 
 export default function Home() {
   const { user, error, isLoading } = useUser();
-  if (error) return <div>{error.message}</div>;
+  const style = { fontSize: 14.5, marginTop: 12, marginLeft: 3 };
   if (isLoading)
     return (
       <div className="lds-ripple">
@@ -28,7 +28,6 @@ export default function Home() {
     },
     hidden: { y: "-20vh" },
   };
-  let s = { fontSize: 14.5, marginTop: 12, marginLeft: 3 };
   return (
     <>
       <Logo />
@@ -41,20 +40,22 @@ export default function Home() {
         <div className="container">
           <div className="grid">
             <div className="connected">
-              <a href="/api/auth/login">
+              <a href={user ? "/api/auth/login" : "#"}>
                 <a>
                   {user ? (
                     <img className="image" src={user.picture} />
                   ) : (
                     <Icons icon="profile" />
                   )}
+                  {error ? <Icons icon="profile" /> : ""}
                 </a>
               </a>
               <div className="login">
+                {error ? <p className="logged">{error.message}</p> : ""}
                 {user ? (
                   <p className="logged">Connecté en tant que {user.name}</p>
                 ) : (
-                  <p className="logged" style={s}>
+                  <p className="logged" style={style}>
                     Connectez-vous en appuyant sur l'icône
                   </p>
                 )}
