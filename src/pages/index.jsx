@@ -37,9 +37,11 @@ export default function Home() {
                   <Icons icon="profile" />
                 </a>
               </a>
+              user && (
               <div className="login">
-                <p className="logged">connecté en tant que Amine</p>
+                <p className="logged">connecté en tant que {user.name}</p>
               </div>
+              )
             </div>
             <Type />
           </div>
