@@ -40,7 +40,7 @@ export default function Home() {
         <div className="container">
           <div className="grid">
             <div className="connected">
-              <a href={user ? "#" : "/api/auth/login"}>
+              <a href="/api/auth/login">
                 <a>
                   {user ? (
                     <img className="image" src={user.picture} />
