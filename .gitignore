@@ -26,3 +26,4 @@ package-lock.json
 yarn.lock
 .next
 .vscode
+.vercel
