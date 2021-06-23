@@ -331,6 +331,12 @@ td {
   margin-left: 13%;
 }
 
+.image {
+  border-radius: 100px;
+  width: 45px;
+  height: 45px;
+}
+
 .selected {
   display: flex;
   margin-left: 8%;
