@@ -22,10 +22,12 @@ html {
   padding: 5%;
   margin-right: 5%;
 }
+
 .icon-sub {
   width: 12px;
   height: 10px;
 }
+
 .app {
   background-color: #f37737;
   height: 100vh;
@@ -38,6 +40,7 @@ html {
   border-bottom-right-radius: 20px;
   position: relative;
 }
+
 .control {
   background-color: #fff;
   border: none;
@@ -65,6 +68,7 @@ html {
   max-width: 155px;
   text-align: center;
 }
+
 .islogged {
   padding-left: 44px;
 }
@@ -76,12 +80,14 @@ html {
   padding-left: 2px;
   justify-content: center;
 }
+
 .icon-submit {
   width: 16px;
   height: 16px;
   margin-bottom: -2px;
   padding-left: -1px;
 }
+
 :-ms-input-placeholder {
   color: #000;
   font-size: 15px;
@@ -102,23 +108,27 @@ html {
   margin-left: -2px;
   color: #fff;
 }
+
 .valid {
   border: none;
   border-radius: 30px;
   height: 19px;
   width: 19px;
 }
+
 .icon {
   position: absolute;
   left: 15px;
   top: calc(50% - 0.5em);
   min-width: 40px;
 }
+
 .icon-auth {
   width: 20px;
   height: 20px;
   fill: #000;
 }
+
 ::-webkit-scrollbar {
   width: 10px;
   margin-top: -10px;
@@ -178,10 +188,12 @@ html {
   transition: all 0.3s ease-out;
   transition-timing-function: linear;
 }
+
 .gray {
   background-color: #2a2a2b !important;
   color: #fff !important;
 }
+
 .gray a {
   color: #fff !important;
 }
@@ -205,6 +217,7 @@ html {
 .orange a {
   color: #fff !important;
 }
+
 .button:focus {
   outline: none;
   box-shadow: none;
@@ -249,6 +262,7 @@ html {
   justify-content: center;
   align-items: center;
 }
+
 .lds-ripple div {
   position: absolute;
   border: 4px solid rgb(0, 0, 0);
@@ -256,9 +270,11 @@ html {
   border-radius: 50%;
   animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
+
 .lds-ripple div:nth-child(2) {
   animation-delay: -0.5s;
 }
+
 @keyframes lds-ripple {
   0% {
     top: 36px;
@@ -274,12 +290,6 @@ html {
     height: 72px;
     opacity: 0;
   }
-}
-
-.testing {
-  position: absolute;
-  margin: 20px;
-  top: 0;
 }
 
 .type {
@@ -347,6 +357,7 @@ td {
   border-radius: 31px;
   stroke: #fff;
 }
+
 .connected {
   display: flex;
   text-align: center;
@@ -366,11 +377,13 @@ td {
   margin-top: 27%;
   margin-left: -10%;
 }
+
 table {
   min-width: 290px;
   min-height: 40px;
   display: block;
 }
+
 hr {
   margin-block-start: 0.2em;
   border-width: 0.2px;
@@ -382,6 +395,7 @@ hr {
   border-radius: 30px;
   width: 96%;
 }
+
 .bold {
   font-weight: bold;
 }
@@ -392,6 +406,7 @@ hr {
     margin: 3%;
     margin-top: 13%;
   }
+
   .logged {
     margin-left: 9px;
     margin-block-start: 0.2rem;
@@ -403,10 +418,12 @@ hr {
     margin: 3%;
     margin-top: 10%;
   }
+
   .logged {
     margin-left: 9px;
     margin-block-start: 0.2rem;
   }
+
   .box {
     margin-top: 3%;
   }
