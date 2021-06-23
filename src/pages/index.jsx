@@ -45,15 +45,13 @@ export default function Home() {
                   <Icons icon="profile" />
                 </a>
               </a>
-              {user ? (
-                <div className="login">
+              <div className="login">
+                {user ? (
                   <p className="logged">Connecté en tant que {user.name}</p>
-                </div>
-              ) : (
-                <div className="login">
+                ) : (
                   <p className="logged">Connectez-vous</p>
-                </div>
-              )}
+                )}
+              </div>
             </div>
             <Type />
           </div>
