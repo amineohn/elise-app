@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import Icons from "../Icons";
 import { useUser } from "@auth0/nextjs-auth0";
 export default function AddWeight() {
-  const { user, error, isLoading } = useUser();
+  const { user, error } = useUser();
   if (error) return <div>{error.message}</div>;
   return (
     <div className="data">

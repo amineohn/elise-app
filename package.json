@@ -20,7 +20,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "generate": "next build && next export"
+    "generate": "next build && next export",
+    "deploy": "vercel && vercel --prod"
   },
   "proxy": "http://localhost:3001",
   "eslintConfig": {
