@@ -19,7 +19,7 @@ export default class AddWeight extends Component {
       method: "GET",
       weight: 0,
     });
-    const body = await response.json();
+    const body = await response.text();
 
     if (response.status !== 200) {
       throw Error(body.message);

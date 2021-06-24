@@ -3,7 +3,8 @@ import Icons from "../Icons";
 export default class Table extends Component {
   state = {
     data: null,
-    weight: "",
+    weight: 0,
+    type: "",
   };
   componentDidMount() {
     this.callAPI()
@@ -11,17 +12,18 @@ export default class Table extends Component {
         this.setState({
           weight: res.weight,
           type: res.type,
-          deposit: res.deposit,
         })
       )
       .catch((err) => console.log(err));
   }
   callAPI = async () => {
     const response = await fetch(`${process.env.API}/list/weight/`, {
-      method: "GET",
-      type: "type",
-      weight: "weight",
-      deposit: "deposit",
+      // method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      dataType: "json",
     });
 
     const body = await response.json();
@@ -36,7 +38,6 @@ export default class Table extends Component {
     const table = [
       {
         type: this.state.type,
-        deposit: this.state.deposit,
         weight: this.state.weight,
         asButton: false,
         isEditable: true,
@@ -49,7 +50,7 @@ export default class Table extends Component {
           <tr>
             <>
               <td>{item.type}</td>
-              <td>{item.deposit}</td>
+              <td></td>
               <td>
                 {item.weight}
                 {item.asButton ? (
