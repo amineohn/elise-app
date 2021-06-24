@@ -13,6 +13,9 @@ module.exports = {
 
     return config;
   },
+  env: {
+    API: "http://localhost:3001",
+  },
   images: {
     disableStaticImages: true,
   },
