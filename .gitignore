@@ -27,3 +27,4 @@ yarn.lock
 .next
 .vscode
 .vercel
+.history
