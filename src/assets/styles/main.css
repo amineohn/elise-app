@@ -15,8 +15,8 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.bod {
-    background-color: rgba(255, 255, 255, 0.822);
+.loading {
+    background-color: rgba(255, 255, 255, 0.795);
     height: 100vh;
     display: flex;
     overflow: hidden;

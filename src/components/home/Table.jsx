@@ -1,21 +1,11 @@
 import React, { Component } from 'react'
 import Icons from '@components/Icons'
 export default class Table extends Component {
-    state = {
-        data: null,
-        edit: false,
-    }
-    componentDidMount() {
-        this.callAPI()
-            .then((res) =>
-                this.setState({
-                    weight: res.weight,
-                    type: res.type,
-                    metter: res.metter,
-                    data: res.data,
-                })
-            )
-            .catch((err) => console.log(err))
+    constructor(props) {
+        super(props)
+        this.state = {
+            data: [],
+        }
     }
     callAPI = async () => {
         const response = await fetch(`${process.env.API}/list`, {
@@ -34,23 +24,24 @@ export default class Table extends Component {
         return body
     }
 
+    componentDidMount() {
+        this.callAPI()
+            .then((res) =>
+                this.setState({
+                    data: res.data,
+                })
+            )
+            .catch((err) => console.log(err))
+    }
     render() {
-        const data = [
-            {
-                type: this.state.type,
-                weight: this.state.weight,
-                metter: this.state.metter,
-                edit: this.state.edit,
-            },
-        ]
-
+        const { data } = this.state
         return (
             <>
                 {data.map((item) => (
                     <tr>
                         <>
                             <td>{item.type}</td>
-                            <td>{item.metter}</td>
+                            <td>{item.matter}</td>
                             <td>
                                 {item.weight}
                                 <button

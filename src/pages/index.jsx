@@ -10,15 +10,16 @@ import Table from '@components/home/Table'
 export default function Home() {
     const { user, error, isLoading } = useUser()
     const style = { fontSize: 14.5, marginTop: 12, marginLeft: 3 }
-    if (isLoading)
+    if (isLoading) {
         return (
-            <div className="bod">
+            <div className="loading">
                 <div className="lds-ripple">
                     <div></div>
                     <div></div>
                 </div>
             </div>
         )
+    }
 
     const config = {
         visible: {
@@ -63,11 +64,16 @@ export default function Home() {
                                 )}
                                 {user ? (
                                     <p className="logged">
-                                        Connecté en tant que {user.name}
+                                        <span>
+                                            Connecté en tant que {user.name}
+                                        </span>
                                     </p>
                                 ) : (
                                     <p className="logged" style={style}>
-                                        Connectez-vous en appuyant sur l'icône
+                                        <span>
+                                            Connectez-vous en appuyant sur
+                                            l'icône
+                                        </span>
                                     </p>
                                 )}
                             </div>

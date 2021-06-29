@@ -40,7 +40,7 @@ const LoadingLogo = () => {
             className="logo"
         >
             {loading ? (
-                <div className="bod">
+                <div className="loading">
                     <div className="lds-ripple">
                         <div></div>
                         <div></div>
