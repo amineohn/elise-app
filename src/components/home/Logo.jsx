@@ -1,4 +1,4 @@
-import logo from '@img/logo.jpg'
+import logo from '../../assets/img/logo.jpg'
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -40,7 +40,7 @@ const LoadingLogo = () => {
             className="logo"
         >
             {loading ? (
-                <div className="loading">
+                <div className="bod">
                     <div className="lds-ripple">
                         <div></div>
                         <div></div>
