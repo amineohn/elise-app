@@ -14,7 +14,7 @@ module.exports = {
         return config
     },
     env: {
-        API: 'http://localhost:3001',
+        API: 'https://api-elise.imveny.repl.co/',
     },
     images: {
         disableStaticImages: true,
