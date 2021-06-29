@@ -8,23 +8,23 @@ export default class AddWeight extends Component {
         this.callAPI()
             .then((res) =>
                 this.setState({
-                    weight: res.weight,
-                    type: res.type,
-                    metter: res.metter,
                     data: res.data,
                 })
             )
             .catch((err) => console.log(err))
     }
     callAPI = async () => {
-        const response = await fetch(`${process.env.API}/add/`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Request-Method': 'GET',
-                Accept: 'application/json',
-            },
-        })
+        const response = await fetch(
+            `${process.env.API}/add/${type}/${weight}/${matter}`,
+            {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Request-Method': 'GET',
+                    Accept: 'application/json',
+                },
+            }
+        )
         const body = await response.text()
 
         if (response.status !== 200) {
@@ -33,6 +33,7 @@ export default class AddWeight extends Component {
         return body
     }
     render() {
+        const { data } = this.state
         return (
             <div className="data">
                 <input
