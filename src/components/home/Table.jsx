@@ -17,6 +17,10 @@ export default class Table extends Component {
                 'Content-Type': 'application/json',
                 'Access-Control-Request-Method': 'GET',
                 Accept: 'application/json',
+                'Access-Control-Allow-Methods': 'DELETE, POST, GET, OPTIONS',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers':
+                    'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With',
             },
         })
         const body = await response.json()
