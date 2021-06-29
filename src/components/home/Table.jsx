@@ -12,15 +12,9 @@ export default class Table extends Component {
         const response = await fetch(`${process.env.API}/list`, {
             method: 'GET',
             headers: {
-                mode:
-                    process.env.NODE_ENV === 'production' ? 'cors' : 'no-cors',
                 'Content-Type': 'application/json',
                 'Access-Control-Request-Method': 'GET',
                 Accept: 'application/json',
-                'Access-Control-Allow-Methods': 'DELETE, POST, GET, OPTIONS',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Headers':
-                    'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With',
             },
         })
         const body = await response.json()
@@ -45,6 +39,7 @@ export default class Table extends Component {
         const { data } = this.state
         return (
             <>
+                {data.error ? 'erreur est survenue' : ''}
                 {data.map((item) => (
                     <tr>
                         <>
