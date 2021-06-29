@@ -7,6 +7,7 @@ export default class Table extends Component {
             data: [],
         }
     }
+
     callAPI = async () => {
         const response = await fetch(`${process.env.API}/list`, {
             method: 'GET',
@@ -33,6 +34,7 @@ export default class Table extends Component {
             )
             .catch((err) => console.log(err))
     }
+
     render() {
         const { data } = this.state
         return (
