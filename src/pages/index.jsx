@@ -1,20 +1,22 @@
 import React from 'react'
-import Logo from '../components/home/Logo'
-import Type from '../components/home/Type'
-import AddWeight from '../components/home/AddWeight'
-import Icons from '../components/Icons'
-import Table from '../components/home/Table'
 import { motion } from 'framer-motion'
 import { useUser } from '@auth0/nextjs-auth0'
+import Logo from '@components/home/Logo'
+import Type from '@components/home/Type'
+import AddWeight from '@components/home/AddWeight'
+import Icons from '@components/Icons'
+import Table from '@components/home/Table'
 
 export default function Home() {
     const { user, error, isLoading } = useUser()
     const style = { fontSize: 14.5, marginTop: 12, marginLeft: 3 }
     if (isLoading)
         return (
-            <div className="lds-ripple">
-                <div></div>
-                <div></div>
+            <div className="bod">
+                <div className="lds-ripple">
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
         )
 

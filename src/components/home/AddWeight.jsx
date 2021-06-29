@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Icons from '../Icons'
+import Icons from '@components/Icons'
 export default class AddWeight extends Component {
     state = {
         data: null,

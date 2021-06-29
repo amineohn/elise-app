@@ -15,12 +15,20 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+.bod {
+    background-color: rgba(255, 255, 255, 0.822);
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
 .logo {
     display: flex;
     justify-content: center;
-    padding: 5%;
-    margin-right: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-right: 2.5%;
 }
 
 .icon-sub {
@@ -67,10 +75,6 @@ html {
     text-align: center;
 }
 
-.islogged {
-    padding-left: 44px;
-}
-
 ::placeholder {
     color: #000;
     opacity: 1;
@@ -96,11 +100,6 @@ html {
     font-size: 15px;
 }
 
-.fas {
-    color: #000;
-    font-size: 22px;
-}
-
 .edit {
     font-size: 10px;
     margin-left: -2px;
@@ -114,13 +113,6 @@ html {
     width: 19px;
     margin-left: 20%;
     margin-bottom: 5%;
-}
-
-.icon {
-    position: absolute;
-    left: 15px;
-    top: calc(50% - 0.5em);
-    min-width: 40px;
 }
 
 .icon-auth {
@@ -148,16 +140,6 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background: #b30000;
     width: 10px;
-}
-.auth i {
-    position: absolute;
-}
-
-.auth {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    margin: 10%;
 }
 
 .enter-submit {
@@ -215,9 +197,7 @@ html {
 .gray:hover {
     background-color: #424244 !important;
 }
-.p {
-    padding-bottom: 1rem;
-}
+
 .button:hover {
     background-color: #f5f4f45e;
     transition: all 0.3s ease-in;
@@ -252,10 +232,6 @@ html {
 
 .form {
     position: relative;
-}
-
-.center {
-    place-content: center;
 }
 
 .container {
@@ -339,12 +315,6 @@ td {
     width: 1%;
 }
 
-.checked {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
 .selection {
     width: 144px;
     height: 39px;
@@ -366,6 +336,7 @@ td {
 .data {
     display: flex;
     position: relative;
+    padding-right: 1.5%;
 }
 
 .image {
@@ -384,15 +355,10 @@ td {
     color: #fff;
 }
 
-.spaced {
-    padding: 3.5%;
-}
-
 .button a {
     color: #000;
     text-decoration: none;
 }
-
 .user {
     width: 47px;
     height: 47px;
