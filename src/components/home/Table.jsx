@@ -12,7 +12,8 @@ export default class Table extends Component {
         const response = await fetch(`${process.env.API}/list`, {
             method: 'GET',
             headers: {
-                mode: process.env.NODE_ENV === 'development' ? '' : 'cors',
+                mode:
+                    process.env.NODE_ENV === 'production' ? 'cors' : 'no-cors',
                 'Content-Type': 'application/json',
                 'Access-Control-Request-Method': 'GET',
                 Accept: 'application/json',
