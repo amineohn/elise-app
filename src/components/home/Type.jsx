@@ -17,13 +17,16 @@ export default class Type extends Component {
         e.preventDefault()
         let type = await this.getString(this.refs.type)
         let matter = await this.getNumber(this.refs.matter)
-        fetch(`http://localhost:3001/type/${type}/${matter}`, {
-            method: 'POST',
-            data: {
-                type: type,
-                matter: matter,
-            },
-        })
+        const fetchType = await fetch(
+            `http://localhost:3001/type/${type}/${matter}`,
+            {
+                method: 'POST',
+                data: {
+                    type: type,
+                    matter: matter,
+                },
+            }
+        )
             .then((response) => response.json())
             .then((body) => console.log(body))
 
@@ -34,6 +37,7 @@ export default class Type extends Component {
                 </div>
             )
         }
+        return fetchType
     }
     render() {
         const bennes = [
