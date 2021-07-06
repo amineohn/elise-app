@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import Icons from '@components/Icons'
-import useSWR from 'swr'
-import { sql_query } from '../../libs/database'
 export default class AddWeight extends Component {
     constructor() {
         super()
