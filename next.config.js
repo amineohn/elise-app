@@ -1,4 +1,5 @@
 module.exports = {
+    webpack5: false,
     webpack(config) {
         config.module.rules.push({
             test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
@@ -10,10 +11,17 @@ module.exports = {
                 },
             },
         })
+
+        config.node = {
+            dns: 'mock',
+            fs: 'empty',
+            net: 'empty',
+            tls: 'empty',
+            path: true,
+            url: false,
+        }
+
         return config
-    },
-    env: {
-        API: 'http://localhost:3001',
     },
     images: {
         disableStaticImages: true,

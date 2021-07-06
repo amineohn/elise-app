@@ -1,11 +1,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { useUser } from '@auth0/nextjs-auth0'
-import Logo from '@components/home/Logo'
-import Type from '@components/home/Type'
-import AddWeight from '@components/home/AddWeight'
+import Logo from '@home/Logo'
+import Type from '@home/Type'
+import AddWeight from '@home/AddWeight'
 import Icons from '@components/Icons'
-import Table from '@components/home/Table'
+import Table from '@home/Table'
 
 export default function Home() {
     const { user, error, isLoading } = useUser()

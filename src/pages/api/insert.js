@@ -9,6 +9,7 @@ const handler = async (_, res, params) => {
     } catch (e) {
         res.status(500).json({ message: e.message })
     }
+    //return [_, res, params]
 }
 
 export default handler

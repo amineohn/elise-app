@@ -238,7 +238,31 @@ html {
     display: flex;
     align-items: center;
 }
+@media (min-width: 780px) and (max-width: 1341px) {
+    .container {
+        margin-top: 6%;
+    }
+}
 
+.bots {
+    background-color: #2a2a2b;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 100px;
+    justify-content: center;
+    display: flex;
+    width: 207px;
+    margin: 0 auto;
+}
+
+h5 {
+    margin: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #fff;
+}
 .box {
     background-color: #fff;
     width: 93%;
