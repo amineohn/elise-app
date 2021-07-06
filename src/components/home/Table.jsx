@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Icons from '@components/Icons'
 import useSWR from 'swr'
+import FadeIn from 'react-fade-in'
 import { sql_query } from '../../libs/database'
 const Table = () => {
     const Delete = async (id) => {
@@ -33,13 +34,15 @@ const Table = () => {
     return (
         <>
             {table.map((item) => (
-                <tr>
-                    <>
-                        <td>{item.type}</td>
-                        <td>{item.matter}</td>
-                        <td>{item.weight}</td>
-                    </>
-                </tr>
+                <FadeIn>
+                    <tr>
+                        <>
+                            <td>{item.type}</td>
+                            <td>{item.matter}</td>
+                            <td>{item.weight}</td>
+                        </>
+                    </tr>
+                </FadeIn>
             ))}
         </>
     )

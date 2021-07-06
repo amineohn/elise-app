@@ -1,5 +1,40 @@
 import React, { Component } from 'react'
 export default class Type extends Component {
+    constructor() {
+        super()
+        this.state = { user: {} }
+        this.onSubmit = this.handleSubmit.bind(this)
+    }
+    getNumber({ value, defaultValue }) {
+        const num = parseInt(value, 10)
+        return isNaN(num) ? defaultValue : num
+    }
+    getString({ value, defaultValue }) {
+        const num = String(value, 10)
+        return isNaN(num) ? defaultValue : num
+    }
+    async handleSubmit(e) {
+        e.preventDefault()
+        let type = await this.getString(this.refs.type)
+        let matter = await this.getNumber(this.refs.matter)
+        fetch(`http://localhost:3001/type/${type}/${matter}`, {
+            method: 'POST',
+            data: {
+                type: type,
+                matter: matter,
+            },
+        })
+            .then((response) => response.json())
+            .then((body) => console.log(body))
+
+        if (!weight && weight.length == 0) {
+            return (
+                <div className="bots">
+                    <h5 className="texts">no more results.</h5>
+                </div>
+            )
+        }
+    }
     render() {
         const bennes = [
             {
@@ -16,8 +51,13 @@ export default class Type extends Component {
         return (
             <>
                 <div className="selected">
-                    <select id="bennes" className="selection" name="typebennes">
-                        <option>Type de bennes</option>
+                    <select
+                        onSubmit={this.onSubmit}
+                        ref="type"
+                        className="selection"
+                        name="type"
+                    >
+                        <option>Type</option>
                         {bennes.map((item) => (
                             <>
                                 <option value={item.value}>
@@ -27,11 +67,12 @@ export default class Type extends Component {
                         ))}
                     </select>
                     <select
-                        id="palette"
+                        ref="matter"
                         className="selection"
-                        name="typepalette"
+                        name="matter"
+                        onSubmit={this.onSubmit}
                     >
-                        <option>Caisse palette</option>
+                        <option>Matière</option>
                         {palette.map((item) => (
                             <>
                                 <option value={item.poids}>{item.value}</option>

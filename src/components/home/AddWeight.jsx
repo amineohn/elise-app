@@ -10,9 +10,9 @@ export default class AddWeight extends Component {
         const num = parseInt(value, 10)
         return isNaN(num) ? defaultValue : num
     }
-    handleSubmit(e) {
+    async handleSubmit(e) {
         e.preventDefault()
-        let weight = this.getNumber(this.refs.weight)
+        let weight = await this.getNumber(this.refs.weight)
 
         fetch(`http://localhost:3001/add/${weight}`, {
             method: 'POST',
@@ -22,6 +22,14 @@ export default class AddWeight extends Component {
         })
             .then((response) => response.json())
             .then((body) => console.log(body))
+
+        if (!weight && weight.length == 0) {
+            return (
+                <div className="bots">
+                    <h5 className="texts">no more results.</h5>
+                </div>
+            )
+        }
     }
     render() {
         return (
