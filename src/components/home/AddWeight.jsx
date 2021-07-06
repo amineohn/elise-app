@@ -22,14 +22,6 @@ export default class AddWeight extends Component {
         })
             .then((response) => response.json())
             .then((body) => console.log(body))
-
-        if (!weight && weight.length == 0) {
-            return (
-                <div className="bots">
-                    <h5 className="texts">no more results.</h5>
-                </div>
-            )
-        }
     }
     render() {
         return (
