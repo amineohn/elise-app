@@ -37,18 +37,7 @@ const Table = () => {
                     <>
                         <td>{item.type}</td>
                         <td>{item.matter}</td>
-                        <td>
-                            {item.weight}
-                            <button
-                                className={
-                                    item.edit ? 'valid orange' : 'valid gray'
-                                }
-                                onClick={() => Delete(9)}
-                                type="submit"
-                            >
-                                <Icons icon={item.edit ? 'add' : 'delete'} />
-                            </button>
-                        </td>
+                        <td>{item.weight}</td>
                     </>
                 </tr>
             ))}

@@ -6,14 +6,18 @@ export default class AddWeight extends Component {
         this.state = { user: {} }
         this.onSubmit = this.handleSubmit.bind(this)
     }
+    getNumber({ value, defaultValue }) {
+        const num = parseInt(value, 10)
+        return isNaN(num) ? defaultValue : num
+    }
     handleSubmit(e) {
         e.preventDefault()
-        var self = this
-        let weight = Number(self.refs.weight)
+        let weight = this.getNumber(this.refs.weight)
+
         fetch(`http://localhost:3001/add/${weight}`, {
             method: 'POST',
             data: {
-                weight: self.refs.weight,
+                weight: weight,
             },
         })
             .then((response) => response.json())
