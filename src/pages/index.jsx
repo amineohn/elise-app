@@ -10,14 +10,10 @@ import FadeIn from 'react-fade-in'
 
 export default function Home() {
     const { user, error, isLoading } = useUser()
-    const style = { fontSize: 14.5, marginTop: 12, marginLeft: 3 }
     if (isLoading) {
         return (
-            <div className="loading">
-                <div className="lds-ripple">
-                    <div></div>
-                    <div></div>
-                </div>
+            <div className="fixed top-0 bottom-0 left-0 right-0 z-50 flex flex-col items-center justify-center w-full h-screen overflow-hidden transition-all bg-white opacity-75 dark:bg-black">
+                <div className="w-12 h-12 mb-4 ease-linear border-4 border-t-4 border-gray-100 rounded-full loader"></div>
             </div>
         )
     }
@@ -27,8 +23,8 @@ export default function Home() {
             <FadeIn>
                 <div className="app">
                     <div className="container">
-                        <div className="grid">
-                            <div className="connected">
+                        <div className="space-y-5">
+                            <div className="flex mt-5">
                                 <a href="/api/auth/login">
                                     {user ? (
                                         <img
@@ -40,7 +36,7 @@ export default function Home() {
                                     )}
                                     {error ? <Icons icon="profile" /> : ''}
                                 </a>
-                                <div className="login">
+                                <div className="mt-2 ml-1">
                                     {error ? (
                                         <p className="logged">
                                             {error.message}
@@ -49,18 +45,14 @@ export default function Home() {
                                         ''
                                     )}
                                     {user ? (
-                                        <p className="logged">
-                                            <span>
-                                                Connecté en tant que {user.name}
-                                            </span>
-                                        </p>
+                                        <span>
+                                            Connecté en tant que {user.name}
+                                        </span>
                                     ) : (
-                                        <p className="logged" style={style}>
-                                            <span>
-                                                Connectez-vous en appuyant sur
-                                                l'icône
-                                            </span>
-                                        </p>
+                                        <span className="text-sm inline text-center">
+                                            Connectez-vous en appuyant sur
+                                            l'icône
+                                        </span>
                                     )}
                                 </div>
                             </div>
@@ -68,28 +60,22 @@ export default function Home() {
                         </div>
                     </div>
                     <AddWeight />
-                    <div className="box">
-                        <table className="type">
-                            <tr>
-                                <td className="bold">Type</td>
-                                <td className="bold">Matière</td>
-                                <td className="bold">KG</td>
-                            </tr>
-                            <hr />
-                            <Table />
-                        </table>
-                    </div>
                     {user ? (
-                        <div className="box-hover">
-                            <div className="type section">
-                                <button className="button">
-                                    <a href="/api/auth/logout">Déconnexion</a>
-                                </button>
-                            </div>
+                        <div className="flex">
+                            <button className="">
+                                <a href="/api/auth/logout">Déconnexion</a>
+                            </button>
                         </div>
                     ) : (
                         ''
                     )}
+
+                    <table class="rounded-2xl rounded-bl-2xl m-5 w-3/6 mx-auto bg-gray-50 text-gray-800">
+                        <tr class="text-left border-gray-100">
+                            <th class="px-4 py-3">Table</th>
+                        </tr>
+                        <Table />
+                    </table>
                 </div>
             </FadeIn>
         </>

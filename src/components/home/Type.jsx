@@ -14,6 +14,9 @@ export default class Type extends Component {
         const number = String(value, 10)
         return isNaN(number) ? defaults : number
     }
+    handleChange(event) {
+        //this.setState({category: event.target.value});
+    }
     async handleSubmit(e) {
         e.preventDefault()
         let type = await this.getString(this.refs.type)
@@ -31,10 +34,10 @@ export default class Type extends Component {
     render() {
         return (
             <>
-                <div className="selected">
+                <div className="text-black hover:border-2 hover:border-orange-400 focus:border-orange-400 space-x-2 flex justify-center xl:items-center">
                     <select
                         onChange={this.handleSubmit}
-                        className="selection"
+                        className="p-3 rounded-2xl"
                         name="type"
                         value={this.refs.type}
                     >
@@ -44,7 +47,7 @@ export default class Type extends Component {
                     </select>
                     <select
                         onChange={this.handleSubmit}
-                        className="selection"
+                        className="p-3 rounded-2xl"
                         name="matter"
                         value={this.refs.matter}
                     >

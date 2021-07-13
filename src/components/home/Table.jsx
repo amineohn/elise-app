@@ -24,23 +24,21 @@ const Table = () => {
     }
     if (!table)
         return (
-            <div className="bod">
-                <div className="lds-ripple">
-                    <div></div>
-                    <div></div>
-                </div>
+            <div className="fixed top-0 bottom-0 left-0 right-0 z-50 flex flex-col items-center justify-center w-full h-screen overflow-hidden transition-all bg-white opacity-75 dark:bg-black">
+                <div className="w-12 h-12 mb-4 ease-linear border-4 border-t-4 border-gray-100 rounded-full loader"></div>
             </div>
         )
     return (
         <>
             {table.map((item) => (
                 <FadeIn>
-                    <tr>
-                        <>
-                            <td>{item.type}</td>
-                            <td>{item.matter}</td>
-                            <td>{item.weight}</td>
-                        </>
+                    <tr class="bg-gray-100 border-b border-gray-100">
+                        <td class="px-4 py-3">Canettes</td>
+                        <td class="px-4 py-3">PET</td>
+                        <td class="px-4 py-3">
+                            {item.weight}
+                            <span className="text-xs">kg</span>
+                        </td>
                     </tr>
                 </FadeIn>
             ))}

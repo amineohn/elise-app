@@ -25,28 +25,30 @@ export default class AddWeight extends Component {
     render() {
         const weight = this.refs.weight
         return (
-            <form className="data" onSubmit={this.onSubmit}>
-                <input
-                    className="enter"
-                    type="number"
-                    placeholder="Saisir un poids"
-                    ref="weight"
-                />
-                &nbsp;
-                <button className="enter-submit poids gray">
-                    <Icons icon="login" />
-                    Ajouter
-                </button>
-                {() => {
-                    if (!weight && weight == 0) {
-                        return (
-                            <h5 className="classes orange">
-                                Veillez saisir une valeur
-                            </h5>
-                        )
-                    }
-                }}
-            </form>
+            <div className="mt-5">
+                <form className="flex justify-center" onSubmit={this.onSubmit}>
+                    <input
+                        className="placeholder-black rounded-2xl p-2 text-black"
+                        type="number"
+                        placeholder="Saisir un poids"
+                        ref="weight"
+                    />
+                    &nbsp;
+                    <button className="bg-gray-800 flex p-2 rounded-2xl hover:bg-gray-700 transition">
+                        <Icons icon="login" />
+                        Ajouter
+                    </button>
+                    {() => {
+                        if (!weight && weight == 0) {
+                            return (
+                                <h5 className="classes orange">
+                                    Veillez saisir une valeur
+                                </h5>
+                            )
+                        }
+                    }}
+                </form>
+            </div>
         )
     }
 }

@@ -4,7 +4,7 @@ export default function Icons({ icon }) {
             return (
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-auth"
+                    className="w-5 h-5"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -123,7 +123,7 @@ export default function Icons({ icon }) {
             return (
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="user"
+                    className="w-10 h-10"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
