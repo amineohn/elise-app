@@ -5,13 +5,14 @@ export default class Type extends Component {
         this.state = { user: {} }
         this.onSubmit = this.handleSubmit.bind(this)
     }
-    getNumber({ value, defaultValue }) {
-        const num = parseInt(value, 10)
-        return isNaN(num) ? defaultValue : num
+
+    getNumber({ value, defaults }) {
+        const number = parseInt(value, 10)
+        return isNaN(number) ? defaults : number
     }
-    getString({ value, defaultValue }) {
-        const num = String(value, 10)
-        return isNaN(num) ? defaultValue : num
+    getString({ value, defaults }) {
+        const number = String(value, 10)
+        return isNaN(number) ? defaults : number
     }
     async handleSubmit(e) {
         e.preventDefault()
@@ -32,6 +33,7 @@ export default class Type extends Component {
             <>
                 <div className="selected">
                     <select
+                        onChange={this.handleSubmit}
                         className="selection"
                         name="type"
                         value={this.refs.type}
@@ -41,11 +43,13 @@ export default class Type extends Component {
                         <option value="palette">Palettes</option>
                     </select>
                     <select
+                        onChange={this.handleSubmit}
                         className="selection"
                         name="matter"
                         value={this.refs.matter}
                     >
                         <option>Matière</option>
+                        <option>--- Matières ---</option>
                         <option value="pet">PET</option>
                         <option value="canettes">Canettes</option>
                         <option value="dee">DEE</option>

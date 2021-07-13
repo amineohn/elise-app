@@ -6,9 +6,9 @@ export default class AddWeight extends Component {
         this.state = { user: {} }
         this.onSubmit = this.handleSubmit.bind(this)
     }
-    getNumber({ value, defaultValue }) {
-        const num = parseInt(value, 10)
-        return isNaN(num) ? defaultValue : num
+    getNumber({ value, defaults }) {
+        const number = parseInt(value, 10)
+        return isNaN(number) ? defaults : number
     }
     async handleSubmit(e) {
         e.preventDefault()
@@ -23,6 +23,7 @@ export default class AddWeight extends Component {
             .then((body) => console.log(body))
     }
     render() {
+        const weight = this.refs.weight
         return (
             <form className="data" onSubmit={this.onSubmit}>
                 <input
@@ -37,8 +38,7 @@ export default class AddWeight extends Component {
                     Ajouter
                 </button>
                 {() => {
-                    const weight = this.refs.weight
-                    if (!weight && weight.length == 0) {
+                    if (!weight && weight == 0) {
                         return (
                             <h5 className="classes orange">
                                 Veillez saisir une valeur

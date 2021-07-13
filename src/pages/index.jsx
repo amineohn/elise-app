@@ -7,6 +7,7 @@ import AddWeight from '@home/AddWeight'
 import Icons from '@components/Icons'
 import Table from '@home/Table'
 import FadeIn from 'react-fade-in'
+
 export default function Home() {
     const { user, error, isLoading } = useUser()
     const style = { fontSize: 14.5, marginTop: 12, marginLeft: 3 }
@@ -29,17 +30,15 @@ export default function Home() {
                         <div className="grid">
                             <div className="connected">
                                 <a href="/api/auth/login">
-                                    <a>
-                                        {user ? (
-                                            <img
-                                                className="image"
-                                                src={user.picture}
-                                            />
-                                        ) : (
-                                            <Icons icon="profile" />
-                                        )}
-                                        {error ? <Icons icon="profile" /> : ''}
-                                    </a>
+                                    {user ? (
+                                        <img
+                                            className="image"
+                                            src={user.picture}
+                                        />
+                                    ) : (
+                                        <Icons icon="profile" />
+                                    )}
+                                    {error ? <Icons icon="profile" /> : ''}
                                 </a>
                                 <div className="login">
                                     {error ? (
