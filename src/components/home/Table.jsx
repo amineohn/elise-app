@@ -32,10 +32,10 @@ const Table = () => {
         <>
             {table.map((item) => (
                 <FadeIn>
-                    <tr class="bg-gray-100 border-b border-gray-100">
-                        <td class="px-4 py-3">Canettes</td>
-                        <td class="px-4 py-3">PET</td>
-                        <td class="px-4 py-3">
+                    <tr class="bg-gray-100 pl-2 border-b">
+                        <td class="px-4 py-3 rounded-2xl">Canettes</td>
+                        <td class="px-4 py-3 rounded-2xl">PET</td>
+                        <td class="px-4 py-3 rounded-2xl">
                             {item.weight}
                             <span className="text-xs">kg</span>
                         </td>

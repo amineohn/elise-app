@@ -10,6 +10,7 @@ import FadeIn from 'react-fade-in'
 
 export default function Home() {
     const { user, error, isLoading } = useUser()
+
     if (isLoading) {
         return (
             <div className="fixed top-0 bottom-0 left-0 right-0 z-50 flex flex-col items-center justify-center w-full h-screen overflow-hidden transition-all bg-white opacity-75 dark:bg-black">
@@ -70,9 +71,11 @@ export default function Home() {
                         ''
                     )}
 
-                    <table class="rounded-2xl rounded-bl-2xl m-5 w-3/6 mx-auto bg-gray-50 text-gray-800">
-                        <tr class="text-left border-gray-100">
-                            <th class="px-4 py-3">Table</th>
+                    <table class="rounded-2xl m-5 w-3/6 mx-auto bg-gray-50 text-gray-800">
+                        <tr class="text-left ">
+                            <th class="px-4 py-3 flex justify-center">
+                                Tableaux
+                            </th>
                         </tr>
                         <Table />
                     </table>
