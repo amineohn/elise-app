@@ -17,71 +17,43 @@ export default class Type extends Component {
         e.preventDefault()
         let type = await this.getString(this.refs.type)
         let matter = await this.getNumber(this.refs.matter)
-        const fetchType = await fetch(
-            `http://localhost:3001/type/${type}/${matter}`,
-            {
-                method: 'POST',
-                data: {
-                    type: type,
-                    matter: matter,
-                },
-            }
-        )
+        await fetch(`http://localhost:3001/type/${type}/${matter}`, {
+            method: 'POST',
+            data: {
+                type: type,
+                matter: matter,
+            },
+        })
             .then((response) => response.json())
             .then((body) => console.log(body))
-
-        if (!weight && weight.length == 0) {
-            return (
-                <div className="bots">
-                    <h5 className="texts">no more results.</h5>
-                </div>
-            )
-        }
-        return fetchType
     }
     render() {
-        const bennes = [
-            {
-                bennes: '2000kg',
-                value: 'deuxtonnes',
-            },
-        ]
-        const palette = [
-            {
-                value: '660L (37kg)',
-                poids: 'poids',
-            },
-        ]
         return (
             <>
                 <div className="selected">
                     <select
-                        onSubmit={this.onSubmit}
-                        ref="type"
                         className="selection"
                         name="type"
+                        value={this.refs.type}
                     >
                         <option>Type</option>
-                        {bennes.map((item) => (
-                            <>
-                                <option value={item.value}>
-                                    {item.bennes}
-                                </option>
-                            </>
-                        ))}
+                        <option value="caisse">Caisse</option>
+                        <option value="palette">Palettes</option>
                     </select>
                     <select
-                        ref="matter"
                         className="selection"
                         name="matter"
-                        onSubmit={this.onSubmit}
+                        value={this.refs.matter}
                     >
                         <option>Matière</option>
-                        {palette.map((item) => (
-                            <>
-                                <option value={item.poids}>{item.value}</option>
-                            </>
-                        ))}
+                        <option value="pet">PET</option>
+                        <option value="canettes">Canettes</option>
+                        <option value="dee">DEE</option>
+                        <option value="papier">Papier</option>
+                        <option value="carton">Carton</option>
+                        <option value="">--- Spécifique ---</option>
+                        <option value="dib">DIB</option>
+                        <option value="">--- Désarchivage ---</option>
                     </select>
                 </div>
             </>

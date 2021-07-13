@@ -263,6 +263,10 @@ h5 {
     padding-bottom: 5px;
     color: #fff;
 }
+.classes {
+    border-radius: 50px;
+    padding: 10px;
+}
 .box {
     background-color: #fff;
     width: 93%;

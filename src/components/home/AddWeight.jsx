@@ -13,7 +13,6 @@ export default class AddWeight extends Component {
     async handleSubmit(e) {
         e.preventDefault()
         let weight = await this.getNumber(this.refs.weight)
-
         fetch(`http://localhost:3001/add/${weight}`, {
             method: 'POST',
             data: {
@@ -37,6 +36,16 @@ export default class AddWeight extends Component {
                     <Icons icon="login" />
                     Ajouter
                 </button>
+                {() => {
+                    const weight = this.refs.weight
+                    if (!weight && weight.length == 0) {
+                        return (
+                            <h5 className="classes orange">
+                                Veillez saisir une valeur
+                            </h5>
+                        )
+                    }
+                }}
             </form>
         )
     }
