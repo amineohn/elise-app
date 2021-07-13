@@ -37,7 +37,7 @@ export default class AddWeight extends Component {
                         ref="weight"
                     />
                     &nbsp;
-                    <button className="outline-none bg-gray-800 flex p-2 rounded-2xl hover:bg-gray-700 transition">
+                    <button className="outline-none bg-gray-800 flex p-2 rounded-2xl hover:bg-gray-700 transition border-2 border-gray-900 hover:border-gray-800">
                         <Icons icon="login" />
                         Ajouter
                     </button>

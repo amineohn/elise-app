@@ -74,7 +74,7 @@ export default function Home() {
                         ''
                     )}
 
-                    <table class="rounded-2xl m-5 w-3/6 mx-auto bg-gray-50 text-gray-800 overflow-hidden h-20">
+                    <table class="rounded-2xl m-5 w-3/6 mx-auto bg-gray-50 text-gray-800 overflow-hidden">
                         <tr class="text-left ">
                             <th class="px-4 py-3 flex justify-center space-x-5">
                                 Tableaux

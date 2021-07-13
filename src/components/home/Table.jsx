@@ -32,7 +32,7 @@ const Table = () => {
         <>
             {table.map((item) => (
                 <FadeIn>
-                    <tr class="bg-gray-100 pl-2 border-b">
+                    <tr class="bg-gray-100 pl-2 border-b overflow-hidden">
                         <td class="px-4 py-3 rounded-2xl">Canettes</td>
                         <td class="px-4 py-3 rounded-2xl">PET</td>
                         <td class="px-4 py-3 rounded-2xl">
