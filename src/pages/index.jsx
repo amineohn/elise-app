@@ -7,16 +7,19 @@ import AddWeight from '@home/AddWeight'
 import Icons from '@components/Icons'
 import Table from '@home/Table'
 import FadeIn from 'react-fade-in'
-
+import { sql_query } from '../libs/database'
 export default function Home() {
     const { user, error, isLoading } = useUser()
-
     if (isLoading) {
         return (
             <div className="fixed top-0 bottom-0 left-0 right-0 z-50 flex flex-col items-center justify-center w-full h-screen overflow-hidden transition-all bg-white opacity-75 dark:bg-black">
                 <div className="w-12 h-12 mb-4 ease-linear border-4 border-t-4 border-gray-100 rounded-full loader"></div>
             </div>
         )
+    }
+    const deleteAll = () => {
+        const test = sql_query(`DELETE * from data`)
+        return test
     }
     return (
         <>
@@ -71,9 +74,9 @@ export default function Home() {
                         ''
                     )}
 
-                    <table class="rounded-2xl m-5 w-3/6 mx-auto bg-gray-50 text-gray-800">
+                    <table class="rounded-2xl m-5 w-3/6 mx-auto bg-gray-50 text-gray-800 overflow-hidden h-20">
                         <tr class="text-left ">
-                            <th class="px-4 py-3 flex justify-center">
+                            <th class="px-4 py-3 flex justify-center space-x-5">
                                 Tableaux
                             </th>
                         </tr>

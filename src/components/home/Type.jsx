@@ -34,10 +34,10 @@ export default class Type extends Component {
     render() {
         return (
             <>
-                <div className="text-black hover:border-2 hover:border-orange-400 focus:border-orange-400 space-x-2 flex justify-center xl:items-center">
+                <div className="text-black space-x-2 flex justify-center xl:items-center">
                     <select
                         onChange={this.handleSubmit}
-                        className="p-3 rounded-2xl"
+                        className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-600 hover:border-orange-400 transition"
                         name="type"
                         value={this.refs.type}
                     >
@@ -47,7 +47,7 @@ export default class Type extends Component {
                     </select>
                     <select
                         onChange={this.handleSubmit}
-                        className="p-3 rounded-2xl"
+                        className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-600 hover:border-orange-400 transition"
                         name="matter"
                         value={this.refs.matter}
                     >
