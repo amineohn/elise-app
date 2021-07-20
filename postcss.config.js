@@ -1,3 +1,4 @@
+import purgecss from 'purgecss'
 module.exports = {
     plugins: {
         tailwindcss: {},
