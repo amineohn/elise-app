@@ -3,30 +3,8 @@
 body {
     @apply bg-gray-50 text-white select-none overflow-hidden;
 }
-.logo {
-    @apply flex justify-center items-center p-5 bg-white;
-}
-.app {
-    @apply h-screen max-h-screen bg-orange-500;
-}
-.container {
-    @apply flex justify-center;
-}
-.connected {
-    @apply inline;
-}
-.image {
-}
-.login {
-}
-.logged {
-}
 .type {
     @apply text-black grid grid-flow-col auto-cols-max;
-}
-.logout {
-}
-.button {
 }
 
 .loader {

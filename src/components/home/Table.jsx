@@ -32,13 +32,15 @@ const Table = () => {
         <>
             {table.map((item) => (
                 <FadeIn>
-                    <tr class="bg-gray-100 pl-2 border-b overflow-hidden">
-                        <td class="px-4 py-3 rounded-2xl">Canettes</td>
-                        <td class="px-4 py-3 rounded-2xl">PET</td>
-                        <td class="px-4 py-3 rounded-2xl">
-                            {item.weight}
-                            <span className="text-xs">kg</span>
-                        </td>
+                    <tr className="bg-gray-100 pl-2 border-b flex items-center">
+                        <div className="m-2 items-center flex">
+                            <td className="px-4 py-3 rounded-2xl">Canettes</td>
+                            <td className="px-4 py-3 rounded-2xl">PET</td>
+                            <td className="px-4 py-3 rounded-2xl">
+                                {item.weight}
+                                <span className="text-xs">kg</span>
+                            </td>
+                        </div>
                     </tr>
                 </FadeIn>
             ))}

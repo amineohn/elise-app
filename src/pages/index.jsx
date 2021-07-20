@@ -1,5 +1,4 @@
 import React from 'react'
-import { motion } from 'framer-motion'
 import { useUser } from '@auth0/nextjs-auth0'
 import Logo from '@home/Logo'
 import Type from '@home/Type'
@@ -17,72 +16,100 @@ export default function Home() {
             </div>
         )
     }
-    const deleteAll = () => {
-        const test = sql_query(`DELETE * from data`)
-        return test
-    }
     return (
         <>
-            <Logo />
             <FadeIn>
-                <div className="app">
-                    <div className="container">
+                <Logo />
+            </FadeIn>
+            <FadeIn>
+                <div className="h-screen max-h-screen bg-orange-500">
+                    <div className="flex justify-center items-center">
                         <div className="space-y-5">
                             <div className="flex mt-5">
-                                <a href="/api/auth/login">
-                                    {user ? (
-                                        <img
-                                            className="image"
-                                            src={user.picture}
-                                        />
-                                    ) : (
-                                        <Icons icon="profile" />
-                                    )}
-                                    {error ? <Icons icon="profile" /> : ''}
-                                </a>
-                                <div className="mt-2 ml-1">
-                                    {error ? (
-                                        <p className="logged">
-                                            {error.message}
-                                        </p>
-                                    ) : (
-                                        ''
-                                    )}
-                                    {user ? (
-                                        <span>
-                                            Connecté en tant que {user.name}
-                                        </span>
-                                    ) : (
-                                        <span className="text-sm inline text-center">
-                                            Connectez-vous en appuyant sur
-                                            l'icône
-                                        </span>
-                                    )}
-                                </div>
+                                <FadeIn>
+                                    <a href="/api/auth/login">
+                                        {user ? (
+                                            <img
+                                                className="image"
+                                                src={user.picture}
+                                            />
+                                        ) : (
+                                            <Icons icon="profile" />
+                                        )}
+                                        {error ? <Icons icon="profile" /> : ''}
+                                    </a>
+                                </FadeIn>
+                                <FadeIn>
+                                    <div className="mt-2 ml-1">
+                                        {error ? (
+                                            <p className="logged">
+                                                {error.message}
+                                            </p>
+                                        ) : (
+                                            ''
+                                        )}
+                                        {user ? (
+                                            <span>
+                                                Connecté en tant que {user.name}
+                                            </span>
+                                        ) : (
+                                            <span className="text-sm inline text-center">
+                                                Connectez-vous en appuyant sur
+                                                l'icône
+                                            </span>
+                                        )}
+                                    </div>
+                                </FadeIn>
                             </div>
                             <Type />
                         </div>
                     </div>
-                    <AddWeight />
-                    {user ? (
-                        <div className="flex">
+                    <FadeIn>
+                        <AddWeight />
+                    </FadeIn>
+                    <FadeIn>
+                        <div className="rounded-2xl m-5 w-4/6 sm:w-2/5 md:w-2/5 xl:w-1/3 mx-auto bg-gray-50 text-gray-800 h-96 overflow-y-auto">
+                            <tr className="text-left">
+                                <th className="px-4 py-3 flex justify-center space-x-5">
+                                    Tableaux
+                                </th>
+                            </tr>
+                            <Table />
+                        </div>
+                    </FadeIn>
+                </div>
+                {user ? (
+                    <FadeIn>
+                        <div className="fixed z-20 flex items-center justify-center px-2 py-2 space-x-2 capitalize transition duration-200 bg-white rounded-full shadow-sm cursor-pointer select-none text-gray-50 bottom-4 right-4 focus:outline-none bg-opacity-20 hover:bg-opacity-25 dark:hover:bg-opacity-25">
                             <button className="">
-                                <a href="/api/auth/logout">Déconnexion</a>
+                                <a href="/api/auth/logout">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                        <polyline points="16 17 21 12 16 7"></polyline>
+                                        <line
+                                            x1="21"
+                                            y1="12"
+                                            x2="9"
+                                            y2="12"
+                                        ></line>
+                                    </svg>
+                                </a>
                             </button>
                         </div>
-                    ) : (
-                        ''
-                    )}
-
-                    <table class="rounded-2xl m-5 w-3/6 mx-auto bg-gray-50 text-gray-800 overflow-hidden">
-                        <tr class="text-left ">
-                            <th class="px-4 py-3 flex justify-center space-x-5">
-                                Tableaux
-                            </th>
-                        </tr>
-                        <Table />
-                    </table>
-                </div>
+                    </FadeIn>
+                ) : (
+                    ''
+                )}
             </FadeIn>
         </>
     )

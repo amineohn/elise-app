@@ -3,7 +3,7 @@ import Icons from '@components/Icons'
 export default class AddWeight extends Component {
     constructor() {
         super()
-        this.state = { user: {} }
+        this.state = {}
         this.onSubmit = this.handleSubmit.bind(this)
     }
     getNumber({ value, defaults }) {
@@ -23,10 +23,6 @@ export default class AddWeight extends Component {
             .then((body) => console.log(body))
     }
     render() {
-        const weight = this.refs.weight
-        if (typeof weight == undefined) {
-            return <h1>error!!!</h1>
-        }
         return (
             <div className="mt-5">
                 <form className="flex justify-center" onSubmit={this.onSubmit}>
@@ -41,15 +37,6 @@ export default class AddWeight extends Component {
                         <Icons icon="login" />
                         Ajouter
                     </button>
-                    {() => {
-                        if (!weight && weight == 0) {
-                            return (
-                                <h5 className="classes orange">
-                                    Veillez saisir une valeur
-                                </h5>
-                            )
-                        }
-                    }}
                 </form>
             </div>
         )
