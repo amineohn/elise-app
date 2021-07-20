@@ -1,7 +1,10 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "target": "es6",
+        "checkJs": false,
+        "resolveJsonModule": true,
+        "moduleResolution": "node",
+        "target": "es2020",
+        "module": "es2015",
         "baseUrl": ".",
         "paths": {
             "@components/*": ["src/components/*"],
@@ -11,5 +14,18 @@
             "@app/*": ["src/*"]
         }
     },
-    "include": ["src/**/*"]
+    "exclude": [
+        "dist",
+        "node_modules",
+        "build",
+        ".vscode",
+        ".next",
+        "coverage",
+        ".npm",
+        ".yarn"
+    ],
+    "typeAcquisition": {
+        "enable": true,
+        "include": ["react", "react-dom", "src/**/*"]
+    }
 }

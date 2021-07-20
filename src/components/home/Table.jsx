@@ -22,28 +22,38 @@ const Table = () => {
             </div>
         )
     }
-    if (!table)
-        return (
-            <div className="fixed top-0 bottom-0 left-0 right-0 z-50 flex flex-col items-center justify-center w-full h-screen overflow-hidden transition-all bg-white opacity-75 dark:bg-black">
-                <div className="w-12 h-12 mb-4 ease-linear border-4 border-t-4 border-gray-100 rounded-full loader border-t-orange-500"></div>
-            </div>
-        )
+
     return (
         <>
-            {table.map((item) => (
+            {table ? (
+                <>
+                    {' '}
+                    {table.map((item) => (
+                        <FadeIn>
+                            <tr className="bg-gray-50 border-b border-gray-100 flex items-center">
+                                <div className="m-2 items-center flex justify-center mx-9 md:mx-10 sm:mx-20 xl:mx-28 2xl:mx-48">
+                                    <td className="px-4 py-3 rounded-2xl">
+                                        Canettes
+                                    </td>
+                                    <td className="px-4 py-3 rounded-2xl">
+                                        PET
+                                    </td>
+                                    <td className="px-4 py-3 rounded-2xl">
+                                        {item.weight}
+                                        <span className="text-xs">kg</span>
+                                    </td>
+                                </div>
+                            </tr>
+                        </FadeIn>
+                    ))}
+                </>
+            ) : (
                 <FadeIn>
-                    <tr className="bg-gray-50 border-b border-gray-100 flex items-center">
-                        <div className="m-2 items-center flex">
-                            <td className="px-4 py-3 rounded-2xl">Canettes</td>
-                            <td className="px-4 py-3 rounded-2xl">PET</td>
-                            <td className="px-4 py-3 rounded-2xl">
-                                {item.weight}
-                                <span className="text-xs">kg</span>
-                            </td>
-                        </div>
+                    <tr className="bg-gray-50 border-b border-gray-100 flex items-center animate-pulse">
+                        <div className="m-2 items-center flex"></div>
                     </tr>
                 </FadeIn>
-            ))}
+            )}
         </>
     )
 }

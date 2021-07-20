@@ -71,16 +71,28 @@ export default function Home() {
                             <FadeIn>
                                 <AddWeight />
                             </FadeIn>
-                            <FadeIn>
-                                <div className="rounded-2xl m-10 w-5/6 sm:w-3/5 md:w-2/5 xl:w-1/3 2xl:w-1/3 mx-auto bg-gray-50 text-gray-800 h-96 overflow-y-auto">
-                                    <tr className="text-left">
-                                        <th className="px-4 py-3 flex justify-center space-x-5">
-                                            Tableaux
-                                        </th>
-                                    </tr>
-                                    <Table />
-                                </div>
-                            </FadeIn>
+                            {isLoading ? (
+                                <FadeIn>
+                                    <div className="rounded-2xl m-10 w-5/6 sm:w-3/5 md:w-2/5 xl:w-1/3 2xl:w-1/3 mx-auto bg-gray-50 text-gray-800 h-96 overflow-y-auto animate-pulse">
+                                        <tr className="text-left">
+                                            <th className="px-4 py-3 flex justify-center space-x-5">
+                                                Chargement des données..
+                                            </th>
+                                        </tr>
+                                    </div>
+                                </FadeIn>
+                            ) : (
+                                <FadeIn>
+                                    <div className="rounded-2xl m-10 w-5/6 sm:w-3/5 md:w-2/5 xl:w-1/3 2xl:w-1/3 mx-auto bg-gray-50 text-gray-800 h-96 overflow-y-auto">
+                                        <tr className="text-left">
+                                            <th className="px-4 py-3 flex justify-center space-x-5">
+                                                Tableaux
+                                            </th>
+                                        </tr>
+                                        <Table />
+                                    </div>
+                                </FadeIn>
+                            )}
                         </div>
                         {user ? (
                             <FadeIn>
