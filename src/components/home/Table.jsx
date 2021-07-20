@@ -32,7 +32,7 @@ const Table = () => {
         <>
             {table.map((item) => (
                 <FadeIn>
-                    <tr className="bg-gray-100 pl-2 border-b flex items-center">
+                    <tr className="bg-gray-50 pl-2 border-b border-gray-100 flex items-center">
                         <div className="m-2 items-center flex">
                             <td className="px-4 py-3 rounded-2xl">Canettes</td>
                             <td className="px-4 py-3 rounded-2xl">PET</td>
