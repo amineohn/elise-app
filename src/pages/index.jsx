@@ -21,8 +21,8 @@ export default function Home() {
                         <Logo />
                     </FadeIn>
                     <FadeIn>
-                        <div className="h-screen max-h-screen bg-orange-500">
-                            <div className="flex justify-center items-center">
+                        <div className="h-screen max-h-screen bg-gradient-to-tl from-orange-400 to-orange-500">
+                            <div className="flex justify-center items-center flex-col">
                                 <div className="space-y-5">
                                     <div className="flex mt-5">
                                         <FadeIn>
@@ -67,13 +67,12 @@ export default function Home() {
                                     </div>
                                     <Type />
                                 </div>
-                            </div>
-                            <FadeIn>
                                 <AddWeight />
-                            </FadeIn>
+                            </div>
+                            <FadeIn></FadeIn>
                             {isLoading ? (
                                 <FadeIn>
-                                    <div className="rounded-2xl m-10 w-5/6 sm:w-3/5 md:w-2/5 xl:w-1/3 2xl:w-1/3 mx-auto bg-gray-50 text-gray-800 h-96 overflow-y-auto animate-pulse">
+                                    <div className="rounded-2xl m-10 w-4/6 sm:w-3/5 md:w-2/5 xl:w-1/3 2xl:w-1/3 mx-auto bg-gray-50 text-gray-800 h-96 overflow-y-auto animate-pulse">
                                         <tr className="text-left">
                                             <th className="px-4 py-3 flex justify-center space-x-5">
                                                 Chargement des données..
@@ -83,7 +82,7 @@ export default function Home() {
                                 </FadeIn>
                             ) : (
                                 <FadeIn>
-                                    <div className="rounded-2xl m-10 w-5/6 sm:w-3/5 md:w-2/5 xl:w-1/3 2xl:w-1/3 mx-auto bg-gray-50 text-gray-800 h-96 overflow-y-auto">
+                                    <div className="rounded-2xl m-10 w-4/6 sm:w-3/5 md:w-2/5 xl:w-1/3 2xl:w-1/3 mx-auto bg-gray-50 text-gray-800 h-96 overflow-y-auto border-2 border-orange-400 hover:border-orange-600 transition transform hover:scale-110">
                                         <div className="flex justify-between">
                                             <tr className="text-left">
                                                 <th className="px-4 py-3 flex justify-center space-x-5">

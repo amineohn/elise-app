@@ -24,10 +24,10 @@ export default class AddWeight extends Component {
     }
     render() {
         return (
-            <div className="mt-5">
+            <div className="mt-5 flex">
                 <form className="flex justify-center" onSubmit={this.onSubmit}>
                     <input
-                        className="outline-none placeholder-black rounded-2xl p-2 text-black border-2 border-orange-600 hover:border-orange-400 transition"
+                        className="outline-none placeholder-black rounded-2xl p-2 text-black border-2 border-orange-400 hover:border-orange-600 transition w-44"
                         type="number"
                         placeholder="Saisir un poids"
                         ref="weight"

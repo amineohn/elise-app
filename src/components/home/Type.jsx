@@ -37,7 +37,7 @@ export default class Type extends Component {
                 <div className="text-black space-x-2 flex justify-center xl:items-center">
                     <select
                         onChange={this.handleSubmit}
-                        className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-600 hover:border-orange-400 transition bg-white"
+                        className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white"
                         name="text-black grid grid-flow-col auto-cols-max"
                         value={this.refs.type}
                     >
@@ -47,7 +47,7 @@ export default class Type extends Component {
                     </select>
                     <select
                         onChange={this.handleSubmit}
-                        className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-600 hover:border-orange-400 transition bg-white"
+                        className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white"
                         name="matter"
                         value={this.refs.matter}
                     >
