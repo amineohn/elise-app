@@ -38,7 +38,7 @@ export default class Type extends Component {
                     <select
                         onChange={this.handleSubmit}
                         className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-600 hover:border-orange-400 transition"
-                        name="type"
+                        name="text-black grid grid-flow-col auto-cols-max"
                         value={this.refs.type}
                     >
                         <option>Type</option>

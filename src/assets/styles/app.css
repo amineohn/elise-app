@@ -3,9 +3,6 @@
 body {
     @apply bg-gray-50 text-white select-none overflow-hidden;
 }
-.type {
-    @apply text-black grid grid-flow-col auto-cols-max;
-}
 
 .loader {
     @apply border-t-orange-500;
