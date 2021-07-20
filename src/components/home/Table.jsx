@@ -1,6 +1,9 @@
 import React from 'react'
+import useSWR from 'swr'
 import FadeIn from 'react-fade-in'
 const Table = () => {
+    const { data } = useSWR('/api/list')
+    const table = data
     return (
         <>
             {table ? (
