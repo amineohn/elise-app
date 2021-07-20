@@ -20,7 +20,7 @@ export default class AddWeight extends Component {
             },
         })
             .then((response) => response.json())
-            .then((body) => console.log(body))
+            .then((body) => body)
     }
     render() {
         return (
