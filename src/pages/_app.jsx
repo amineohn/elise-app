@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import '../assets/styles/main.css'
+import '../assets/styles/app.css'
 import { UserProvider } from '@auth0/nextjs-auth0'
 function App({ Component, pageProps }) {
     return (
