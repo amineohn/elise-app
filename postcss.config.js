@@ -1,8 +1,8 @@
-const purgecss = require('purgecss')
+//const purgecss = require('purgecss')
 module.exports = {
     plugins: {
         tailwindcss: {},
-        ...(process.env.NODE_ENV === 'production' ? [purgecss] : []),
+        //...(process.env.NODE_ENV === 'production' ? [purgecss] : []),
         autoprefixer: {},
     },
 }
