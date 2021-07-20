@@ -46,7 +46,7 @@ module.exports = {
     },
     variants: {},
     plugins: [
-        plugin(function ({ addUtilities, theme, config }) {
+        plugin(function ({ addUtilities, theme }) {
             const themeColors = theme('colors')
             const individualBorderColors = Object.keys(themeColors).map(
                 (colorName) => {
