@@ -30,7 +30,7 @@ export default function Home() {
                                     <a href="/api/auth/login">
                                         {user ? (
                                             <img
-                                                className="image"
+                                                className="w-10 h-10 rounded-full"
                                                 src={user.picture}
                                             />
                                         ) : (
