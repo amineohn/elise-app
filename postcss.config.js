@@ -1,4 +1,4 @@
-import purgecss from 'purgecss'
+const purgecss = require('purgecss')
 module.exports = {
     plugins: {
         tailwindcss: {},
