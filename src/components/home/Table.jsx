@@ -1,28 +1,6 @@
-import React, { Component } from 'react'
-import Icons from '@components/Icons'
-import useSWR from 'swr'
+import React from 'react'
 import FadeIn from 'react-fade-in'
-import { sql_query } from '../../libs/database'
 const Table = () => {
-    const Delete = async (id) => {
-        try {
-            const results = await sql_query(`DELETE FROM data WHERE id = ${id}`)
-            console.log(results)
-            return results
-        } catch (e) {
-            console.log(JSON.stringify(e.message))
-        }
-    }
-    const { data } = useSWR('/api/list')
-    const table = data
-    if (!table == null) {
-        return (
-            <div className="bots">
-                <h5 className="texts">no data is available.</h5>
-            </div>
-        )
-    }
-
     return (
         <>
             {table ? (
