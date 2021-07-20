@@ -1,12 +1,15 @@
 const colors = require('tailwindcss/colors')
 const plugin = require('tailwindcss/plugin')
 module.exports = {
-    purge: [
-        './pages/**/*.js',
-        './components/**/*.js',
-        './layouts/**/*.js',
-        './lib/**/*.js',
-    ],
+    purge: {
+        enabled: true,
+        content: [
+            './pages/**/*.js',
+            './components/**/*.js',
+            './layouts/**/*.js',
+            './lib/**/*.js',
+        ],
+    },
     darkMode: 'class',
     theme: {
         extend: {
