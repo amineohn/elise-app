@@ -6,6 +6,7 @@ import AddWeight from '@home/AddWeight'
 import Icons from '@components/Icons'
 import Table from '@home/Table'
 import FadeIn from 'react-fade-in'
+import Count from '@components/home/Count'
 import { sql_query } from '../libs/database'
 export default function Home() {
     const { user, error, isLoading } = useUser()
@@ -84,11 +85,16 @@ export default function Home() {
                             ) : (
                                 <FadeIn>
                                     <div className="rounded-2xl m-10 w-5/6 sm:w-3/5 md:w-2/5 xl:w-1/3 2xl:w-1/3 mx-auto bg-gray-50 text-gray-800 h-96 overflow-y-auto">
-                                        <tr className="text-left">
-                                            <th className="px-4 py-3 flex justify-center space-x-5">
-                                                Tableaux
-                                            </th>
-                                        </tr>
+                                        <div className="flex justify-between">
+                                            <tr className="text-left">
+                                                <th className="px-4 py-3 flex justify-center space-x-5">
+                                                    Tableaux
+                                                </th>
+                                            </tr>
+                                            <tr className="">
+                                                <Count />
+                                            </tr>
+                                        </div>
                                         <Table />
                                     </div>
                                 </FadeIn>
