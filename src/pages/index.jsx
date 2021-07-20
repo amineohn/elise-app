@@ -6,7 +6,6 @@ import AddWeight from '@home/AddWeight'
 import Icons from '@components/Icons'
 import Table from '@home/Table'
 import FadeIn from 'react-fade-in'
-import Count from '@components/home/Count'
 import { sql_query } from '../libs/database'
 export default function Home() {
     const { user, error, isLoading } = useUser()
