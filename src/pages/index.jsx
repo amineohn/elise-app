@@ -91,9 +91,6 @@ export default function Home() {
                                                     Tableaux
                                                 </th>
                                             </tr>
-                                            <tr className="">
-                                                <Count />
-                                            </tr>
                                         </div>
                                         <Table />
                                     </div>

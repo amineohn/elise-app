@@ -7,7 +7,7 @@ const Count = () => {
     return (
         <FadeIn>
             <th className="py-3 pr-4 flex justify-center text-xs text-white bg-orange-500 pl-3 rounded-bl-lg">
-                20 valeurs ont été enregistrer
+                {doneCount} valeurs ont été enregistrer
             </th>
         </FadeIn>
     )
