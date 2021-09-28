@@ -33,18 +33,18 @@ export default function Home() {
                 `[Poids au jours] \n\n Liste des maitères: ${data.matter.length} \n Poids total: ${data.weight} \n Type: ${data.type}`
             )}`
         )
-        try {
-            const results = executeQuery({
-                query: `INSERT INTO data (matter, type, weight) VALUES (?, ?, ?)`,
-                values: [data.matter, data.type, data.weight],
-            })
-            console.log(results)
-        } catch (error) {
-            console.log(error)
-        }
+        // here.. http://localhost:3001/add/20/Palettes/PET
+        fetch(
+            `http://localhost:3001/add/${data.weight}/${data.type}/${data.matter}`,
+            {
+                method: 'GET',
+            }
+        )
+            .then((response) => response.json())
+            .then((body) => console.log(body))
     }
 
-    const { user, error, isLoading } = useUser()
+    const { user, isLoading } = useUser()
     return (
         <>
             {isLoading ? (
@@ -58,49 +58,8 @@ export default function Home() {
                     </FadeIn>
                     <FadeIn>
                         <div className="h-screen max-h-screen bg-gradient-to-tl from-orange-400 to-orange-500">
-                            <div className="flex justify-center items-center flex-col">
+                            <div className="flex justify-center items-center flex-col mt-5">
                                 <div className="space-y-5">
-                                    <div className="flex mt-5">
-                                        <FadeIn>
-                                            <a href="/api/auth/login">
-                                                {user ? (
-                                                    <img
-                                                        className="w-10 h-10 rounded-full"
-                                                        src={user.picture}
-                                                    />
-                                                ) : (
-                                                    <Icons icon="profile" />
-                                                )}
-                                                {error ? (
-                                                    <Icons icon="profile" />
-                                                ) : (
-                                                    ''
-                                                )}
-                                            </a>
-                                        </FadeIn>
-                                        <FadeIn>
-                                            <div className="mt-2 ml-1">
-                                                {error ? (
-                                                    <p className="logged">
-                                                        {error.message}
-                                                    </p>
-                                                ) : (
-                                                    ''
-                                                )}
-                                                {user ? (
-                                                    <span>
-                                                        Connecté en tant que{' '}
-                                                        {user.name}
-                                                    </span>
-                                                ) : (
-                                                    <span className="text-bold inline text-center text-black ">
-                                                        Connectez-vous en
-                                                        appuyant sur l'icône
-                                                    </span>
-                                                )}
-                                            </div>
-                                        </FadeIn>
-                                    </div>
                                     <div className="text-black space-x-2 flex justify-center xl:items-center">
                                         <form
                                             onSubmit={handleSubmit(onSubmit)}
@@ -161,6 +120,7 @@ export default function Home() {
                                     </div>
                                 </div>
                             </div>
+
                             {isLoading ? (
                                 <FadeIn>
                                     <div className="rounded-2xl m-10 w-4/6 sm:w-3/5 md:w-2/5 xl:w-1/3 2xl:w-1/3 mx-auto bg-gray-50 text-gray-800 h-96 overflow-y-auto animate-pulse">
@@ -218,7 +178,7 @@ export default function Home() {
                         ) : (
                             ''
                         )}
-                    </FadeIn>{' '}
+                    </FadeIn>
                 </>
             )}
         </>
