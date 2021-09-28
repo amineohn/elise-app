@@ -13,6 +13,7 @@
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
         "react-fade-in": "^2.0.1",
+        "react-hook-form": "^7.16.1",
         "react-lazyload": "^3.2.0",
         "react-scripts": "4.0.3",
         "serverless-mysql": "^1.5.4",
@@ -46,10 +47,10 @@
         ]
     },
     "devDependencies": {
-        "autoprefixer": "^10.3.1",
+        "autoprefixer": "^10.3.6",
         "eslint-config-next": "^11.0.0",
-        "postcss": "^8.3.5",
+        "postcss": "^8.3.8",
         "prettier": "^2.3.0",
-        "tailwindcss": "^2.2.4"
+        "tailwindcss": "^2.2.16"
     }
 }

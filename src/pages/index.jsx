@@ -1,13 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useUser } from '@auth0/nextjs-auth0'
 import Logo from '@home/Logo'
-import Type from '@home/Type'
-import AddWeight from '@home/AddWeight'
 import Icons from '@components/Icons'
 import Table from '@home/Table'
 import FadeIn from 'react-fade-in'
+import 'tailwindcss/tailwind.css'
+import { useForm } from 'react-hook-form'
 import { sql_query } from '../libs/database'
+
 export default function Home() {
+    const [, setMatter] = useState('')
+    const [, setType] = useState('')
+    const [, setWeight] = useState('')
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm()
+
+    const onMatterChange = (e) => {
+        setMatter(e.target.value)
+    }
+    const onTypeChange = (e) => {
+        setType(e.target.value)
+    }
+    const onWeightChange = (e) => {
+        setWeight(e.target.value)
+    }
+    const onSubmit = (data) =>
+        window.open(
+            `mailto:aouhani@actes-atlantique.fr?body=${encodeURIComponent(
+                `[Poids au jours] \n\n Liste des maitères: ${data.matter.length} \n Poids total: ${data.weight} \n Type: ${data.type}`
+            )}`
+        )
+    //sql_query(
+    //    `INSERT INTO data (weight, matter, type) VALUES (${onWeightChange}, ${onMatterChange}, ${onTypeChange})`
+    //)
+
     const { user, error, isLoading } = useUser()
     return (
         <>
@@ -57,7 +87,7 @@ export default function Home() {
                                                         {user.name}
                                                     </span>
                                                 ) : (
-                                                    <span className="text-sm inline text-center">
+                                                    <span className="text-bold inline text-center text-black ">
                                                         Connectez-vous en
                                                         appuyant sur l'icône
                                                     </span>
@@ -65,9 +95,66 @@ export default function Home() {
                                             </div>
                                         </FadeIn>
                                     </div>
-                                    <Type />
+                                    <div className="text-black space-x-2 flex justify-center xl:items-center">
+                                        <form
+                                            onSubmit={handleSubmit(onSubmit)}
+                                            className="space-x-1"
+                                        >
+                                            {errors.weight && (
+                                                <FadeIn>
+                                                    <span
+                                                        role="alert"
+                                                        className="text-red-50 font-medium ml-2 mb-4 bg-red-500 rounded-2xl p-3 flex justify-center items-center border border-red-300"
+                                                    >
+                                                        champs requis
+                                                    </span>
+                                                </FadeIn>
+                                            )}
+                                            <input
+                                                className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white text-black placeholder-black w-36 space-x-1"
+                                                placeholder="Type"
+                                                onChange={onTypeChange}
+                                                {...register('type', {
+                                                    required: true,
+                                                })}
+                                            />
+                                            <input
+                                                className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white placeholder-black text-black w-36"
+                                                name="matter"
+                                                placeholder="Matière"
+                                                onChange={onMatterChange}
+                                                {...register('matter', {
+                                                    required: true,
+                                                })}
+                                            />
+                                            <div className="mt-5 flex">
+                                                <div className="flex justify-center">
+                                                    <input
+                                                        className="outline-none placeholder-black rounded-2xl p-2 text-black border-2 border-orange-400 hover:border-orange-600 transition w-44"
+                                                        type="number"
+                                                        placeholder="Saisir un poids"
+                                                        ref="weight"
+                                                        onChange={
+                                                            onWeightChange
+                                                        }
+                                                        {...register('weight', {
+                                                            required: true,
+                                                        })}
+                                                    />
+                                                    &nbsp;
+                                                    <button
+                                                        aria-label="Submit"
+                                                        type="submit"
+                                                        className="outline-none bg-gray-800 flex p-2 rounded-2xl hover:bg-gray-700 transition border-2 border-transparent text-white"
+                                                    >
+                                                        <Icons icon="login" />
+                                                        Ajouter
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
-                                <AddWeight />
                             </div>
                             <FadeIn></FadeIn>
                             {isLoading ? (
