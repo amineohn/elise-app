@@ -1,8 +1,8 @@
-import { sql_query } from '../../libs/database'
+import { executeQuery } from '../../libs/database'
 
 const handler = async (_, res) => {
     try {
-        const results = await sql_query(`SELECT * FROM type`)
+        const results = await executeQuery(`SELECT * FROM type`)
         return res.json(results)
     } catch (e) {
         res.status(500).json({ message: e.message })

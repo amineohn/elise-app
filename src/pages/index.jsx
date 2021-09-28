@@ -28,15 +28,22 @@ export default function Home() {
     const onWeightChange = (e) => {
         setWeight(e.target.value)
     }
-    const onSubmit = (data) =>
+    const onSubmit = (data) => {
         window.open(
             `mailto:aouhani@actes-atlantique.fr?body=${encodeURIComponent(
                 `[Poids au jours] \n\n Liste des maitères: ${data.matter.length} \n Poids total: ${data.weight} \n Type: ${data.type}`
             )}`
         )
-    //sql_query(
-    //    `INSERT INTO data (weight, matter, type) VALUES (${onWeightChange}, ${onMatterChange}, ${onTypeChange})`
-    //)
+        try {
+            const results = sql_query({
+                query: `INSERT INTO data (matter, type, weight) VALUES (?, ?, ?)`,
+                values: [data.matter, data.type, data.weight],
+            })
+            console.log(results)
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
     const { user, error, isLoading } = useUser()
     return (
@@ -156,7 +163,6 @@ export default function Home() {
                                     </div>
                                 </div>
                             </div>
-                            <FadeIn></FadeIn>
                             {isLoading ? (
                                 <FadeIn>
                                     <div className="rounded-2xl m-10 w-4/6 sm:w-3/5 md:w-2/5 xl:w-1/3 2xl:w-1/3 mx-auto bg-gray-50 text-gray-800 h-96 overflow-y-auto animate-pulse">

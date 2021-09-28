@@ -10,10 +10,9 @@ export const db = mysql({
     },
 })
 
-export async function sql_query(query_string, values = []) {
+export async function executeQuery(query_string, values = []) {
     try {
         const results = await db.query(query_string, values)
-        // db.connect()
         await db.end()
         return results
     } catch (e) {
