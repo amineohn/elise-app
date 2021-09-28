@@ -6,7 +6,7 @@ import Table from '@home/Table'
 import FadeIn from 'react-fade-in'
 import 'tailwindcss/tailwind.css'
 import { useForm } from 'react-hook-form'
-import { sql_query } from '../libs/database'
+import { executeQuery } from '../libs/database'
 
 export default function Home() {
     const [, setMatter] = useState('')
@@ -35,7 +35,7 @@ export default function Home() {
             )}`
         )
         try {
-            const results = sql_query({
+            const results = executeQuery({
                 query: `INSERT INTO data (matter, type, weight) VALUES (?, ?, ?)`,
                 values: [data.matter, data.type, data.weight],
             })
