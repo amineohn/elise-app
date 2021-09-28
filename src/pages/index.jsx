@@ -4,7 +4,6 @@ import Logo from '@home/Logo'
 import Icons from '@components/Icons'
 import Table from '@home/Table'
 import FadeIn from 'react-fade-in'
-import 'tailwindcss/tailwind.css'
 import { useForm } from 'react-hook-form'
 import { executeQuery } from '../libs/database'
 
