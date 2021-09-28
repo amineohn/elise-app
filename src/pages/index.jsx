@@ -137,7 +137,7 @@ export default function Home() {
                                             <div className="mt-5 flex">
                                                 <div className="flex justify-center">
                                                     <input
-                                                        className="outline-none placeholder-black rounded-2xl p-2 text-black border-2 border-orange-400 hover:border-orange-600 transition w-44"
+                                                        className="outline-none placeholder-black rounded-2xl p-2 text-black border-2 border-orange-400 hover:border-orange-600 transition w-52"
                                                         type="number"
                                                         placeholder="Saisir un poids"
                                                         ref="weight"
@@ -154,7 +154,6 @@ export default function Home() {
                                                         type="submit"
                                                         className="outline-none bg-gray-800 flex p-2 rounded-2xl hover:bg-gray-700 transition border-2 border-transparent text-white"
                                                     >
-                                                        <Icons icon="login" />
                                                         Ajouter
                                                     </button>
                                                 </div>
