@@ -33,7 +33,6 @@ export default function Home() {
                 `[Poids au jours] \n\n Liste des maitères: ${data.matter.length} \n Poids total: ${data.weight} \n Type: ${data.type}`
             )}`
         )
-        // here.. http://localhost:3001/add/20/Palettes/PET
         fetch(
             `http://localhost:3001/add/${data.weight}/${data.type}/${data.matter}`,
             {
