@@ -80,7 +80,7 @@ export default function Home() {
                                                         role="alert"
                                                         className="text-red-50 font-medium ml-2 mb-4 bg-red-500 rounded-2xl p-3 flex justify-center items-center border border-red-300"
                                                     >
-                                                        champs requis
+                                                        Champ requis
                                                     </span>
                                                 </FadeIn>
                                             )}
