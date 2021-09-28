@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import { useUser } from '@auth0/nextjs-auth0'
 import Logo from '@home/Logo'
-import Icons from '@components/Icons'
 import Table from '@home/Table'
 import FadeIn from 'react-fade-in'
 import { useForm } from 'react-hook-form'
-import { executeQuery } from '../libs/database'
 
 export default function Home() {
     const [, setMatter] = useState('')
@@ -15,7 +13,7 @@ export default function Home() {
     const {
         register,
         handleSubmit,
-        formState: { errors },
+        formState: { errors, isSubmitSuccessful },
     } = useForm()
 
     const onMatterChange = (e) => {
@@ -28,11 +26,12 @@ export default function Home() {
         setWeight(e.target.value)
     }
     const onSubmit = (data) => {
-        window.open(
+        /*window.open(
             `mailto:aouhani@actes-atlantique.fr?body=${encodeURIComponent(
                 `[Poids au jours] \n\n Liste des maitères: ${data.matter.length} \n Poids total: ${data.weight} \n Type: ${data.type}`
             )}`
-        )
+        )*/
+
         fetch(
             `http://localhost:3001/add/${data.weight}/${data.type}/${data.matter}`,
             {
@@ -64,6 +63,17 @@ export default function Home() {
                                             onSubmit={handleSubmit(onSubmit)}
                                             className="space-x-1"
                                         >
+                                            {isSubmitSuccessful && (
+                                                <FadeIn>
+                                                    <span
+                                                        role="alert"
+                                                        className="text-green-50 font-medium ml-2 mb-4 bg-green-500 rounded-2xl p-3 flex justify-center items-center border border-green-300"
+                                                    >
+                                                        Les champs ont été
+                                                        ajouter
+                                                    </span>
+                                                </FadeIn>
+                                            )}
                                             {errors.weight && (
                                                 <FadeIn>
                                                     <span
