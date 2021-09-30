@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import { useUser } from '@auth0/nextjs-auth0'
 import Logo from '@home/Logo'
 import Table from '@home/Table'
@@ -7,9 +7,10 @@ import { useForm } from 'react-hook-form'
 
 export default function Home() {
     const [, setMatter] = useState('')
+    //const v8 = require('v8')
+    //console.log(v8.getHeapStatistics())
     const [, setType] = useState('')
     const [, setWeight] = useState('')
-
     const {
         register,
         handleSubmit,
@@ -57,7 +58,7 @@ export default function Home() {
                         <Logo />
                     </FadeIn>
                     <FadeIn>
-                        <div className="h-screen max-h-screen bg-gradient-to-tl from-orange-400 to-orange-500">
+                        <div className="h-screen max-h-screen">
                             <div className="flex justify-center items-center flex-col mt-5">
                                 <div className="space-y-5">
                                     <div className="text-black space-x-2 flex justify-center xl:items-center">
@@ -69,7 +70,7 @@ export default function Home() {
                                                 <FadeIn>
                                                     <span
                                                         role="alert"
-                                                        className="text-green-50 font-medium ml-2 mb-4 bg-green-500 rounded-2xl p-3 flex justify-center items-center border border-green-300"
+                                                        className="text-green-50 font-medium ml-2 mb-4 bg-green-500 rounded-2xl p-3 flex justify-center items-center notification"
                                                     >
                                                         Les champs ont été
                                                         ajouter
@@ -80,14 +81,14 @@ export default function Home() {
                                                 <FadeIn>
                                                     <span
                                                         role="alert"
-                                                        className="text-red-50 font-medium ml-2 mb-4 bg-red-500 rounded-2xl p-3 flex justify-center items-center border border-red-300 notification"
+                                                        className="text-red-50 font-medium ml-2 mb-4 bg-red-500 rounded-2xl p-3 flex justify-center items-center notification"
                                                     >
                                                         Champ requis
                                                     </span>
                                                 </FadeIn>
                                             )}
                                             <input
-                                                className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-gray-600 transition bg-white text-black placeholder-black w-36 space-x-1"
+                                                className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white text-black placeholder-black w-36 space-x-1"
                                                 placeholder="Type"
                                                 onChange={onTypeChange}
                                                 {...register('type', {
@@ -95,7 +96,7 @@ export default function Home() {
                                                 })}
                                             />
                                             <input
-                                                className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-gray-600 transition bg-white placeholder-black text-black w-36"
+                                                className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white placeholder-black text-black w-36"
                                                 name="matter"
                                                 placeholder="Matière"
                                                 onChange={onMatterChange}
@@ -106,7 +107,7 @@ export default function Home() {
                                             <div className="mt-5 flex">
                                                 <div className="flex justify-center">
                                                     <input
-                                                        className="outline-none placeholder-black rounded-2xl p-2 text-black border-2 border-orange-400 hover:border-gray-600 transition w-52"
+                                                        className="outline-none placeholder-black rounded-2xl p-2 text-black border-2 border-orange-400 hover:border-orange-600 transition w-52"
                                                         type="number"
                                                         placeholder="Saisir un poids"
                                                         ref="weight"
@@ -121,7 +122,7 @@ export default function Home() {
                                                     <button
                                                         aria-label="Submit"
                                                         type="submit"
-                                                        className="outline-none bg-gray-800 flex p-2 rounded-2xl hover:bg-gray-700 transition border-2 border-transparent text-white border border-gray-600"
+                                                        className="outline-none bg-gray-800 flex p-2 rounded-2xl hover:bg-gray-700 transition border-2 border-transparent text-white border border-gray-500"
                                                     >
                                                         Ajouter
                                                     </button>
