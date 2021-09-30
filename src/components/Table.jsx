@@ -26,7 +26,13 @@ const Table = () => {
                 ))
             ) : (
                 <FadeIn>
-                    <tr className="bg-gray-50 border-b border-gray-100 flex items-center animate-pulse"></tr>
+                    <div className="rounded-2xl m-10 w-4/6 sm:w-3/5 md:w-2/5 xl:w-1/3 2xl:w-1/3 mx-auto bg-gray-50 text-gray-800 h-96 overflow-y-auto animate-pulse">
+                        <tr className="text-left">
+                            <th className="px-4 py-3 flex justify-center space-x-5">
+                                Chargement des données..
+                            </th>
+                        </tr>
+                    </div>
                 </FadeIn>
             )}
         </>

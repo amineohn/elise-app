@@ -158,7 +158,7 @@ export default function Home() {
                                             </tr>
                                         </div>
                                         <tbody>
-                                         <Table />
+                                            <Table />
                                         </tbody>
                                     </div>
                                 </FadeIn>
