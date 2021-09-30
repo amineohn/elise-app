@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useUser } from '@auth0/nextjs-auth0'
-import Logo from '@home/Logo'
-import Table from '@home/Table'
+import Logo from '@components/Logo'
+import Table from '@components/Table'
 import FadeIn from 'react-fade-in'
 import { useForm } from 'react-hook-form'
 
