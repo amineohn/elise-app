@@ -36,6 +36,26 @@ body {
     opacity: 0;
     transition: all 0.5s;
 }
+::-webkit-scrollbar {
+    display: none;
+}
+::-webkit-scrollbar-button {
+    display: none;
+}
+::-webkit-scrollbar-track {
+    display: none;
+}
+::-webkit-scrollbar-track-piece {
+    display: none;
+}
+::-webkit-scrollbar-thumb {
+    display: none;
+}
+::-webkit-scrollbar-corner {
+    display: none;
+}
+::-webkit-resizer {
+}
 .m-auto {
     margin: 0 auto;
 }
