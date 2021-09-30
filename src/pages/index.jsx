@@ -7,8 +7,6 @@ import { useForm } from 'react-hook-form'
 
 export default function Home() {
     const [, setMatter] = useState('')
-    //const v8 = require('v8')
-    //console.log(v8.getHeapStatistics())
     const [, setType] = useState('')
     const [, setWeight] = useState('')
     const {

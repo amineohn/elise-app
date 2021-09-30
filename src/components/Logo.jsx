@@ -1,4 +1,4 @@
-import logo from '../../assets/img/logo.jpg'
+import logo from '../assets/img/logo.jpg'
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import FadeIn from 'react-fade-in'
