@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { useUser } from '@auth0/nextjs-auth0'
 import Logo from '@home/Logo'
 import Table from '@home/Table'
@@ -32,12 +32,14 @@ export default function Home() {
             )}`
         )*/
 
-        fetch(
-            `http://localhost:3001/add/${data.weight}/${data.type}/${data.matter}`,
-            {
-                method: 'GET',
-            }
-        )
+        fetch(`http://localhost:3001/add`, {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ ...data }),
+        })
             .then((response) => response.json())
             .then((body) => console.log(body))
     }
@@ -78,7 +80,7 @@ export default function Home() {
                                                 <FadeIn>
                                                     <span
                                                         role="alert"
-                                                        className="text-red-50 font-medium ml-2 mb-4 bg-red-500 rounded-2xl p-3 flex justify-center items-center border border-red-300"
+                                                        className="text-red-50 font-medium ml-2 mb-4 bg-red-500 rounded-2xl p-3 flex justify-center items-center border border-red-300 notification"
                                                     >
                                                         Champ requis
                                                     </span>

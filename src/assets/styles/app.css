@@ -25,6 +25,15 @@ body {
         transform: rotate(360deg);
     }
 }
+.notification::before {
+    visibility: visible;
+    opacity: 1;
+}
+.notification::after {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
