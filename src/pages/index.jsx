@@ -4,7 +4,7 @@ import Logo from '@components/Logo'
 import Table from '@components/Table'
 import FadeIn from 'react-fade-in'
 import { useForm } from 'react-hook-form'
-
+import Icons from '../components/Icons'
 export default function Home() {
     const [, setMatter] = useState('')
     const [, setType] = useState('')
@@ -43,7 +43,7 @@ export default function Home() {
             .then((body) => console.log(body))
     }
 
-    const { user, isLoading } = useUser()
+    const { user, isLoading, error } = useUser()
     return (
         <>
             {isLoading ? (
@@ -59,6 +59,70 @@ export default function Home() {
                         <div className="h-screen max-h-screen">
                             <div className="flex justify-center items-center flex-col mt-5">
                                 <div className="space-y-5">
+                                    <div className="flex mt-5">
+                                        <FadeIn>
+                                            <a href="/api/auth/login">
+                                                {user ? (
+                                                    <img
+                                                        className="w-10 h-10 rounded-full"
+                                                        src={user.picture}
+                                                    />
+                                                ) : (
+                                                    <svg
+                                                        className="w-8 h-8 fill-current text-white"
+                                                        aria-hidden="true"
+                                                        focusable="false"
+                                                        data-prefix="fas"
+                                                        data-icon="user-circle"
+                                                        role="img"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 496 512"
+                                                    >
+                                                        <path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"></path>
+                                                    </svg>
+                                                )}
+                                                {error ? (
+                                                    <svg
+                                                        className="w-8 h-8 fill-current text-white"
+                                                        aria-hidden="true"
+                                                        focusable="false"
+                                                        data-prefix="fas"
+                                                        data-icon="user-circle"
+                                                        role="img"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 496 512"
+                                                    >
+                                                        <path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"></path>
+                                                    </svg>
+                                                ) : (
+                                                    ''
+                                                )}
+                                            </a>
+                                        </FadeIn>
+                                        <FadeIn>
+                                            <div className="mt-1 ml-1">
+                                                {error ? (
+                                                    <p className="logged">
+                                                        {error.message}
+                                                    </p>
+                                                ) : (
+                                                    ''
+                                                )}
+                                                {user ? (
+                                                    <span className="text-md inline text-center">
+                                                        Connecté en tant que{' '}
+                                                        {user.name}
+                                                    </span>
+                                                ) : (
+                                                    <button>
+                                                        Vous n'êtes pas
+                                                        connecté? Connectez-vous
+                                                        !
+                                                    </button>
+                                                )}
+                                            </div>
+                                        </FadeIn>
+                                    </div>
                                     <div className="text-black space-x-2 flex justify-center xl:items-center">
                                         <form
                                             onSubmit={handleSubmit(onSubmit)}
@@ -135,7 +199,7 @@ export default function Home() {
                                 <FadeIn>
                                     <div className="rounded-2xl m-10 w-4/6 sm:w-3/5 md:w-2/5 xl:w-1/3 2xl:w-1/3 mx-auto bg-gray-50 text-gray-800 h-96 overflow-y-auto animate-pulse">
                                         <tr className="text-left">
-                                            <th className="px-4 py-3 flex justify-center space-x-5">
+                                            <th className="px-4 py-3 flex justify-center space-x-5 loadData">
                                                 Chargement des données..
                                             </th>
                                         </tr>

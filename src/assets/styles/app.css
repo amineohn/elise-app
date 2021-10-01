@@ -56,6 +56,16 @@ body {
 }
 ::-webkit-resizer {
 }
+.loadData {
+    width: 20rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
 .m-auto {
     margin: 0 auto;
 }
