@@ -164,7 +164,7 @@ export default function Home() {
                                 </FadeIn>
                             ) : (
                                 <FadeIn>
-                                    <div className="rounded-2xl m-10 w-999 w-96 mx-auto bg-gray-50 text-gray-800 h-96 overflow-y-auto border-2 border-orange-400 hover:border-gray-600 transition transform hover:scale-110 h-64">
+                                    <div className="rounded-2xl m-10 w-999 w-96 mx-auto bg-gray-50 text-gray-800 h-96 overflow-y-auto border-2 border-orange-400 h-64 select-text">
                                         <div className="flex items-center justify-center">
                                             <tr className="">
                                                 <th className="px-4 py-3 space-x-5">
