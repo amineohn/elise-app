@@ -81,7 +81,7 @@ export default function Home() {
                                                 <FadeIn>
                                                     <span
                                                         role="alert"
-                                                        className="text-green-50 font-medium ml-2 mb-4 bg-green-500 rounded-2xl p-3 flex justify-center items-center notification"
+                                                        className="text-green-50 font-medium ml-2 mb-4 bg-green-500 rounded-2xl p-3 flex justify-center items-center notification mt-2"
                                                     >
                                                         Les champs ont été
                                                         ajouter
@@ -92,7 +92,7 @@ export default function Home() {
                                                 <FadeIn>
                                                     <span
                                                         role="alert"
-                                                        className="text-red-50 font-medium ml-2 mb-4 bg-red-500 rounded-2xl p-3 flex justify-center items-center notification"
+                                                        className="text-red-50 font-medium ml-2 mb-4 bg-red-500 rounded-2xl p-3 flex justify-center items-center notification mt-2"
                                                     >
                                                         Champ requis
                                                     </span>
@@ -196,7 +196,7 @@ export default function Home() {
                                 </>
                             ) : (
                                 <div className="w-52 justify-center items-center m-auto">
-                                    <div className="outline-none bg-green-600 flex p-4 rounded-2xl hover:bg-green-500 transition text-white">
+                                    <div className="outline-none bg-gray-700 flex p-4 rounded-2xl hover:bg-gray-800 transition text-white">
                                         <a
                                             href="api/auth/login"
                                             className="inline-flex space-x-2 justify-center items-center ml-8"
@@ -219,22 +219,27 @@ export default function Home() {
                                 </div>
                             )}
                             {error ? (
-                                <div className="outline-none bg-green-600 flex p-2 rounded-2xl hover:bg-green-500 transition text-white">
-                                    <a href="api/auth/login">
-                                        <svg
-                                            className="w-8 h-8 fill-current text-white"
-                                            aria-hidden="true"
-                                            focusable="false"
-                                            data-prefix="fas"
-                                            data-icon="user-circle"
-                                            role="img"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 496 512"
+                                <div className="w-52 justify-center items-center m-auto">
+                                    <div className="outline-none bg-gray-700 flex p-4 rounded-2xl hover:bg-gray-800 transition text-white">
+                                        <a
+                                            href="api/auth/login"
+                                            className="inline-flex space-x-2 justify-center items-center ml-8"
                                         >
-                                            <path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"></path>
-                                        </svg>{' '}
-                                        Connexion
-                                    </a>
+                                            <svg
+                                                className="w-6 h-6 fill-current text-white"
+                                                aria-hidden="true"
+                                                focusable="false"
+                                                data-prefix="fas"
+                                                data-icon="user-circle"
+                                                role="img"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 496 512"
+                                            >
+                                                <path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"></path>
+                                            </svg>{' '}
+                                            <span>Connexion</span>
+                                        </a>
+                                    </div>
                                 </div>
                             ) : (
                                 ''
