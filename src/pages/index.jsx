@@ -186,13 +186,15 @@ export default function Home() {
                             )}
                             {user ? (
                                 <>
-                                    <img
-                                        className="w-10 h-10 rounded-full"
-                                        src={user.picture}
-                                    />
-                                    <span className="text-md inline text-center">
-                                        Connecté en tant que {user.name}
-                                    </span>
+                                    <div className="flex justify-center space-x-2">
+                                        <img
+                                            className="w-10 h-10 rounded-full"
+                                            src="https://avatars.githubusercontent.com/u/38817327?v=4"
+                                        />
+                                        <span className="text-md inline text-center mt-1">
+                                            Connecté en tant que Amine
+                                        </span>
+                                    </div>
                                 </>
                             ) : (
                                 <div className="w-52 justify-center items-center m-auto">
