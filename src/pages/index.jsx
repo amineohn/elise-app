@@ -188,12 +188,15 @@ export default function Home() {
                                                     >
                                                         Ajouter
                                                     </button>
+                                                    &nbsp;
+                                                    <div className="outline-none bg-green-600 flex p-2 rounded-2xl hover:bg-green-500 transition text-white border border-green-600">
+                                                        <Link href="/code">
+                                                            Générer
+                                                        </Link>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </form>
-                                        <div className="-mt-16 outline-none bg-gray-800 flex p-2 rounded-2xl hover:bg-gray-700 transition text-white border border-gray-500">
-                                            <Link href="/code">Générer</Link>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
