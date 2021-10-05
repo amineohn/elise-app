@@ -63,22 +63,24 @@ const Codes = () => {
                                         onSubmit={handleSubmit(onSubmit)}
                                         className="space-x-1"
                                     >
-                                        <input
-                                            className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white text-black placeholder-black w-36 space-x-1"
-                                            placeholder="Code"
-                                            onChange={onCodeChange}
-                                            {...register('code', {
-                                                required: true,
-                                            })}
-                                        />
-                                        &nbsp;
-                                        <button
-                                            aria-label="Submit"
-                                            type="submit"
-                                            className="bg-orange-500 text-white active:bg-orange-600 font-bold uppercase text-sm px-6 py-3 rounded-2xl shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                                        >
-                                            Générer
-                                        </button>
+                                        <div className="flex justify-center">
+                                            <input
+                                                className="outline-none appearance-none p-3 rounded-2xl bg-gray-100 hover:bg-gray-200 bg-opacity-50 transition text-black placeholder-black w-36 space-x-1"
+                                                placeholder="Code"
+                                                onChange={onCodeChange}
+                                                {...register('code', {
+                                                    required: true,
+                                                })}
+                                            />
+                                            &nbsp;
+                                            <button
+                                                aria-label="Submit"
+                                                type="submit"
+                                                className="bg-orange-500 text-white active:bg-orange-600 font-bold uppercase text-sm px-6 py-4 rounded-2xl shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 bg-opacity-75"
+                                            >
+                                                Générer
+                                            </button>
+                                        </div>
                                     </form>
                                 </p>
                             </div>
