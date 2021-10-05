@@ -149,23 +149,25 @@ export default function Home() {
                                                     </span>
                                                 </FadeIn>
                                             )}
-                                            <input
-                                                className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white text-black placeholder-black w-36 space-x-1"
-                                                placeholder="Type"
-                                                onChange={onTypeChange}
-                                                {...register('type', {
-                                                    required: true,
-                                                })}
-                                            />
-                                            <input
-                                                className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white placeholder-black text-black w-36"
-                                                name="matter"
-                                                placeholder="Matière"
-                                                onChange={onMatterChange}
-                                                {...register('matter', {
-                                                    required: true,
-                                                })}
-                                            />
+                                            <div className="space-x-1 flex justify-center">
+                                                <input
+                                                    className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white text-black placeholder-black w-36"
+                                                    placeholder="Type"
+                                                    onChange={onTypeChange}
+                                                    {...register('type', {
+                                                        required: true,
+                                                    })}
+                                                />
+                                                <input
+                                                    className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white placeholder-black text-black w-36"
+                                                    name="matter"
+                                                    placeholder="Matière"
+                                                    onChange={onMatterChange}
+                                                    {...register('matter', {
+                                                        required: true,
+                                                    })}
+                                                />
+                                            </div>
                                             <div className="mt-5 flex">
                                                 <div className="flex justify-center">
                                                     <input
@@ -184,12 +186,12 @@ export default function Home() {
                                                     <button
                                                         aria-label="Submit"
                                                         type="submit"
-                                                        className="outline-none bg-gray-800 flex p-2 rounded-2xl hover:bg-gray-700 transition text-white border border-gray-500"
+                                                        className="outline-none bg-gray-800 flex p-2 rounded-2xl hover:bg-gray-700 transition text-white"
                                                     >
                                                         Ajouter
                                                     </button>
                                                     &nbsp;
-                                                    <div className="outline-none bg-green-600 flex p-2 rounded-2xl hover:bg-green-500 transition text-white border border-green-600">
+                                                    <div className="outline-none bg-green-600 flex p-2 rounded-2xl hover:bg-green-500 transition text-white">
                                                         <Link href="/code">
                                                             Générer
                                                         </Link>
