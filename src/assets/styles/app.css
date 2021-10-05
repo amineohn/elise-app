@@ -33,6 +33,7 @@ body {
 }
 .notification::after {
     visibility: hidden;
+    display: none;
     opacity: 0;
     transition: all 0.5s;
 }
@@ -70,7 +71,7 @@ body {
     margin: 0 auto;
 }
 .m-auto-zero {
-   margin: 0 auto; 
+    margin: 0 auto;
 }
 .table {
     border-spacing: 0 15px;

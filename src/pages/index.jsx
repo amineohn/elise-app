@@ -156,7 +156,7 @@ export default function Home() {
                                 <FadeIn>
                                     <div className="rounded-2xl m-10 w-4/6 sm:w-3/5 md:w-2/5 xl:w-1/3 2xl:w-1/3 mx-auto bg-gray-50 text-gray-800 h-96 animate-pulse">
                                         <tr className="text-left">
-                                            <th className="flex justify-center space-x-5 loadData">
+                                            <th className="flex justify-center space-x-5 loadData -mr-24">
                                                 Chargement des données..
                                             </th>
                                         </tr>
