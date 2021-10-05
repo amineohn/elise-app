@@ -214,11 +214,11 @@ export default function Home() {
                             ) : (
                                 <FadeIn>
                                     <div className="rounded-2xl m-10 w-999 w-96 mx-auto bg-gray-50 text-gray-800 h-96 overflow-y-auto border-2 border-orange-400 hover:border-gray-600 transition transform hover:scale-110">
-                                        <div className="">
+                                        <div className="flex items-center justify-center">
                                             <tr className="">
                                                 <th className="px-4 py-3 space-x-5">
                                                     <table className="table-fixed">
-                                                        <thead>
+                                                        <thead className="inline-flex space-x-3">
                                                             <tr>Type</tr>
                                                             <tr>Matière</tr>
                                                             <tr>Poids</tr>
