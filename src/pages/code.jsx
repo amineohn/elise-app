@@ -72,24 +72,23 @@ const Codes = () => {
                                             })}
                                         />
                                         &nbsp;
-                                        <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
-                                            <Link
-                                                type="button"
-                                                href="/"
-                                                className="text-gray-800 hover:bg-gray-700 hover:text-gray-900 hover:bg-opacity-25 rounded-2xl background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                                            >
-                                                Retour
-                                            </Link>
-                                            <button
-                                                aria-label="Submit"
-                                                type="submit"
-                                                className="bg-orange-500 text-white active:bg-orange-600 font-bold uppercase text-sm px-6 py-3 rounded-2xl shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                                            >
-                                                Générer
-                                            </button>
-                                        </div>
+                                        <button
+                                            aria-label="Submit"
+                                            type="submit"
+                                            className="bg-orange-500 text-white active:bg-orange-600 font-bold uppercase text-sm px-6 py-3 rounded-2xl shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                        >
+                                            Générer
+                                        </button>
                                     </form>
                                 </p>
+                            </div>
+                            <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+                                <Link type="button" href="/">
+                                    <button className="text-gray-800 hover:bg-gray-700 hover:text-gray-900 hover:bg-opacity-25 rounded-2xl background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
+                                        {' '}
+                                        Retour
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
