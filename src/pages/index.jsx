@@ -16,7 +16,6 @@ export default function Home() {
         handleSubmit,
         formState: { errors, isSubmitSuccessful },
     } = useForm()
-    const ENDPOINT = 'http://localhost:3001'
     const [socket, setSocket] = useState(null)
     useEffect(() => {
         const newSocket = io(`http://${window.location.hostname}:3001`)
@@ -34,7 +33,7 @@ export default function Home() {
     }
     const onSubmit = (data) => {
         socket.on('add', data)
-        fetch(`${ENDPOINT}/add`, {
+        fetch(`http://${window.location.hostname}/add`, {
             method: 'POST',
             headers: {
                 Accept: 'application/json',

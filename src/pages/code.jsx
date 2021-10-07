@@ -14,7 +14,7 @@ const Codes = () => {
         setCode(e.target.value)
     }
     const onSubmit = (data) => {
-        fetch(`http://localhost:3001/code`, {
+        fetch(`http://${window.location.hostname}:3001/code`, {
             method: 'POST',
             headers: {
                 Accept: 'application/json',

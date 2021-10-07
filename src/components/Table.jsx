@@ -13,7 +13,7 @@ const Table = () => {
     }, [setSocket])
     const handleDelete = (e) => {
         socket.on('delete', e.target.id)
-        fetch(`http://localhost:3001/delete/${e.target.id}`, {
+        fetch(`http://${window.location.hostname}:3001/delete/${e.target.id}`, {
             method: 'DELETE',
             headers: {
                 Accept: 'application/json',
