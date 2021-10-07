@@ -33,7 +33,7 @@ export default function Home() {
     }
     const onSubmit = (data) => {
         socket.on('add', data)
-        fetch(`http://${window.location.hostname}/add`, {
+        fetch(`http://${window.location.hostname}:3001/add`, {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
