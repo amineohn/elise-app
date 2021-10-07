@@ -44,7 +44,7 @@ export default function Home() {
             .then((response) => response.json())
             .then((body) => console.log(body))
     }
-
+    //test
     const { user, isLoading, error } = useUser()
     return (
         <>
