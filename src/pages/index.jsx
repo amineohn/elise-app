@@ -4,6 +4,8 @@ import Logo from '@components/Logo'
 import Table from '@components/Table'
 import FadeIn from 'react-fade-in'
 import { useForm } from 'react-hook-form'
+import io from 'socket.io-client'
+
 import Link from 'next/link'
 export default function Home() {
     const [, setMatter] = useState('')
@@ -14,7 +16,13 @@ export default function Home() {
         handleSubmit,
         formState: { errors, isSubmitSuccessful },
     } = useForm()
-
+    const ENDPOINT = 'http://localhost:3001'
+    const [socket, setSocket] = useState(null)
+    useEffect(() => {
+        const newSocket = io(`http://${window.location.hostname}:3000`)
+        setSocket(newSocket)
+        return () => newSocket.close()
+    }, [setSocket])
     const onMatterChange = (e) => {
         setMatter(e.target.value)
     }
@@ -25,13 +33,8 @@ export default function Home() {
         setWeight(e.target.value)
     }
     const onSubmit = (data) => {
-        /*window.open(
-            `mailto:aouhani@actes-atlantique.fr?body=${encodeURIComponent(
-                `[Poids au jours] \n\n Liste des maitères: ${data.matter.length} \n Poids total: ${data.weight} \n Type: ${data.type}`
-            )}`
-        )*/
-
-        fetch(`http://localhost:3001/add`, {
+        socket.on('add', data)
+        fetch(`${ENDPOINT}/add`, {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
@@ -152,37 +155,41 @@ export default function Home() {
                                 </div>
                             </div>
 
-                            {isLoading ? (
-                                <FadeIn>
-                                    <div className="rounded-2xl m-10 w-4/6 sm:w-3/5 md:w-2/5 xl:w-1/3 2xl:w-1/3 mx-auto bg-gray-50 text-gray-800 h-96 animate-pulse">
-                                        <tr className="text-left">
-                                            <th className="flex justify-center space-x-5 loadData -mr-24">
-                                                Chargement des données..
-                                            </th>
-                                        </tr>
-                                    </div>
-                                </FadeIn>
+                            {socket ? (
+                                <>
+                                    <FadeIn>
+                                        <div className="rounded-2xl m-10 w-999 w-96 mx-auto bg-gray-50 text-gray-800 h-96 overflow-y-auto border-2 border-orange-400 h-64 select-text">
+                                            <div className="flex items-center justify-center">
+                                                <tr className="">
+                                                    <th className="px-4 py-3 space-x-5">
+                                                        <table className="table-fixed">
+                                                            <thead className="inline-flex space-x-3">
+                                                                <tr>Type</tr>
+                                                                <tr>Matière</tr>
+                                                                <tr>Poids</tr>
+                                                            </thead>
+                                                        </table>
+                                                    </th>
+                                                </tr>
+                                            </div>
+                                            <tbody>
+                                                <Table />
+                                            </tbody>
+                                        </div>
+                                    </FadeIn>
+                                </>
                             ) : (
-                                <FadeIn>
-                                    <div className="rounded-2xl m-10 w-999 w-96 mx-auto bg-gray-50 text-gray-800 h-96 overflow-y-auto border-2 border-orange-400 h-64 select-text">
-                                        <div className="flex items-center justify-center">
-                                            <tr className="">
-                                                <th className="px-4 py-3 space-x-5">
-                                                    <table className="table-fixed">
-                                                        <thead className="inline-flex space-x-3">
-                                                            <tr>Type</tr>
-                                                            <tr>Matière</tr>
-                                                            <tr>Poids</tr>
-                                                        </thead>
-                                                    </table>
+                                <>
+                                    <FadeIn>
+                                        <div className="rounded-2xl m-10 w-4/6 sm:w-3/5 md:w-2/5 xl:w-1/3 2xl:w-1/3 mx-auto bg-gray-50 text-gray-800 h-96 animate-pulse">
+                                            <tr className="text-left">
+                                                <th className="flex justify-center space-x-5 loadData -mr-24">
+                                                    Chargement des données..
                                                 </th>
                                             </tr>
                                         </div>
-                                        <tbody>
-                                            <Table />
-                                        </tbody>
-                                    </div>
-                                </FadeIn>
+                                    </FadeIn>
+                                </>
                             )}
                             {user ? (
                                 <>
