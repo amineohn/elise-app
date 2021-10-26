@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form'
 import io from 'socket.io-client'
 
 import Link from 'next/link'
-export default function Home() {
+export default function Index() {
     const [, setMatter] = useState('')
     const [, setType] = useState('')
     const [, setWeight] = useState('')
@@ -44,7 +44,7 @@ export default function Home() {
             .then((response) => response.json())
             .then((body) => console.log(body))
     }
-    //test
+
     const { user, isLoading, error } = useUser()
     return (
         <>
@@ -114,22 +114,25 @@ export default function Home() {
                                                     <option value="Caisse">
                                                         Caisse Palettes
                                                     </option>
-                                                    <option value="bennes-1t">
+                                                    <option value="Bennes (1,5t)">
                                                         Bennes (1,5tonnes)
                                                     </option>
-                                                    <option value="bac-120">
+                                                    <option value="Bennes (3t)">
+                                                        Bennes (3tonnes)
+                                                    </option>
+                                                    <option value="Bac (120L)">
                                                         Bac (120L)
                                                     </option>
-                                                    <option value="bac-240">
+                                                    <option value="Bac (240L)">
                                                         Bac (240L)
                                                     </option>
-                                                    <option value="bac-360">
+                                                    <option value="Bac (360L)">
                                                         Bac (360L)
                                                     </option>
-                                                    <option value="bac-660">
+                                                    <option value="Bac (660L)">
                                                         Bac (660L)
                                                     </option>
-                                                    <option value="bac-770">
+                                                    <option value="Bac (770L)">
                                                         Bac (770L)
                                                     </option>
                                                 </select>
@@ -143,22 +146,22 @@ export default function Home() {
                                                     <option value="">
                                                         Matière
                                                     </option>
-                                                    <option value="pet">
+                                                    <option value="PET">
                                                         PET
                                                     </option>
-                                                    <option value="canettes">
+                                                    <option value="Canettes">
                                                         Canettes
                                                     </option>
-                                                    <option value="dee">
+                                                    <option value="DEEE">
                                                         DEE
                                                     </option>
-                                                    <option value="polystyrene">
+                                                    <option value="Polystyrène">
                                                         Polystyrène
                                                     </option>
-                                                    <option value="papier">
+                                                    <option value="Papier">
                                                         Papier
                                                     </option>
-                                                    <option value="ccr">
+                                                    <option value="Cartons">
                                                         Cartons (CCR)
                                                     </option>
                                                 </select>
