@@ -96,7 +96,7 @@ export default function Home() {
                                                         role="alert"
                                                         className="text-red-50 font-medium ml-2 mb-4 bg-red-500 rounded-2xl p-3 flex justify-center items-center notification mt-2"
                                                     >
-                                                        Champ requis
+                                                        Champs obligatoires.
                                                     </span>
                                                 </FadeIn>
                                             )}
