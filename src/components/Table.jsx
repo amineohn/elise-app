@@ -60,15 +60,6 @@ const Table = () => {
                                         {item.weight}
                                         <span className="text-xs">kg</span>
                                     </td>
-                                    <div
-                                        id={item.id}
-                                        key={item.id}
-                                        className=" rounded-2xl bg-red-500 text-white transition duration-110 w-6"
-                                    >
-                                        <span className="ml-2 text-center text-medium">
-                                            x
-                                        </span>
-                                    </div>
                                 </div>
                             </tr>
                         </FadeIn>

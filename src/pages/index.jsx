@@ -101,23 +101,67 @@ export default function Home() {
                                                 </FadeIn>
                                             )}
                                             <div className="space-x-1 flex justify-center">
-                                                <input
-                                                    className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white text-black placeholder-black w-36"
-                                                    placeholder="Type"
+                                                <select
                                                     onChange={onTypeChange}
+                                                    className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white text-black placeholder-black w-36"
                                                     {...register('type', {
                                                         required: true,
                                                     })}
-                                                />
-                                                <input
-                                                    className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white placeholder-black text-black w-36"
-                                                    name="matter"
-                                                    placeholder="Matière"
+                                                >
+                                                    <option value="">
+                                                        Types
+                                                    </option>
+                                                    <option value="Caisse">
+                                                        Caisse Palettes
+                                                    </option>
+                                                    <option value="bennes-1t">
+                                                        Bennes (1,5tonnes)
+                                                    </option>
+                                                    <option value="bac-120">
+                                                        Bac (120L)
+                                                    </option>
+                                                    <option value="bac-240">
+                                                        Bac (240L)
+                                                    </option>
+                                                    <option value="bac-360">
+                                                        Bac (360L)
+                                                    </option>
+                                                    <option value="bac-660">
+                                                        Bac (660L)
+                                                    </option>
+                                                    <option value="bac-770">
+                                                        Bac (770L)
+                                                    </option>
+                                                </select>
+                                                <select
+                                                    className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white text-black placeholder-black w-36"
                                                     onChange={onMatterChange}
                                                     {...register('matter', {
                                                         required: true,
                                                     })}
-                                                />
+                                                >
+                                                    <option value="">
+                                                        Matière
+                                                    </option>
+                                                    <option value="pet">
+                                                        PET
+                                                    </option>
+                                                    <option value="canettes">
+                                                        Canettes
+                                                    </option>
+                                                    <option value="dee">
+                                                        DEE
+                                                    </option>
+                                                    <option value="polystyrene">
+                                                        Polystyrène
+                                                    </option>
+                                                    <option value="papier">
+                                                        Papier
+                                                    </option>
+                                                    <option value="ccr">
+                                                        Cartons (CCR)
+                                                    </option>
+                                                </select>
                                             </div>
                                             <div className="mt-5 flex">
                                                 <div className="flex justify-center">
