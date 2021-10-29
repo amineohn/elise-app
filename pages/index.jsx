@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useUser } from "@auth0/nextjs-auth0";
-import Logo from "components/Logo";
 import Table from "components/Table";
 import FadeIn from "react-fade-in";
 import { useForm } from "react-hook-form";
@@ -55,7 +54,16 @@ export default function Index() {
       ) : (
         <>
           <FadeIn>
-            <Logo />
+            <div className="flex justify-center items-center p-5 bg-white">
+              <Link href="/">
+                <a>
+                  <img
+                    src="https://www.elise.com.fr/assets/templates/meridian/images/logo.jpg"
+                    alt=""
+                  />
+                </a>
+              </Link>
+            </div>
           </FadeIn>
           <FadeIn>
             <div className="h-screen max-h-screen">
