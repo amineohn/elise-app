@@ -11,7 +11,9 @@ function App({ Component, pageProps }) {
         <UserProvider>
           <Component {...pageProps} />
         </UserProvider>
+      <script src="https://cdn.jsdelivr.net/npm/datalist-css/dist/datalist-css.min.js"></script>
       </body>
+
     </>
   );
 }

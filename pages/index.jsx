@@ -45,6 +45,7 @@ export default function Index() {
   };
 
   const { user, error } = useUser();
+  
   return (
     <>
       <FadeIn>
@@ -93,38 +94,50 @@ export default function Index() {
                     </FadeIn>
                   )}
                   <div className="space-x-1 flex justify-center">
-                    <select
+                    <input
                       onChange={onTypeChange}
-                      className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white text-black placeholder-black w-36"
+                      className="outline-none cursor-pointer appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white text-black placeholder-black w-36"
                       {...register("type", {
                         required: true,
                       })}
-                    >
-                      <option value="">Types</option>
-                      <option value="Caisse">Caisse Palettes</option>
-                      <option value="Bennes (1,5t)">Bennes (1,5t)</option>
-                      <option value="Bennes (3t)">Bennes (3t)</option>
-                      <option value="Bac (120L)">Bac (120L)</option>
-                      <option value="Bac (240L)">Bac (240L)</option>
-                      <option value="Bac (360L)">Bac (360L)</option>
-                      <option value="Bac (660L)">Bac (660L)</option>
-                      <option value="Bac (770L)">Bac (770L)</option>
-                    </select>
-                    <select
-                      className="outline-none appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white text-black placeholder-black w-36"
+                      list="val"
+                      placeholder="Types"
+                      autoComplete="off"
+                    />
+                    <datalist id="val">
+                    {errors.type && (
+                        <option list="val" className="bg-red-500 text-white hover:bg-red-500">Champs obligatoires</option>
+                    )}
+                      <option list="val">Caisse Palettes</option>
+                      <option list="val">Bennes (1,5t)</option>
+                      <option list="val">Bennes (3t)</option>
+                      <option list="val">Bac (120L)</option>
+                      <option list="val">Bac (240L)</option>
+                      <option list="val">Bac (360L)</option>
+                      <option list="val">Bac (660L)</option>
+                      <option list="val">Bac (770L)</option>
+                    </datalist>
+                    <input
+                      className="outline-none cursor-pointer appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white text-black placeholder-black w-36"
                       onChange={onMatterChange}
                       {...register("matter", {
                         required: true,
                       })}
-                    >
-                      <option value="">Matière</option>
-                      <option value="PET">PET</option>
-                      <option value="Canettes">Canettes</option>
-                      <option value="DEEE">DEE</option>
-                      <option value="Polystyrène">Polystyrène</option>
-                      <option value="Papier">Papier</option>
-                      <option value="Cartons">Cartons (CCR)</option>
-                    </select>
+                      list="val2"
+                      placeholder="Matière"
+                      autoComplete="off"
+                    />
+                    <datalist id="val2">
+                    {errors.matter && (
+                        <option list="val2" className="bg-red-500 text-white hover:bg-red-500">Champs obligatoires</option>
+                    )}
+                      <option list="val2">PET</option>
+                      <option list="val2">Canettes</option>
+                      <option list="val2">DEE</option>
+                      <option list="val2">Polystyrène</option>
+                      <option list="val2">Papier</option>
+                      <option list="val2">Cartons (CCR)</option>
+                    </datalist>
                   </div>
                   <div className="mt-5 flex">
                     <div className="flex justify-center">
