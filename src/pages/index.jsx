@@ -5,8 +5,8 @@ import Table from '@components/Table'
 import FadeIn from 'react-fade-in'
 import { useForm } from 'react-hook-form'
 import io from 'socket.io-client'
-
 import Link from 'next/link'
+
 export default function Index() {
     const [, setMatter] = useState('')
     const [, setType] = useState('')
@@ -169,7 +169,7 @@ export default function Index() {
                                             <div className="mt-5 flex">
                                                 <div className="flex justify-center">
                                                     <input
-                                                        className="outline-none placeholder-black rounded-2xl p-2 text-black border-2 border-orange-400 hover:border-orange-600 transition w-52"
+                                                        className="outline-none placeholder-black rounded-2xl p-2 text-black border-2 border-orange-400 hover:border-orange-600 transition w-36"
                                                         type="number"
                                                         placeholder="Saisir un poids"
                                                         ref="weight"
