@@ -1,4 +1,4 @@
-import logo from '../assets/img/logo.jpg'
+import logo from '../public/img/logo.jpg'
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import FadeIn from 'react-fade-in'
@@ -32,7 +32,10 @@ const LoadingLogo = () => {
                 ) : (
                     <Link href="/">
                         <a>
-                            <img src={logo} alt="" />
+                            <img
+                                src="https://www.elise.com.fr/assets/templates/meridian/images/logo.jpg"
+                                alt=""
+                            />
                         </a>
                     </Link>
                 )}

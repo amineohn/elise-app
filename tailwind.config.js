@@ -2,7 +2,10 @@ const colors = require('tailwindcss/colors')
 const plugin = require('tailwindcss/plugin')
 module.exports = {
     mode: 'jit',
-    purge: ['./src/**/*.{js,ts,jsx,tsx}'],
+    purge: [
+        './pages/**/*.{js,ts,jsx,tsx}',
+        './components/**/*.{js,ts,jsx,tsx}',
+    ],
     darkMode: 'class',
     theme: {
         linearBorderGradients: (theme) => ({

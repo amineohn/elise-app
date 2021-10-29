@@ -7,7 +7,7 @@
         "module": "es2015",
         "baseUrl": ".",
         "paths": {
-            "@components/*": ["src/components/*"],
+            "@components/*": ["components/*"],
             "@img/*": ["assets/img/*"],
             "@style/*": ["../src/assets/styles/*"],
             "@app/*": ["src/*"]
