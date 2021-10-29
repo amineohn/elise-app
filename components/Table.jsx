@@ -5,7 +5,7 @@ import FadeIn from "react-fade-in";
 const Table = () => {
   const [deleteId, setDelete] = useState("");
   const fetcher = (url) => fetch(url).then((r) => r.json());
-  const { data, errors } = useSWR("/api/list", fetcher);
+  const { data } = useSWR("/api/list", fetcher);
   const [socket, setSocket] = useState(null);
   useEffect(() => {
     const newSocket = io(`http://${window.location.hostname}:3001`);
