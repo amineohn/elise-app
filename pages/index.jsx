@@ -111,10 +111,8 @@ export default function Index() {
                         >
                           <option value="">Types</option>
                           <option value="Caisse">Caisse Palettes</option>
-                          <option value="Bennes (1,5t)">
-                            Bennes (1,5tonnes)
-                          </option>
-                          <option value="Bennes (3t)">Bennes (3tonnes)</option>
+                          <option value="Bennes (1,5t)">Bennes (1,5t)</option>
+                          <option value="Bennes (3t)">Bennes (3t)</option>
                           <option value="Bac (120L)">Bac (120L)</option>
                           <option value="Bac (240L)">Bac (240L)</option>
                           <option value="Bac (360L)">Bac (360L)</option>
