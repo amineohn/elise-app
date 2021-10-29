@@ -58,23 +58,24 @@ body {
 ::-webkit-resizer {
 }
 datalist {
-    position: absolute;
-    max-height: 20em;
-    margin-top: 3.5rem;
-    @apply border-2 border-opacity-50 border-orange-500 rounded-2xl overflow-x-hidden overflow-y-auto z-50;
+  position: absolute;
+  max-height: 20em;
+  margin-top: 3.5rem;
+  @apply border-2 border-opacity-50 border-orange-500 rounded-2xl overflow-x-hidden overflow-y-auto z-50;
 }
 datalist:focus {
-    display: none;
+  display: none;
 }
 datalist option {
-    font-size: 0.8em;
-    padding: 1rem;
-    background-color: #fff;
-    cursor: pointer;
+  font-size: 0.8em;
+  padding: 1rem;
+  background-color: #fff;
+  cursor: pointer;
 }
 
 /* option active styles */
-datalist option:hover, datalist option:focus {
+datalist option:hover,
+datalist option:focus {
   @apply bg-orange-400 transition text-white;
   outline: 0 none;
 }

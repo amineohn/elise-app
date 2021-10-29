@@ -45,7 +45,7 @@ export default function Index() {
   };
 
   const { user, error } = useUser();
-  
+
   return (
     <>
       <FadeIn>
@@ -105,9 +105,14 @@ export default function Index() {
                       autoComplete="off"
                     />
                     <datalist id="val">
-                    {errors.type && (
-                        <option list="val" className="bg-red-500 text-white hover:bg-red-500">Champs obligatoires</option>
-                    )}
+                      {errors.type && (
+                        <option
+                          list="val"
+                          className="bg-red-500 text-white hover:bg-red-500"
+                        >
+                          Champs obligatoires
+                        </option>
+                      )}
                       <option list="val">Caisse Palettes</option>
                       <option list="val">Bennes (1,5t)</option>
                       <option list="val">Bennes (3t)</option>
@@ -128,9 +133,14 @@ export default function Index() {
                       autoComplete="off"
                     />
                     <datalist id="val2">
-                    {errors.matter && (
-                        <option list="val2" className="bg-red-500 text-white hover:bg-red-500">Champs obligatoires</option>
-                    )}
+                      {errors.matter && (
+                        <option
+                          list="val2"
+                          className="bg-red-500 text-white hover:bg-red-500"
+                        >
+                          Champs obligatoires
+                        </option>
+                      )}
                       <option list="val2">PET</option>
                       <option list="val2">Canettes</option>
                       <option list="val2">DEE</option>
