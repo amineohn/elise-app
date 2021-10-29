@@ -58,7 +58,7 @@ body {
 ::-webkit-resizer {
 }
 .loadData {
-  width: 20rem;
+  width: 14rem;
   text-align: center;
   display: flex;
   justify-content: center;
