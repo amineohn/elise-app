@@ -5,6 +5,8 @@ import FadeIn from "react-fade-in";
 import { useForm } from "react-hook-form";
 import io from "socket.io-client";
 import Link from "next/link";
+import Types from "@components/Types";
+import Matters from "@components/Matters";
 
 export default function Index() {
   const [, setMatter] = useState("");
@@ -113,14 +115,7 @@ export default function Index() {
                           Champs obligatoires
                         </option>
                       )}
-                      <option list="types">Caisse Palettes</option>
-                      <option list="types">Bennes (1,5t)</option>
-                      <option list="types">Bennes (3t)</option>
-                      <option list="types">Bac (120L)</option>
-                      <option list="types">Bac (240L)</option>
-                      <option list="types">Bac (360L)</option>
-                      <option list="types">Bac (660L)</option>
-                      <option list="types">Bac (770L)</option>
+                      <Types />
                     </datalist>
                     <input
                       className="outline-none cursor-pointer appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white text-black placeholder-black w-36"
@@ -141,12 +136,7 @@ export default function Index() {
                           Champs obligatoires
                         </option>
                       )}
-                      <option list="matters">PET</option>
-                      <option list="matters">Canettes</option>
-                      <option list="matters">DEE</option>
-                      <option list="matters">Polystyrène</option>
-                      <option list="matters">Papier</option>
-                      <option list="matters">Cartons (CCR)</option>
+                      <Matters />
                     </datalist>
                   </div>
                   <div className="mt-5 flex">
