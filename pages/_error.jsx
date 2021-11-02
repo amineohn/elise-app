@@ -17,10 +17,15 @@ function Error({ statusCode }) {
                   : "Une erreur s'est produite sur le client"}
               </p>
             </div>
-            <div class="mb-20 md:mb-0">
+            <div class="mb-20 md:mb-0 flex flex-col items-start">
               <button class="text-lg font-light outline-none focus:outline-none transform transition-all hover:scale-110 text-yellow-500 hover:text-yellow-600">
                 <i class="mdi mdi-arrow-left mr-2"></i>
                 <Link href="/">Retour</Link>
+              </button>
+              <button class="text-lg font-light outline-none focus:outline-none transform transition-all hover:scale-110 text-yellow-500 hover:text-yellow-600">
+                <a href="https://google.com" target="_blank" rel="noopener">
+                  <i class="mdi mdi-google mr-2"></i>Google
+                </a>
               </button>
             </div>
           </div>
