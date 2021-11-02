@@ -215,10 +215,7 @@ export default function Index() {
           {user ? (
             <>
               <div className="flex justify-center space-x-2">
-                <img
-                  className="w-10 h-10 rounded-full"
-                  src="https://avatars.githubusercontent.com/u/38817327?v=4"
-                />
+                <img className="w-10 h-10 rounded-full" src={user.picture} />
                 <span className="text-md inline font-medium text-center mt-1.5">
                   Connecté en tant que {user.name}
                 </span>
