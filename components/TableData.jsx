@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import useSWR from "swr";
 import io from "socket.io-client";
 import FadeIn from "react-fade-in";
-const Table = () => {
+const TableData = () => {
   const [deleteId, setDelete] = useState("");
   const fetcher = (url) => fetch(url).then((r) => r.json());
   const { data } = useSWR("/api/list", fetcher);
@@ -132,4 +132,4 @@ const Table = () => {
     </>
   );
 };
-export default Table;
+export default TableData;
