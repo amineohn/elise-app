@@ -69,7 +69,7 @@ export default function Index() {
               <div className="flex mt-5">
                 <FadeIn>
                   <div className="mt-1 ml-1">
-                    {error ? <p className="logged">{error.message}</p> : ""}
+                    {error ? <p>{error.message}</p> : ""}
                   </div>
                 </FadeIn>
               </div>
