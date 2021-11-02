@@ -224,7 +224,7 @@ export default function Index() {
                   src="https://avatars.githubusercontent.com/u/38817327?v=4"
                 />
                 <span className="text-md inline text-center mt-1">
-                  Connecté en tant que Amine
+                  Connecté en tant que {user}
                 </span>
               </div>
             </>
