@@ -100,27 +100,27 @@ export default function Index() {
                       {...register("type", {
                         required: true,
                       })}
-                      list="val"
+                      list="types"
                       placeholder="Types"
                       autoComplete="off"
                     />
-                    <datalist id="val">
+                    <datalist id="types">
                       {errors.type && (
                         <option
-                          list="val"
+                          list="types"
                           className="bg-red-500 text-white hover:bg-red-500"
                         >
                           Champs obligatoires
                         </option>
                       )}
-                      <option list="val">Caisse Palettes</option>
-                      <option list="val">Bennes (1,5t)</option>
-                      <option list="val">Bennes (3t)</option>
-                      <option list="val">Bac (120L)</option>
-                      <option list="val">Bac (240L)</option>
-                      <option list="val">Bac (360L)</option>
-                      <option list="val">Bac (660L)</option>
-                      <option list="val">Bac (770L)</option>
+                      <option list="types">Caisse Palettes</option>
+                      <option list="types">Bennes (1,5t)</option>
+                      <option list="types">Bennes (3t)</option>
+                      <option list="types">Bac (120L)</option>
+                      <option list="types">Bac (240L)</option>
+                      <option list="types">Bac (360L)</option>
+                      <option list="types">Bac (660L)</option>
+                      <option list="types">Bac (770L)</option>
                     </datalist>
                     <input
                       className="outline-none cursor-pointer appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white text-black placeholder-black w-36"
@@ -128,25 +128,25 @@ export default function Index() {
                       {...register("matter", {
                         required: true,
                       })}
-                      list="val2"
+                      list="matters"
                       placeholder="Matière"
                       autoComplete="off"
                     />
-                    <datalist id="val2">
+                    <datalist id="matters">
                       {errors.matter && (
                         <option
-                          list="val2"
+                          list="matters"
                           className="bg-red-500 text-white hover:bg-red-500"
                         >
                           Champs obligatoires
                         </option>
                       )}
-                      <option list="val2">PET</option>
-                      <option list="val2">Canettes</option>
-                      <option list="val2">DEE</option>
-                      <option list="val2">Polystyrène</option>
-                      <option list="val2">Papier</option>
-                      <option list="val2">Cartons (CCR)</option>
+                      <option list="matters">PET</option>
+                      <option list="matters">Canettes</option>
+                      <option list="matters">DEE</option>
+                      <option list="matters">Polystyrène</option>
+                      <option list="matters">Papier</option>
+                      <option list="matters">Cartons (CCR)</option>
                     </datalist>
                   </div>
                   <div className="mt-5 flex">
