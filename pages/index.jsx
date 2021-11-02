@@ -98,7 +98,9 @@ export default function Index() {
                   <div className="space-x-1 flex justify-center">
                     <input
                       onChange={onTypeChange}
-                      className="outline-none cursor-pointer appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white text-black placeholder-black w-36"
+                      className={`outline-none cursor-pointer appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white text-black placeholder-black w-36 ${
+                        errors.type && `border-red-500`
+                      }`}
                       {...register("type", {
                         required: true,
                       })}
@@ -118,7 +120,9 @@ export default function Index() {
                       <Types />
                     </datalist>
                     <input
-                      className="outline-none cursor-pointer appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white text-black placeholder-black w-36"
+                      className={`outline-none cursor-pointer appearance-none p-3 rounded-2xl border-2 border-orange-400 hover:border-orange-600 transition bg-white text-black placeholder-black w-36 ${
+                        errors.matter && `border-red-500`
+                      }`}
                       onChange={onMatterChange}
                       {...register("matter", {
                         required: true,
@@ -142,7 +146,9 @@ export default function Index() {
                   <div className="mt-5 flex">
                     <div className="flex justify-center">
                       <input
-                        className="outline-none placeholder-black rounded-2xl p-2 text-black border-2 border-orange-400 hover:border-orange-600 transition w-36"
+                        className={`outline-none placeholder-black rounded-2xl p-2 text-black border-2 border-orange-400 hover:border-orange-600 transition w-36 ${
+                          errors.weight && `border-red-500`
+                        }`}
                         type="number"
                         placeholder="Saisir un poids"
                         ref="weight"
