@@ -83,7 +83,6 @@ const Codes = () => {
               <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
                 <Link type="button" href="/">
                   <button className="text-gray-800 hover:bg-gray-700 hover:text-gray-900 hover:bg-opacity-25 rounded-2xl background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
-                    {" "}
                     Retour
                   </button>
                 </Link>
