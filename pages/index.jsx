@@ -161,9 +161,14 @@ export default function Index() {
                       <button
                         aria-label="Submit"
                         type="submit"
-                        className="outline-none bg-gray-800 flex p-2 rounded-2xl hover:bg-gray-700 transition text-white"
+                        className={`outline-none bg-gray-800 flex p-2 rounded-2xl hover:bg-gray-700 transition text-white ${
+                          user
+                            ? ``
+                            : `disabled:bg-opacity-80 disabled:cursor-not-allowed`
+                        }`}
+                        disabled
                       >
-                        Ajouter
+                        {user ? `Ajouter` : `Indisponible`}
                       </button>
                       &nbsp;
                       <div className="outline-none bg-green-600 flex p-2 rounded-2xl hover:bg-green-500 transition text-white">
