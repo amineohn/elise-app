@@ -1,9 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;1,300;1,400;1,500&display=swap");
-
 body {
   @apply bg-orange-500 text-white select-none overflow-hidden;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .loader {
@@ -73,7 +71,6 @@ datalist option {
   cursor: pointer;
 }
 
-/* option active styles */
 datalist option:hover,
 datalist option:focus {
   @apply bg-orange-400 transition text-white;
@@ -119,6 +116,7 @@ tr th:nth-child(1) {
 .w-9999 {
   width: 80%;
 }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
