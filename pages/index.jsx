@@ -219,7 +219,7 @@ export default function Index() {
                   className="w-10 h-10 rounded-full"
                   src="https://avatars.githubusercontent.com/u/38817327?v=4"
                 />
-                <span className="text-md inline text-center mt-1.5">
+                <span className="text-md inline font-medium text-center mt-1.5">
                   Connecté en tant que {user.name}
                 </span>
               </div>
