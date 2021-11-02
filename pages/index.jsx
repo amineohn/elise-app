@@ -219,14 +219,26 @@ export default function Index() {
                   className="w-10 h-10 rounded-full"
                   src="https://avatars.githubusercontent.com/u/38817327?v=4"
                 />
-                <span className="text-md inline text-center mt-1">
-                  Connecté en tant que {user}
+                <span className="text-md inline text-center mt-1.5">
+                  Connecté en tant que {user.name}
                 </span>
+              </div>
+
+              <div className="w-52 justify-center items-center m-auto">
+                <div className="outline-none bg-red-500 flex p-4 rounded-2xl hover:bg-red-600 transition text-white cursor-pointer">
+                  <a
+                    href="api/auth/logout"
+                    className="inline-flex -space-x-5 justify-center items-center ml-6"
+                  >
+                    <i class="mdi mdi-exit-run mr-1 w-10 fill-current text-white"></i>
+                    <span>Déconnexion</span>
+                  </a>
+                </div>
               </div>
             </>
           ) : (
             <div className="w-52 justify-center items-center m-auto">
-              <div className="outline-none bg-gray-700 flex p-4 rounded-2xl hover:bg-gray-800 transition text-white">
+              <div className="outline-none bg-gray-700 flex p-4 rounded-2xl hover:bg-gray-800 transition text-white cursor-pointer">
                 <a
                   href="api/auth/login"
                   className="inline-flex space-x-2 justify-center items-center ml-8"
