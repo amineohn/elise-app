@@ -13,7 +13,7 @@ function Error({ statusCode }) {
               </h1>
               <p>
                 {statusCode
-                  ? `Une erreur ${statuscode} s'est produite sur le serveur`
+                  ? `Une erreur ${statusCode} s'est produite sur le serveur`
                   : "Une erreur s'est produite sur le client"}
               </p>
             </div>
