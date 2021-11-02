@@ -7,18 +7,18 @@ function Error({ statusCode }) {
           <div class="mb-10 lg:mb-20"></div>
           <div class="mb-10 md:mb-20 text-gray-600 font-light">
             <h1 class="font-black uppercase text-3xl lg:text-5xl text-yellow-500 mb-10">
-              YOU SEEM TO BE LOST!
+              VOUS SEMBLEZ ÊTRE PERDU !
             </h1>
             <p>
               {statusCode
-                ? `An error ${statusCode} occurred on server`
-                : "An error occurred on client"}
+                ? `Une erreur ${statuscode} s'est produite sur le serveur`
+                : "Une erreur s'est produite sur le client"}
             </p>
           </div>
           <div class="mb-20 md:mb-0">
             <button class="text-lg font-light outline-none focus:outline-none transform transition-all hover:scale-110 text-yellow-500 hover:text-yellow-600">
               <i class="mdi mdi-arrow-left mr-2"></i>
-              <Link href="/">Back</Link>
+              <Link href="/">Retour</Link>
             </button>
           </div>
         </div>
