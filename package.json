@@ -21,8 +21,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "generate": "next build && next export",
-    "deploy": "vercel && vercel --prod"
+    "generate": "next build && next export"
   },
   "eslintConfig": {
     "extends": [
