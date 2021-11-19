@@ -8,7 +8,7 @@ export default function Icons({ icon }) {
           focusable="false"
           data-prefix="fas"
           data-icon="user-circle"
-          class="svg-inline--fa fa-user-circle fa-w-16"
+          className="svg-inline--fa fa-user-circle fa-w-16"
           role="img"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 496 512"

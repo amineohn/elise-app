@@ -227,7 +227,7 @@ export default function Index() {
                     href="api/auth/logout"
                     className="inline-flex -space-x-5 justify-center items-center ml-6"
                   >
-                    <i class="mdi mdi-exit-run mr-1 w-10 fill-current text-white"></i>
+                    <i className="mdi mdi-exit-run mr-1 w-10 fill-current text-white"></i>
                     <span>Déconnexion</span>
                   </a>
                 </div>
