@@ -224,7 +224,7 @@ export default function Index() {
               </FadeIn>
             </>
           )}
-          <div className="flex justify-center items-center m-auto mt-2">
+          <div className="flex justify-center items-center m-auto mt-2 hidden">
             <div
               className="outline-none bg-red-700 flex p-4 rounded-2xl hover:bg-red-800 transition text-white cursor-pointer"
               onClick={onReset}
