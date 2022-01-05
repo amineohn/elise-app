@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import react, { useState } from "react";
+import { useState } from "react";
 import FadeIn from "react-fade-in";
 import Link from "next/link";
 const Codes = () => {
