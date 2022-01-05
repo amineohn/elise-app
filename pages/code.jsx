@@ -31,13 +31,13 @@ const Codes = () => {
         <FadeIn>
           <div className="relative w-auto my-6 mx-auto max-w-3xl">
             <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-              <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
+              <div className="flex items-start justify-between p-5 border-b border-solid border-blueneutral-200 rounded-t">
                 <h3 className="text-2xl font-semibold text-black">
                   Code d'accès génération des poids
                 </h3>
               </div>
               <div className="relative p-6 flex-auto">
-                <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
+                <p className="my-4 text-blueneutral-500 text-lg leading-relaxed">
                   {isSubmitSuccessful && (
                     <FadeIn>
                       <span
@@ -61,7 +61,7 @@ const Codes = () => {
                   <form onSubmit={handleSubmit(onSubmit)} className="space-x-1">
                     <div className="flex justify-center">
                       <input
-                        className="outline-none appearance-none p-3 rounded-2xl bg-gray-100 hover:bg-gray-200 bg-opacity-50 transition text-black placeholder-black w-36 space-x-1"
+                        className="outline-none appearance-none p-3 rounded-2xl bg-neutral-100 hover:bg-neutral-200 bg-opacity-50 transition text-black placeholder-black w-36 space-x-1"
                         placeholder="Code"
                         onChange={onCodeChange}
                         {...register("code", {
@@ -80,9 +80,9 @@ const Codes = () => {
                   </form>
                 </p>
               </div>
-              <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+              <div className="flex items-center justify-end p-6 border-t border-solid border-blueneutral-200 rounded-b">
                 <Link type="button" href="/">
-                  <button className="text-gray-800 hover:bg-gray-700 hover:text-gray-900 hover:bg-opacity-25 rounded-2xl background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
+                  <button className="text-neutral-800 hover:bg-neutral-700 hover:text-neutral-900 hover:bg-opacity-25 rounded-2xl background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
                     Retour
                   </button>
                 </Link>

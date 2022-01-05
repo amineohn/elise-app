@@ -4,10 +4,10 @@ function Error({ statusCode }) {
   return (
     <FadeIn>
       <div className="min-w-screen min-h-screen bg-orange-100 flex items-center p-5 lg:p-20 overflow-hidden relative">
-        <div className="flex-1 min-h-full min-w-full rounded-3xl bg-white shadow-xl p-10 lg:p-20 text-gray-800 relative md:flex items-center text-center md:text-left">
+        <div className="flex-1 min-h-full min-w-full rounded-3xl bg-white shadow-xl p-10 lg:p-20 text-neutral-800 relative md:flex items-center text-center md:text-left">
           <div className="w-full md:w-1/2">
             <div className="mb-10 lg:mb-20"></div>
-            <div className="mb-10 md:mb-20 text-gray-600 font-light">
+            <div className="mb-10 md:mb-20 text-neutral-600 font-light">
               <h1 className="font-black uppercase text-3xl lg:text-5xl text-yellow-500 mb-10">
                 VOUS SEMBLEZ ÊTRE PERDU !
               </h1>

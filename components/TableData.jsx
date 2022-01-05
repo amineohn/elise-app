@@ -34,7 +34,7 @@ const TableData = () => {
         data ? (
           data.map((item) => (
             <FadeIn>
-              <tr className="bg-gray-50 border-b border-gray-100 flex items-center">
+              <tr className="bg-neutral-50 border-b border-neutral-100 flex items-center">
                 <div className="items-center flex justify-center mx-16 md:mx-16 sm:mx-10 xl:mx-16 2xl:mx-16">
                   <td
                     id={item.id}
@@ -68,7 +68,7 @@ const TableData = () => {
         ) : (
           <>
             <FadeIn>
-              <div className="rounded-2xl m-10 w-4/6 sm:w-3/5 md:w-2/5 xl:w-1/3 2xl:w-1/3 mx-auto bg-gray-50 text-gray-800 h-96 animate-pulse">
+              <div className="rounded-2xl m-10 w-4/6 sm:w-3/5 md:w-2/5 xl:w-1/3 2xl:w-1/3 mx-auto bg-neutral-50 text-neutral-800 h-96 animate-pulse">
                 <div className="flex justify-center space-x-5 loadData ">
                   <div className="flex space-x-1 justify-center">
                     <svg
@@ -100,11 +100,11 @@ const TableData = () => {
         )
       ) : (
         <FadeIn>
-          <div className="rounded-2xl m-10 w-4/6 sm:w-3/5 md:w-2/5 xl:w-1/3 2xl:w-1/3 mx-auto bg-gray-50 text-gray-800 h-96 animate-pulse">
+          <div className="rounded-2xl m-10 w-4/6 sm:w-3/5 md:w-2/5 xl:w-1/3 2xl:w-1/3 mx-auto bg-neutral-50 text-neutral-800 h-96 animate-pulse">
             <div className="flex justify-center space-x-5 loadData -mr-24">
               <div className="flex space-x-1 justify-center">
                 <svg
-                  className="animate-spin h-5 w-5 text-gray-900 dark:text-gray-100"
+                  className="animate-spin h-5 w-5 text-neutral-900 dark:text-neutral-100"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"

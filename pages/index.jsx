@@ -161,7 +161,7 @@ export default function Index() {
                       <button
                         aria-label="Submit"
                         type="submit"
-                        className="outline-none bg-gray-800 flex p-2 rounded-2xl hover:bg-gray-700 transition text-white"
+                        className="outline-none bg-neutral-800 flex p-2 rounded-2xl hover:bg-neutral-700 transition text-white"
                       >
                         Ajouter
                       </button>
@@ -179,7 +179,7 @@ export default function Index() {
           {socket ? (
             <>
               <FadeIn>
-                <div className="rounded-2xl m-10 w-999 w-96 mx-auto bg-gray-50 text-gray-800 overflow-y-auto border-2 border-orange-400 h-72 select-text">
+                <div className="rounded-2xl m-10 w-999 w-96 mx-auto bg-neutral-50 text-neutral-800 overflow-y-auto border-2 border-orange-400 h-72 select-text">
                   <div className="flex items-center justify-center">
                     <tr className="">
                       <th className="px-4 py-3 space-x-5">
@@ -202,7 +202,7 @@ export default function Index() {
           ) : (
             <>
               <FadeIn>
-                <div className="rounded-2xl m-10 w-4/6 sm:w-3/5 md:w-2/5 xl:w-1/3 2xl:w-1/3 mx-auto bg-gray-50 text-gray-800 h-96 animate-pulse">
+                <div className="rounded-2xl m-10 w-4/6 sm:w-3/5 md:w-2/5 xl:w-1/3 2xl:w-1/3 mx-auto bg-neutral-50 text-neutral-800 h-96 animate-pulse">
                   <tr className="text-left">
                     <th className="flex justify-center space-x-5 loadData -mr-24">
                       Chargement des données..
@@ -235,7 +235,7 @@ export default function Index() {
             </>
           ) : (
             <div className="w-52 justify-center items-center m-auto">
-              <div className="outline-none bg-gray-700 flex p-4 rounded-2xl hover:bg-gray-800 transition text-white cursor-pointer">
+              <div className="outline-none bg-neutral-700 flex p-4 rounded-2xl hover:bg-neutral-800 transition text-white cursor-pointer">
                 <a
                   href="api/auth/login"
                   className="inline-flex space-x-2 justify-center items-center ml-8"
