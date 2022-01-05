@@ -48,6 +48,17 @@ export default function Index() {
   };
 
   const { user, error } = useUser();
+  const onReset = () => {
+    fetch(`http://${window.location.hostname}:3001/reset`, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((body) => console.log(body));
+  };
 
   return (
     <>
@@ -213,9 +224,22 @@ export default function Index() {
               </FadeIn>
             </>
           )}
+          <div className="flex justify-center items-center m-auto mt-2">
+            <div
+              className="outline-none bg-red-700 flex p-4 rounded-2xl hover:bg-red-800 transition text-white cursor-pointer"
+              onClick={onReset}
+            >
+              <a
+                href="api/auth/login"
+                className="inline-flex space-x-2 justify-center items-center"
+              >
+                <span>Supprimer les données du tableau</span>
+              </a>
+            </div>
+          </div>
           {user ? (
             <>
-              <div className="flex justify-center space-x-2">
+              <div className="flex justify-center space-x-2 mt-2">
                 <img className="w-10 h-10 rounded-full" src={user.picture} />
                 <span className="text-md inline font-medium text-center mt-1.5">
                   Connecté en tant que {user.name}
@@ -235,7 +259,7 @@ export default function Index() {
               </div>
             </>
           ) : (
-            <div className="w-52 justify-center items-center m-auto">
+            <div className="w-52 justify-center items-center m-auto mt-2">
               <div className="outline-none bg-neutral-700 flex p-4 rounded-2xl hover:bg-neutral-800 transition text-white cursor-pointer">
                 <a
                   href="api/auth/login"
